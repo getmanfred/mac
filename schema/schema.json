@@ -1,0 +1,73 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://github.com/manfred/mac/schema.json",
+  "title": "Manfred Awesomic CV",
+  "description": "An open CV format",
+  "type": "object",
+  "properties": {
+    "name": {
+      "description": "Name of the CV Author",
+      "type": "string"
+    },
+    "experience": {
+      "description": "List of working Experience",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "company": {
+            "description": "Name of the Company",
+            "type": "string"
+          },
+          "roles": {
+            "description": "Your role during a period of time",
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "role": {
+                  "description": "Name of the role",
+                  "type": "string"
+                },
+                "from": {
+                  "description": "When you started to work in the company",
+                  "type": "string"
+                },
+                "until": {
+                  "description": "When you finished to work in the company",
+                  "type": "string"
+                },
+                "achievements": {
+                  "description": "List of Achievements",
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  },
+                  "minItems": 1,
+                  "uniqueItems": true
+                }
+              },
+              "required": [
+                "role",
+                "from",
+                "achievements"
+              ]
+            },
+            "minItems": 1,
+            "uniqueItems": true
+          }
+        },
+        "required": [
+          "company",
+          "roles"
+        ]
+      },
+      "minItems": 1,
+      "uniqueItems": true
+    }
+  },
+  "required": [
+    "name",
+    "experience"
+  ]
+}
