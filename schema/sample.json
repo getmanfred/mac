@@ -1,0 +1,37 @@
+{
+  "name": "XXXX XXXXX",
+  "experience": [
+    {
+      "company": "XXXXX",
+      "roles": [
+        {
+          "role": "Technical Evangelist",
+          "from": "junio de 2011",
+          "until": "enero de 2014",
+          "achievements": [
+            "Contribución al lanzamiento de nuevos productos y funcionalidades",
+            "Venta por Canal",
+            "Reclutamiento",
+            "Evangelismo Técnico"
+          ]
+        }
+      ]
+    },
+    {
+      "company": "XXXXX",
+      "roles": [
+        {
+          "role": "CTO",
+          "from": "septiembre de 2003",
+          "until": "junio de 2011",
+          "achievements": [
+            "Contribución al lanzamiento de nuevos productos y funcionalidades",
+            "Venta por Canal",
+            "Reclutamiento",
+            "Evangelismo Técnico"
+          ]
+        }
+      ]
+    }
+  ]
+}
