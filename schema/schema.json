@@ -5,69 +5,365 @@
   "description": "An open CV format",
   "type": "object",
   "properties": {
-    "name": {
-      "description": "Name of the CV Author",
-      "type": "string"
+    "author":{
+      "description": "Main data of the CV author",
+        "type":"object",
+        "properties": {
+          "profile":{
+            "description": "Personal data of the CV author",
+            "type": "array",
+            "items":{
+              "type": "object",
+              "properties": {
+                "name": {
+                  "description": "Complete name of the CV author",
+                  "type": "string"
+                },
+                "image":{ 
+                  "description": "URL of the author image", 
+                  "type":"string", 
+                  "format":"uri" 
+                },
+                "birthday":{
+                  "description": "Birthday in format dd.mm.yyyy",
+                  "type":"string",
+                  "format": "date"
+                },
+                "publicLinks": {
+                  "description": "List the links to code repositories, social media, professional networks or any other worthy public profile",
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "format": "uri"
+                  },
+                  "minItems": 1,
+                  "uniqueItems": true
+                },
+                "roles":{
+                  "description": "The ones that better describe your previous or future positions",
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "enum": ["project manager", "product manager", "operational manager", "analyst", "business analyst", "qa manager", "software architect", "process analyst", "test engineer", "test analyst", "database administrator", "developer", "software engineer", "product owner", "scrum master", "team lead", "UX designer", "UI designer"]
+                  }
+                },
+                "yearsOfExperience": {
+                  "description": "Total number of years of professional experience",
+                  "type": "number"
+                }
+              },
+              "required": [
+                "name",
+                "birthday",
+                "roles",
+                "yearsOfExperience"
+              ]
+            },
+            "minItems": 1,
+            "maxItems": 1
+          },
+          "intro": {
+            "description": "Explain to your future company what kind of professional you are",
+            "type": "string"
+          },
+          "professionalGoals": {
+            "description": "List the goals that explain to your future company what kind of professional you'd like to be, what you'd like to be i.e., What motivates you",
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "minItems": 1,
+            "uniqueItems": true
+          },
+          "transportableSkills": {
+            "description": "List the skills not specifically related to your particular job or area of knowledge, but still can be used at work (for example, when you were manager in that Burger King and had to organize a team of employees)",
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "minItems": 1,
+            "uniqueItems": true
+          },
+          "significantExperience": {
+            "description": "List the professional milestones that provided you with experience and knowledge for your future position",
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "minItems": 1,
+            "uniqueItems": true
+          },
+          "significantRelationships": {
+            "description": "List the professional relationships (2-3 is enough) that you can seek advice in case you need, who provide you with professional insights in your day to day",
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "description": "Name of this significant reference",
+                  "type": "string"
+                },
+                "comment": {
+                  "description": "Describe what this significant reference provides you with",
+                  "type": "string"
+                },
+                "role": {
+                  "description": "Role of this significant reference",
+                  "type": "string"
+                },
+                "contact": {
+                  "description": "Contact of this significant reference",
+                  "type": "string"
+                },
+                "company": {
+                  "description": "Name of the Company of this significant reference",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "name",
+                "comment",
+                "role"
+              ]
+            },
+            "minItems": 1,
+            "uniqueItems": true
+          }
+        }
     },
     "experience": {
-      "description": "List of working Experience",
+      "description": "List of working experience",
       "type": "array",
       "items": {
         "type": "object",
         "properties": {
           "company": {
-            "description": "Name of the Company",
-            "type": "string"
-          },
-          "roles": {
-            "description": "Your role during a period of time",
+            "description": "Company in which you worked",
             "type": "array",
             "items": {
               "type": "object",
               "properties": {
-                "role": {
-                  "description": "Name of the role",
+                "name":{
+                  "description": "Name of the company",
                   "type": "string"
                 },
-                "from": {
-                  "description": "When you started to work in the company",
-                  "type": "string"
-                },
-                "until": {
-                  "description": "When you finished to work in the company",
-                  "type": "string"
-                },
-                "achievements": {
-                  "description": "List of Achievements",
+                "roles": {
+                  "description": "Your role or title during a period of time",
                   "type": "array",
                   "items": {
-                    "type": "string"
+                    "type": "object",
+                    "properties": {
+                      "role": {
+                        "description": "Name of the role",
+                        "type": "string"
+                      },
+                      "from": {
+                        "description": "When you started to work in the company",
+                        "type": "string"
+                      },
+                      "until": {
+                        "description": "When you finished to work in the company",
+                        "type": "string"
+                      },
+                      "challenges": {
+                        "description": "List of challenges of this role or title",
+                        "type": "array",
+                        "items": {
+                          "type": "object",
+                          "properties": {
+                            "summary":{
+                              "description": "Sum up your challenge",
+                              "type": "string"
+                            },
+                            "actions": {
+                              "description": "List of actions for this challenge",
+                              "type": "array",
+                              "items": {
+                                "type": "object",
+                                "properties": {
+                                  "summary":{
+                                    "description": "Sum up your action for this challenge",
+                                    "type": "string"
+                                  },
+                                  "tools": {
+                                    "description": "List of tools, frameworks, languages you used or learnt",
+                                    "type": "string"
+                                  }
+                                },
+                                "required": [
+                                  "summary"
+                                ]
+                              },
+                              "minItems": 1,
+                              "uniqueItems": true
+                            }
+                          },
+                          "required": [
+                            "summary",
+                            "actions"
+                          ]
+                        },
+                        "minItems": 1,
+                        "uniqueItems": true
+                      }
+                    },
+                    "required": [
+                      "role",
+                      "from",
+                      "until",
+                      "challenges"
+                    ]
+                  },
+                  "minItems": 1,
+                  "uniqueItems": true
+                },
+                "references": {
+                  "description": "List references of the company when you worked there",
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "name": {
+                        "description": "Name of this reference",
+                        "type": "string"
+                      },
+                      "role": {
+                        "description": "Role of this reference",
+                        "type": "string"
+                      },
+                      "contact": {
+                        "description": "Contact of this reference",
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "name",
+                      "role",
+                      "link"
+                    ]
                   },
                   "minItems": 1,
                   "uniqueItems": true
                 }
               },
               "required": [
-                "role",
-                "from",
-                "achievements"
+                "name",
+                "roles"
               ]
             },
-            "minItems": 1,
-            "uniqueItems": true
+          "minItems": 1,
+          "uniqueItems": true
           }
         },
         "required": [
-          "company",
-          "roles"
+          "company"
         ]
       },
       "minItems": 1,
       "uniqueItems": true
+    },
+    "education": {
+      "description": "Degree or kind of schooling",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "institution": {
+            "description": "School or University",
+            "type": "string"
+          },
+          "study": {
+            "description": "Degree/field of study",
+            "type": "string"
+          },
+          "from": {
+            "description": "When you started your studies",
+            "type": "string"
+          },
+          "until": {
+            "description": "When you finished your studies",
+            "type": "string"
+          },
+          "achievements": {
+            "description": "List of awards or achievements during your studies",
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "minItems": 0,
+            "uniqueItems": true
+          }
+        },
+        "required": [
+          "institution",
+          "study",
+          "from",
+          "until"
+        ]
+      },
+      "minItems": 1,
+      "uniqueItems": true
+    },
+    "languages": {
+      "description": "List of languages and your proficiency level",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "language": {
+            "description": "Language",
+            "type": "string"
+          },
+          "proficiency": {
+            "description": "Your level of this language proficiency",
+            "type": "array",
+            "items": {
+              "type": "string",
+              "enum": ["elementary", "limited working", "professional working", "full professional", "native or bilingual"]
+            }
+          }
+        },
+        "required": [
+          "language",
+          "proficiency"
+        ]
+      },
+      "minItems": 1,
+      "uniqueItems": true
+    },
+    "miscEducation": {
+      "description": "Miscellaneous education such as courses, certifications, awards, projects, etc.",
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "minItems": 0,
+      "uniqueItems": true
+    },
+    "questionnaire":{
+      "description": "List of questions to help understanding if your motivations match with those of your potential employer",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "question": {
+            "description": "Question to find out anything you understand is important for the open position",
+            "type": "string"
+          },
+          "answer": {
+            "description": "Open answer to the formulated question",
+            "type": "string"
+          }
+        }
+      },
+      "minItems": 0,
+      "uniqueItems": true
     }
   },
   "required": [
-    "name",
-    "experience"
+    "author",
+    "experience",
+    "education"
   ]
 }
+
