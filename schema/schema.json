@@ -231,16 +231,26 @@
                         "description": "Role of this reference",
                         "type": "string"
                       },
-                      "contact": {
-                        "description": "Contact of this reference",
-                        "type": "string"
+                      "link": {
+                        "description": "Link to a profile of this reference",
+                        "type": "string",
+                        "format": "uri"
+                      },
+                      "mail": {
+                        "description": "Mail of this reference",
+                        "type": "string",
+                        "format": "mail"
+                      },
+                      "phone_number": {
+                        "description": "Phone Number of this reference with country code",
+                        "type": "string"                        
                       }
                     },
                     "required": [
                       "name",
-                      "role",
-                      "link"
-                    ]
+                      "role"
+                    ],
+                    "minProperties" : 3 
                   },
                   "minItems": 1,
                   "uniqueItems": true
