@@ -1,3 +1,4 @@
+
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
   "$id": "http://github.com/manfred/mac/schema.json",
@@ -326,11 +327,8 @@
           },
           "proficiency": {
             "description": "Your level of this language proficiency",
-            "type": "array",
-            "items": {
-              "type": "string",
-              "enum": ["elementary", "limited working", "professional working", "full professional", "native or bilingual"]
-            }
+            "type": "string",
+            "enum": ["elementary", "limited working", "professional working", "full professional", "native or bilingual"]            
           }
         },
         "required": [
@@ -376,4 +374,3 @@
     "education"
   ]
 }
-
