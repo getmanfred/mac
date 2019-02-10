@@ -12,56 +12,51 @@
         "properties": {
           "profile":{
             "description": "Personal data of the CV author",
-            "type": "array",
-            "items":{
-              "type": "object",
-              "properties": {
-                "name": {
-                  "description": "Complete name of the CV author",
-                  "type": "string"
+            "type": "object",
+            "properties": {
+              "name": {
+                "description": "Complete name of the CV author",
+                "type": "string"
+              },
+              "image":{ 
+                "description": "URL of the author image", 
+                "type":"string", 
+                "format":"uri" 
+              },
+              "birthday":{
+                "description": "Birthday in format dd.mm.yyyy",
+                "type":"string",
+                "format": "date"
+              },
+              "publicLinks": {
+                "description": "List the links to code repositories, social media, professional networks or any other worthy public profile",
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "format": "uri"
                 },
-                "image":{ 
-                  "description": "URL of the author image", 
-                  "type":"string", 
-                  "format":"uri" 
-                },
-                "birthday":{
-                  "description": "Birthday in format dd.mm.yyyy",
-                  "type":"string",
-                  "format": "date"
-                },
-                "publicLinks": {
-                  "description": "List the links to code repositories, social media, professional networks or any other worthy public profile",
-                  "type": "array",
-                  "items": {
-                    "type": "string",
-                    "format": "uri"
-                  },
-                  "minItems": 1,
-                  "uniqueItems": true
-                },
-                "roles":{
-                  "description": "The ones that better describe your previous or future positions",
-                  "type": "array",
-                  "items": {
-                    "type": "string",
-                    "enum": ["project manager", "product manager", "operational manager", "analyst", "business analyst", "qa manager", "software architect", "process analyst", "test engineer", "test analyst", "database administrator", "developer", "software engineer", "product owner", "scrum master", "team lead", "UX designer", "UI designer"]
-                  }
-                },
-                "yearsOfExperience": {
-                  "description": "Total number of years of professional experience",
-                  "type": "number"
+                "minItems": 1,
+                "uniqueItems": true
+              },
+              "roles":{
+                "description": "The ones that better describe your previous or future positions",
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "enum": ["project manager", "product manager", "operational manager", "analyst", "business analyst", "qa manager", "software architect", "process analyst", "test engineer", "test analyst", "database administrator", "developer", "software engineer", "product owner", "scrum master", "team lead", "UX designer", "UI designer"]
                 }
               },
-              "required": [
-                "name",
-                "birthday",
-                "roles",
-                "yearsOfExperience"
-              ]
+              "yearsOfExperience": {
+                "description": "Total number of years of professional experience",
+                "type": "number"
+              }
             },
-            "minItems": 1,
-            "maxItems": 1
+            "required": [
+              "name",
+              "birthday",
+              "roles",
+              "yearsOfExperience"
+            ]
           },
           "intro": {
             "description": "Explain to your future company what kind of professional you are",
@@ -130,7 +125,11 @@
             "minItems": 1,
             "uniqueItems": true
           }
-        }
+        },
+        "required": [
+          "profile",
+          "intro"
+        ]
     },
     "experience": {
       "description": "List of working experience",
