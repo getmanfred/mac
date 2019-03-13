@@ -2,13 +2,20 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "$id": "https://github.com/getmanfred/mac/blob/master/samples/sample-definitions-file.json",
     "type": "object",
-    "definitions": {
-        "mail": {
+    "definitions": {        
+        "movil" : {
             "type" : "string",
-            "pattern": "^\\w+@[a-zA-Z_]+?\\.[a-zA-Z]{2,3}$"
+            "pattern" : "^\\(*(\\+34|0034|34)?\\)*[ -]*(6|7)[ -]*([0-9][ -]*){8}$"
         },
-        "telefono" : {
-            "type" : "string"
+        "provincia" : {
+            "type" : "string",
+            "enum" : ["A Coruña", "Alava", "Albacete", "Alicante", "Almeria", "Asturias", "Avila", 
+                "Badajoz", "Baleares", "Barcelona", "Burgos", "Caceres", "Cadiz", "Cantabria", "Castellon",
+                "Ceuta", "Ciudad Real", "Cordoba", "Cuenca", "Girona", "Granada", "Guadalajara", "Guipuzcoa",
+                "Huelva", "Huesca", "Jaen", "La Rioja", "Las Palmas", "Leon", "Lleida", "Lugo", "Madrid",
+                "Malaga", "Melilla", "Murcia", "Navarra", "Ourense", "Palencia", "Pontevedra", "Salamanca",
+                "Tenerife", "Segovia", "Sevilla", "Soria", "Tarragona", "Teruel", "Toledo", "Valencia",
+                "Valladolid", "Vizcaya", "Zamora", "Zaragoza"]
         }
     }
 }
