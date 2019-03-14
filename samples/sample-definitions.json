@@ -1,6 +1,6 @@
 	{
         "$schema" : "http://json-schema.org/draft-07/schema#",
-        "$id" : "https://github.com/getmanfred/mac/blob/master/samples/sample-definitions.json",
+        "$id" : "https://raw.githubusercontent.com/getmanfred/mac/master/samples/sample-definitions.json",
         "type" : "object",
         "definitions" : {
             "mail" : {

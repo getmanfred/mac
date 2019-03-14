@@ -1,8 +1,8 @@
 {
     "$schema": "http://json-schema.org/draft-07/schema#",
-    "$id": "https://github.com/getmanfred/mac/blob/master/samples/sample-definitions-file.json",
+    "$id": "https://raw.githubusercontent.com/getmanfred/mac/master/samples/sample-definitions-file.json",
     "type": "object",
-    "definitions": {        
+    "definitions" : {        
         "movil" : {
             "type" : "string",
             "pattern" : "^\\(*(\\+34|0034|34)?\\)*[ -]*(6|7)[ -]*([0-9][ -]*){8}$"
