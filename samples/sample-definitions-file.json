@@ -6,6 +6,7 @@
         "movil" : {
             "type" : "string",
             "pattern" : "^\\(*(\\+34|0034|34)?\\)*[ -]*(6|7)[ -]*([0-9][ -]*){8}$",
+            "description": "Teléfono móvil de los candidatos",
             "$comment": "Sólo valida móviles españoles. OJO CUIDAO",
             "examples": ["(+34)626536444", "(+34)626 536 444", "+34 626536444"]
         },
