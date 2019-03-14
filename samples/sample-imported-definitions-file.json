@@ -1,0 +1,23 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "https://raw.githubusercontent.com/getmanfred/mac/master/samples/sample-imported-definitions-file.json",
+    "type": "object",
+    "properties": {
+        "manfredita" : {
+            "type" : "object",
+            "properties": {
+                "nombre" : {
+                    "type" : "string"
+                },
+                "mail" : {
+                    "type" : "string",
+                    "format": "email"
+                },
+                "movil" : {
+                    "$ref": "https://raw.githubusercontent.com/getmanfred/mac/master/samples/sample-definitions-file.json#/definitions/movil"
+                }
+            },
+            "required" : ["nombre", "mail", "movil"]
+        } 
+    }
+}
