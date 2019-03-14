@@ -13,7 +13,7 @@
     },
     "url": {
       "description": "URL de la foto de la candidata",
-      "deafult": "https://github.com/getmanfred/mac/blob/master/samples/examples/default.png?raw=true",
+      "default": "https://github.com/getmanfred/mac/blob/master/samples/examples/default.png?raw=true",
       "format": "uri"
     }
   },
