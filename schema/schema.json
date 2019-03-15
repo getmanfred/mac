@@ -24,7 +24,7 @@
                 "format":"uri" 
               },
               "birthday":{
-                "description": "Birthday in format dd.mm.yyyy",
+                "description": "Birthday in format yyyy-mm-dd",
                 "type":"string",
                 "format": "date"
               },
