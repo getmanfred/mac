@@ -44,7 +44,8 @@
                 "items": {
                   "type": "string",
                   "enum": ["project manager", "product manager", "operational manager", "analyst", "business analyst", "qa manager", "software architect", "process analyst", "test engineer", "test analyst", "database administrator", "developer", "software engineer", "product owner", "scrum master", "team lead", "UX designer", "UI designer"]
-                }
+                },
+                "uniqueItems": true
               },
               "yearsOfExperience": {
                 "description": "Total number of years of professional experience",
