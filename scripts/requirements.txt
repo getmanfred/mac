@@ -1,0 +1,3 @@
+faker
+pyyaml
+jsonschema
