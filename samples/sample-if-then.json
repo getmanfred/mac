@@ -17,13 +17,13 @@
                 }
             },
             "if": {
-                "properties": { "country": { "const": "Madrid" } }
+                "properties": { "provincia": { "const": "Madrid" } }
             },
             "then": {
-                "properties": { "codigo_postal": { "pattern": "^28[0-9]{3}$" } }
+                "properties": { "codigo_postal": { "type" : "string", "pattern": "^28[0-9]{3}$" } }
             },
             "else": {
-                "properties": { "codigo_postal": { "pattern": "^[0-9]{5}$" } }
+                "properties": { "codigo_postal": { "type" : "string", "pattern": "^[0-9]{5}$" } }
             },
             "required" : ["calle", "poblacion", "provincia", "codigo_postal"]
         }
