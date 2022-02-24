@@ -1,37 +1,460 @@
 {
-  "name": "XXXX XXXXX",
-  "experience": [
-    {
-      "company": "XXXXX",
-      "roles": [
-        {
-          "role": "Technical Evangelist",
-          "from": "junio de 2011",
-          "until": "enero de 2014",
-          "achievements": [
-            "Contribución al lanzamiento de nuevos productos y funcionalidades",
-            "Venta por Canal",
-            "Reclutamiento",
-            "Evangelismo Técnico"
-          ]
-        }
-      ]
+    "settings": {
+        "language": "EN",
+        "lastUpdate": "2011-06-14",
+        "MACversion": "0.2"
     },
-    {
-      "company": "XXXXX",
-      "roles": [
-        {
-          "role": "CTO",
-          "from": "septiembre de 2003",
-          "until": "junio de 2011",
-          "achievements": [
-            "Contribución al lanzamiento de nuevos productos y funcionalidades",
-            "Venta por Canal",
-            "Reclutamiento",
-            "Evangelismo Técnico"
-          ]
-        }
-      ]
+    "aboutMe": {
+        "profile": {
+            "name": "David",
+            "surnames": "Bonilla Fuertes",
+            "avatar": {
+                "alt": "picture of Mike Gomez",
+                "link": "https://images.assetsdelivery.com/compings_v2/thesomeday123/thesomeday1231709/thesomeday123170900021.jpg"
+            },
+            "birthday": "1977-07-26",
+            "whereILive": {
+                "country": "US",
+                "region": "California",
+                "municipality": "San Francisco",
+                "postalCode": "Lorem",
+                "address": "Lorem",
+                "notes": "Lorem"
+            }
+        },
+        "headline": "Full-stack Developer at Manfred. Slow Marathoner. Rock'n'roll Accordionist.",
+        "introduction": "I'm a developer interested on human-centric projects and videogames. I love my family. I hate broccoli.",
+        "relevantLinks": [
+            {
+                "type": "other",
+                "URL": "sample.com",
+                "description": "Lorem"
+            }
+        ],
+        "significativeRelationships": [
+            {
+                "name": "Sharon",
+                "surnames": "Vlaovic-Sorensen",
+                "title": "My supervisor",
+                "description": "Daniel was the perfect leader and he achieved all the goals assigned to the Departement but the most important thing is he's also a great colleague.",
+                "contact": {
+                    "publicProfiles": [
+                        {
+                            "type": "other",
+                            "URL": "https://www.getmanfred.com/mac/david"
+                        }
+                    ],
+                    "phoneNumbers": [
+                        {
+                            "countryCode": 34,
+                            "number": "616100584"
+                        }
+                    ],
+                    "contactMails": [
+                        "your.name@mail.com"
+                    ]
+                },
+                "avatar": {
+                    "alt": "picture of Mike Gomez",
+                    "link": "https://images.assetsdelivery.com/compings_v2/thesomeday123/thesomeday1231709/thesomeday123170900021.jpg"
+                }
+            }
+        ],
+        "interestingFacts": [
+            {
+                "topic": "First computer",
+                "fact": "Amstrad CPC 464"
+            }
+        ],
+        "currentSalary": {
+            "currency": "Lorem",
+            "amount": 56,
+            "relevantPerks": [
+                "Lorem"
+            ]
+        },
+        "noticePeriod": 13,
+        "recommendations": [
+            {
+                "title": "Lorem",
+                "type": "web",
+                "URL": "Lorem",
+                "author": {
+                    "name": "Sharon",
+                    "surnames": "Vlaovic-Sorensen",
+                    "title": "My supervisor",
+                    "description": "Daniel was the perfect leader and he achieved all the goals assigned to the Departement but the most important thing is he's also a great colleague.",
+                    "contact": {
+                        "publicProfiles": [
+                            {
+                                "type": "other",
+                                "URL": "https://www.getmanfred.com/mac/david"
+                            }
+                        ],
+                        "phoneNumbers": [
+                            {
+                                "countryCode": 34,
+                                "number": "616100584"
+                            }
+                        ],
+                        "contactMails": [
+                            "your.name@mail.com"
+                        ]
+                    },
+                    "avatar": {
+                        "alt": "picture of Mike Gomez",
+                        "link": "https://images.assetsdelivery.com/compings_v2/thesomeday123/thesomeday1231709/thesomeday123170900021.jpg"
+                    }
+                },
+                "summary": "Lorem"
+            }
+        ]
+    },
+    "experience": {
+        "jobs": [
+            {
+                "organization": {
+                    "name": "Stanford University",
+                    "description": "Lorem",
+                    "URL": "https://www.stanford.edu/",
+                    "image": {
+                        "alt": "picture of Mike Gomez",
+                        "link": "https://images.assetsdelivery.com/compings_v2/thesomeday123/thesomeday1231709/thesomeday123170900021.jpg"
+                    },
+                    "location": {
+                        "country": "US",
+                        "region": "California",
+                        "municipality": "San Francisco",
+                        "postalCode": "Lorem",
+                        "address": "Lorem",
+                        "notes": "Lorem"
+                    }
+                },
+                "type": "bigCorp",
+                "roles": [
+                    {
+                        "name": "Developer",
+                        "startDate": "2019-06-20",
+                        "finishDate": "2022-02-14",
+                        "challenges": [
+                            {
+                                "description": "Lorem",
+                                "actions": [
+                                    "Lorem"
+                                ]
+                            }
+                        ],
+                        "means": [
+                            {
+                                "name": "Excel",
+                                "type": "domain",
+                                "description": "Formule modeling and complex calculations"
+                            }
+                        ],
+                        "referrals": [
+                            {
+                                "name": "Sharon",
+                                "surnames": "Vlaovic-Sorensen",
+                                "title": "My supervisor",
+                                "description": "Daniel was the perfect leader and he achieved all the goals assigned to the Departement but the most important thing is he's also a great colleague.",
+                                "contact": {
+                                    "publicProfiles": [
+                                        {
+                                            "type": "other",
+                                            "URL": "https://www.getmanfred.com/mac/david"
+                                        }
+                                    ],
+                                    "phoneNumbers": [
+                                        {
+                                            "countryCode": 34,
+                                            "number": "616100584"
+                                        }
+                                    ],
+                                    "contactMails": [
+                                        "your.name@mail.com"
+                                    ]
+                                },
+                                "avatar": {
+                                    "alt": "picture of Mike Gomez",
+                                    "link": "https://images.assetsdelivery.com/compings_v2/thesomeday123/thesomeday1231709/thesomeday123170900021.jpg"
+                                }
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "projects": [
+            {
+                "details": {
+                    "name": "Stanford University",
+                    "description": "Lorem",
+                    "URL": "https://www.stanford.edu/",
+                    "image": {
+                        "alt": "picture of Mike Gomez",
+                        "link": "https://images.assetsdelivery.com/compings_v2/thesomeday123/thesomeday1231709/thesomeday123170900021.jpg"
+                    },
+                    "location": {
+                        "country": "US",
+                        "region": "California",
+                        "municipality": "San Francisco",
+                        "postalCode": "Lorem",
+                        "address": "Lorem",
+                        "notes": "Lorem"
+                    }
+                },
+                "type": "other",
+                "roles": [
+                    {
+                        "name": "Developer",
+                        "startDate": "2019-06-20",
+                        "finishDate": "2022-02-14",
+                        "challenges": [
+                            {
+                                "description": "Lorem",
+                                "actions": [
+                                    "Lorem"
+                                ]
+                            }
+                        ],
+                        "means": [
+                            {
+                                "name": "Excel",
+                                "type": "domain",
+                                "description": "Formule modeling and complex calculations"
+                            }
+                        ],
+                        "referrals": [
+                            {
+                                "name": "Sharon",
+                                "surnames": "Vlaovic-Sorensen",
+                                "title": "My supervisor",
+                                "description": "Daniel was the perfect leader and he achieved all the goals assigned to the Departement but the most important thing is he's also a great colleague.",
+                                "contact": {
+                                    "publicProfiles": [
+                                        {
+                                            "type": "other",
+                                            "URL": "https://www.getmanfred.com/mac/david"
+                                        }
+                                    ],
+                                    "phoneNumbers": [
+                                        {
+                                            "countryCode": 34,
+                                            "number": "616100584"
+                                        }
+                                    ],
+                                    "contactMails": [
+                                        "your.name@mail.com"
+                                    ]
+                                },
+                                "avatar": {
+                                    "alt": "picture of Mike Gomez",
+                                    "link": "https://images.assetsdelivery.com/compings_v2/thesomeday123/thesomeday1231709/thesomeday123170900021.jpg"
+                                }
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "publicArtifacts": [
+            {
+                "details": {
+                    "name": "Stanford University",
+                    "description": "Lorem",
+                    "URL": "https://www.stanford.edu/",
+                    "image": {
+                        "alt": "picture of Mike Gomez",
+                        "link": "https://images.assetsdelivery.com/compings_v2/thesomeday123/thesomeday1231709/thesomeday123170900021.jpg"
+                    },
+                    "location": {
+                        "country": "US",
+                        "region": "California",
+                        "municipality": "San Francisco",
+                        "postalCode": "Lorem",
+                        "address": "Lorem",
+                        "notes": "Lorem"
+                    }
+                },
+                "type": "video",
+                "publishingDate": "2011-06-14",
+                "means": [
+                    {
+                        "name": "Excel",
+                        "type": "domain",
+                        "description": "Formule modeling and complex calculations"
+                    }
+                ]
+            }
+        ]
+    },
+    "education": {
+        "languages": [
+            {
+                "name": "EN",
+                "level": "native"
+            }
+        ],
+        "hardSkills": [
+            {
+                "name": "Excel",
+                "type": "hardware",
+                "description": "Lorem",
+                "level": "expert"
+            }
+        ],
+        "softSkills": [
+            {
+                "name": "Strategic Vision",
+                "type": "domain",
+                "description": "Lorem",
+                "level": "expert"
+            }
+        ],
+        "studies": [
+            {
+                "studyType": "selfTraining",
+                "degreeAchieved": true,
+                "name": "Software Engineering",
+                "description": "Computer Science Grade",
+                "startDate": "2011-06-14",
+                "finishDate": "2011-06-14",
+                "institution": {
+                    "name": "Stanford University",
+                    "URL": "https://www.stanford.edu/",
+                    "logo": {
+                        "alt": "picture of Mike Gomez",
+                        "link": "https://images.assetsdelivery.com/compings_v2/thesomeday123/thesomeday1231709/thesomeday123170900021.jpg"
+                    }
+                },
+                "linkedMeans": [
+                    {
+                        "name": "Excel",
+                        "type": "domain",
+                        "description": "Formule modeling and complex calculations"
+                    }
+                ],
+                "publicEntity": {
+                    "name": "Stanford University",
+                    "description": "Lorem",
+                    "URL": "https://www.stanford.edu/",
+                    "image": {
+                        "alt": "picture of Mike Gomez",
+                        "link": "https://images.assetsdelivery.com/compings_v2/thesomeday123/thesomeday1231709/thesomeday123170900021.jpg"
+                    },
+                    "location": {
+                        "country": "US",
+                        "region": "California",
+                        "municipality": "San Francisco",
+                        "postalCode": "Lorem",
+                        "address": "Lorem",
+                        "notes": "Lorem"
+                    }
+                }
+            }
+        ]
+    },
+    "careerPreferences": {
+        "contact": {
+            "publicProfiles": [
+                {
+                    "type": "other",
+                    "URL": "https://www.getmanfred.com/mac/david"
+                }
+            ],
+            "phoneNumbers": [
+                {
+                    "countryCode": 34,
+                    "number": "616100584"
+                }
+            ],
+            "contactMails": [
+                "your.name@mail.com"
+            ]
+        },
+        "status": "notAvailable",
+        "requirements": {
+            "compensation": {
+                "salary": {
+                    "currency": "USD",
+                    "from": 50000,
+                    "upto": 100000,
+                    "comments": "Lorem"
+                },
+                "equity": {
+                    "mustHave": true,
+                    "from": 1.5,
+                    "upto": 10,
+                    "comments": "Lorem"
+                },
+                "perks": {
+                    "mustHave": [
+                        "Health Insurance"
+                    ],
+                    "niceToHave": [
+                        "Free Meals"
+                    ]
+                }
+            },
+            "contractTypes": [
+                "internship"
+            ],
+            "location": {
+                "remoteOnly": false,
+                "openToRelocate": false,
+                "openToRemote": true,
+                "workingAreas": [
+                    {
+                        "location": {
+                            "country": "US",
+                            "region": "California",
+                            "municipality": "San Francisco",
+                            "postalCode": "Lorem",
+                            "address": "Lorem",
+                            "notes": "Lorem"
+                        },
+                        "distanceFromMunicipality": {
+                            "unit": "Mi",
+                            "amount": 20
+                        }
+                    }
+                ],
+                "comments": "I don't want to work in the Financial District. There are no decent donuts shops"
+            }
+        },
+        "preferences": {
+            "preferredMeans": [
+                {
+                    "name": "Excel",
+                    "type": "domain",
+                    "description": "Formule modeling and complex calculations"
+                }
+            ],
+            "discardedMeans": [
+                {
+                    "name": "Excel",
+                    "type": "domain",
+                    "description": "Formule modeling and complex calculations"
+                }
+            ],
+            "preferredOrganizations": [
+                "bigCorp"
+            ],
+            "discardedOrganizations": [
+                "bigCorp"
+            ],
+            "preferredRoles": [
+                "Product Manager"
+            ],
+            "discardedRoles": [
+                "Project Manager"
+            ]
+        },
+        "goals": [
+            {
+                "title": "Learn German",
+                "description": "Write and speak German fluently"
+            }
+        ]
     }
-  ]
 }
