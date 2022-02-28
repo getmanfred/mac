@@ -43,7 +43,7 @@
                 "profile": {
                     "$ref": "#/$defs/person"
                 },
-                "yearsOfExperience": {
+                "relevantYearsOfExperience": {
                     "type": "number",
                     "description": "Relevant years of experience related with desired professional roles and goals."
                 },
@@ -297,7 +297,7 @@
                 }
             ]
         },
-        "education": {
+        "knowledge": {
             "type": "object",
             "properties": {
                 "languages": {
@@ -882,7 +882,7 @@
             "type": "object",
             "description": "A way to contact a specific person",
             "additionalProperties": true,
-            "allOf": [
+            "anyOf": [
                 {
                     "type": "object",
                     "properties": {
@@ -891,6 +891,8 @@
                             "description": "Online services that provide a way to contact a person without exposing mail or phone number.",
                             "additionalItems": false,
                             "minContains": 1,
+                            "uniqueItems": true,
+                            "minItems": 1,
                             "items": {
                                 "type": "object",
                                 "properties": {
@@ -922,7 +924,10 @@
                             }
                         }
                     },
-                    "additionalProperties": true
+                    "additionalProperties": true,
+                    "required": [
+                        "publicProfiles"
+                    ]
                 },
                 {
                     "type": "object",
@@ -932,6 +937,7 @@
                             "additionalItems": false,
                             "minContains": 1,
                             "minItems": 1,
+                            "uniqueItems": true,
                             "items": {
                                 "type": "object",
                                 "properties": {
@@ -960,7 +966,10 @@
                             }
                         }
                     },
-                    "additionalProperties": true
+                    "additionalProperties": true,
+                    "required": [
+                        "phoneNumbers"
+                    ]
                 },
                 {
                     "type": "object",
@@ -969,6 +978,8 @@
                             "type": "array",
                             "additionalItems": false,
                             "minContains": 1,
+                            "uniqueItems": true,
+                            "minItems": 1,
                             "items": {
                                 "type": "string",
                                 "format": "email",
@@ -978,7 +989,10 @@
                             }
                         }
                     },
-                    "additionalProperties": true
+                    "additionalProperties": true,
+                    "required": [
+                        "contactMails"
+                    ]
                 }
             ],
             "$comment": "TBD Same component used in significativeRelationships and careerPreferences/contact (to be refactor to a common definition)"
@@ -1136,6 +1150,7 @@
                     "type": "array",
                     "additionalItems": true,
                     "minContains": 1,
+                    "uniqueItems": true,
                     "items": {
                         "type": "object",
                         "properties": {
@@ -1160,6 +1175,7 @@
                     "type": "array",
                     "additionalItems": false,
                     "minItems": 1,
+                    "uniqueItems": true,
                     "items": {
                         "$ref": "#/$defs/mean"
                     }
@@ -1168,10 +1184,15 @@
                     "type": "array",
                     "additionalItems": false,
                     "minItems": 1,
+                    "uniqueItems": true,
                     "$comment": "Professional Referrals about my activity in one specific rol.",
                     "items": {
                         "$ref": "#/$defs/person"
                     }
+                },
+                "notes": {
+                    "type": "string",
+                    "description": "Notes and information about the role"
                 }
             },
             "additionalProperties": false,

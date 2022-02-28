@@ -1,62 +1,97 @@
 {
     "settings": {
-        "language": "EN",
-        "lastUpdate": "2011-06-14",
+        "language": "ES",
+        "lastUpdate": "2022-02-28",
         "MACversion": "0.2"
     },
     "aboutMe": {
         "profile": {
             "name": "David",
             "surnames": "Bonilla Fuertes",
+            "title": "Fundador en Manfred / C-Level Executive"
+            ,
+            "description": "Llevo casi dos décadas desarrollando software, ocupando puestos a lo largo de toda la cadena de valor -programacion, diseño de producto, marketing, ventas y gestión de equipos, departamentos y empresas- pero creo que el rol donde se cruzan mi vocación, mis habilidades y las necesidades de la mayoría de las empresas es en la gestión de equipos y proyectos de construcción de activos digitales.\r\rMe apasiona contribuir en todo el ciclo de vida de un producto o servicio informático, desde la definición hasta el mantenimiento o soporte a clientes, y también involucrarme en la comercialización del mismo.\r\rMe gusta trabajar con gente y para la gente. Como responsable de equipos, mi principal prioridad siempre es eliminar cualquier problema que les impida alcanzar todo su potencial. También procuro devolver a la Comunidad informática parte del valor y el conocimiento que me han aportado a lo largo de mi carrera profesional, dando charlas o colaborando con grupos de usuarios y conferencias técnicas; y, a veces, organizándolos.
+",  
             "avatar": {
-                "alt": "picture of Mike Gomez",
-                "link": "https://images.assetsdelivery.com/compings_v2/thesomeday123/thesomeday1231709/thesomeday123170900021.jpg"
+                "alt": "foto de David Bonilla",
+                "link": "https://pbs.twimg.com/profile_images/1387692137664458758/-Z8bTzmY_400x400.jpg"
             },
-            "birthday": "1977-07-26",
-            "whereILive": {
-                "country": "US",
-                "region": "California",
-                "municipality": "San Francisco",
-                "postalCode": "Lorem",
-                "address": "Lorem",
-                "notes": "Lorem"
-            }
+            "birthday": "1977-07-26"           
         },
-        "headline": "Full-stack Developer at Manfred. Slow Marathoner. Rock'n'roll Accordionist.",
-        "introduction": "I'm a developer interested on human-centric projects and videogames. I love my family. I hate broccoli.",
+        "relevantYearsOfExperience" : 20,
         "relevantLinks": [
+          	{
+                "type": "linkedin",
+                "URL": "https://www.linkedin.com/in/dbonillaf/",
+                "description": "Mi perfil en LinkedIn"
+            },
+            {
+                "type": "twitter",
+                "URL": "https://twitter.com/david_bonilla",
+                "description": "Mi cuenta de Twitter"
+            },
+            {
+                "type": "github",
+                "URL": "https://github.com/dbonillaf",
+                "description": "Mi cuenta en GitHub"
+            },
+            {
+                "type": "website",
+                "URL": "https://bonillaware.com/",
+                "description": "Mi Blog"
+            },
             {
                 "type": "other",
-                "URL": "sample.com",
-                "description": "Lorem"
+                "URL": "https://www.bonilista.com",
+                "description": "Mi Newsletter"
             }
         ],
         "significativeRelationships": [
             {
-                "name": "Sharon",
-                "surnames": "Vlaovic-Sorensen",
-                "title": "My supervisor",
-                "description": "Daniel was the perfect leader and he achieved all the goals assigned to the Departement but the most important thing is he's also a great colleague.",
+                "name": "Diego",
+                "surnames": "Arrola",
+                "title": "Fundador y General Partner del fondo de capital-riesgo K Fund",
+                "description": "Me aporta información sobre el ecosistema startup desde el punto de vista del inversor.",
                 "contact": {
                     "publicProfiles": [
                         {
+                            "type": "linkedin",
+                            "URL": "https://www.linkedin.com/in/inakiarrola"
+                        },
+                      	{
                             "type": "other",
-                            "URL": "https://www.getmanfred.com/mac/david"
+                            "URL": "https://twitter.com/arrola"
                         }
-                    ],
-                    "phoneNumbers": [
-                        {
-                            "countryCode": 34,
-                            "number": "616100584"
-                        }
-                    ],
-                    "contactMails": [
-                        "your.name@mail.com"
                     ]
-                },
-                "avatar": {
-                    "alt": "picture of Mike Gomez",
-                    "link": "https://images.assetsdelivery.com/compings_v2/thesomeday123/thesomeday1231709/thesomeday123170900021.jpg"
+                }
+            },
+          	{
+                "name": "Diego",
+                "surnames": "Mariño",
+                "title": "Fundador de Ducksboard y antiguo Principal Product Manager en New Relic",
+                "description": "Amigo con el que siempre valido ideas y estrategias de Product Management.
+",
+                "contact": {
+                    "publicProfiles": [
+                        {
+                            "type": "linkedin",
+                            "URL": "https://www.linkedin.com/in/diegomarino"
+                        }
+                    ]
+                }
+            },
+          	{
+                "name": "Alberto",
+                "surnames": "Molpeceres",
+                "title": "Fundador de Devengo",
+                "description": "Consulto habitualmente su opinión sobre decisiones importantes a nivel de ejecución y gestión de operaciones.",
+                "contact": {
+                    "publicProfiles": [
+                        {
+                            "type": "linkedin",
+                            "URL": "https://www.linkedin.com/in/molpe"
+                        }
+                    ]
                 }
             }
         ],
@@ -64,49 +99,49 @@
             {
                 "topic": "First computer",
                 "fact": "Amstrad CPC 464"
-            }
-        ],
-        "currentSalary": {
-            "currency": "Lorem",
-            "amount": 56,
-            "relevantPerks": [
-                "Lorem"
-            ]
-        },
-        "noticePeriod": 13,
+            },
+          	{                
+                "fact": "Formar parte del equipo que implementó la **pasarela de pago** online del BBVA Definir, diseñar, desarrollar y lanzar un **ERP** y un **WMS** completos, desde cero, en sólo siete años."
+            },
+          	{                
+                "fact": "Trabajar como **evangelista técnico** en una prometedora startup australiana y dejarla cuando estaba a punto de empezar a cotizar en el NASDAQ, triplicando las ventas en los territorios a mi cargo para contribuir al éxito colectivo."
+            },
+          	{                
+                "fact": "Lanzar una campaña de **captación de talento técnico** y conseguir atraer a cientos de personas a Madrid para las pruebas de selección y cobertura en TV."
+            },
+          	{                
+                "fact": "Fundar una **startup** y cerrar una ronda de 330.000€ de inversión de capital-riesgo."
+            },
+          	{                
+                "fact": "Concebir, desarrollar y lanzar dos productos web que llegaron a transaccionar €1M anuales en **ventas afiliadas**. Vender ambos y gestionar todo el proceso legal previo y posterior."
+            },
+          	{                
+                "fact": "Enviar una **newsletter** sobre tecnología, todos los domingos desde hace más de seis años, que más de 15.000 personas quieren recibir."
+            },
+          	{                
+                "fact": "Organizar un evento anual sobre tecnología que vende todas sus entradas en unos pocos segundos."
+            },
+          	{                
+                "fact": "Ser **CEO** de una compañía fundada por otros."
+            },
+          	{                
+                "fact": "Gestionar la implementación y cumplimiento de la **LOPD** y el **RGPD**."
+            },
+          	{                
+                "fact": "Completar todos los trámites legales, operativos y fiscales necesarios para abrir la filial de una compañía multinacional en Bilbao."
+            }                    
+        ],        
         "recommendations": [
             {
-                "title": "Lorem",
-                "type": "web",
-                "URL": "Lorem",
+                "title": "High Output Management",
+                "type": "reading",                
                 "author": {
-                    "name": "Sharon",
-                    "surnames": "Vlaovic-Sorensen",
-                    "title": "My supervisor",
-                    "description": "Daniel was the perfect leader and he achieved all the goals assigned to the Departement but the most important thing is he's also a great colleague.",
-                    "contact": {
-                        "publicProfiles": [
-                            {
-                                "type": "other",
-                                "URL": "https://www.getmanfred.com/mac/david"
-                            }
-                        ],
-                        "phoneNumbers": [
-                            {
-                                "countryCode": 34,
-                                "number": "616100584"
-                            }
-                        ],
-                        "contactMails": [
-                            "your.name@mail.com"
-                        ]
-                    },
-                    "avatar": {
-                        "alt": "picture of Mike Gomez",
-                        "link": "https://images.assetsdelivery.com/compings_v2/thesomeday123/thesomeday1231709/thesomeday123170900021.jpg"
-                    }
-                },
-                "summary": "Lorem"
+                    "name": "Andrew S.",
+                    "surnames": "Grove",
+                    "title": "Former Chairman and CEO of Intel"       
+                },                    
+                "summary": "Un buen manual sobre cómo organizar el trabajo y dirigir equipos para responsables de todos los niveles."
+                
             }
         ]
     },
@@ -114,69 +149,172 @@
         "jobs": [
             {
                 "organization": {
-                    "name": "Stanford University",
-                    "description": "Lorem",
-                    "URL": "https://www.stanford.edu/",
+                    "name": "Manfred",
+                    "description": "Plataforma de Talento y agencia de recruiting técnico",
+                    "URL": "https://www.getmanfred.com/",
                     "image": {
-                        "alt": "picture of Mike Gomez",
-                        "link": "https://images.assetsdelivery.com/compings_v2/thesomeday123/thesomeday1231709/thesomeday123170900021.jpg"
+                        "alt": "Logo de Manfred",
+                        "link": "https://pbs.twimg.com/profile_images/946845160004112384/ap8_xjIa_400x400.jpg"
                     },
                     "location": {
-                        "country": "US",
-                        "region": "California",
-                        "municipality": "San Francisco",
-                        "postalCode": "Lorem",
-                        "address": "Lorem",
-                        "notes": "Lorem"
+                        "country": "ES",
+                        "region": "Madrid",
+                        "municipality": "Madrid",
+                        "postalCode": "28034",
+                        "address": "Labastida 1"
                     }
                 },
-                "type": "bigCorp",
+                "type": "startup",
                 "roles": [
                     {
-                        "name": "Developer",
-                        "startDate": "2019-06-20",
-                        "finishDate": "2022-02-14",
+                        "name": "Fundador",
+                        "startDate": "2018-06-20",
                         "challenges": [
                             {
-                                "description": "Lorem",
+                                "description": "Adaptación de la organización y procesos de la empresa para escalar las operaciones de la misma.",
                                 "actions": [
-                                    "Lorem"
+                                    "Implementación de la Holocracia como sistema de gestión.",
+                                  	"Optimización de los procesos de hiring"
+                                ]
+                            },
+                          	{
+                                "description": "Desarrollo de producto propio para escalar las operaciones de la compañía, especialmente la aportación de valor a candidatos.",
+                                "actions": [
+                                    "Definición de visión y alcance de producto.",
+                                  	"Definición de primer roadmap.",
+                                  	"Validación de la implementación de funcionalidades."
+                                ]
+                            },
+                          	{
+                                "description": "Culminación del [proceso de compraventa](https://bonillaware.com/manfred-sngular) de la compañía por parte de Sngular, manteniendo el núcleo de empleados de la compañía y sin que la productividad o las ventas se resintieran antes, durante y después del mismo."                                
+                            },
+                          	{
+                                "description": "Creación y publicación de contratos open source (candidatos y empresas) para construir un marco legal para una empresa de recruiting.",
+                                "actions": [
+                                    "Definición de alcance y condiciones de contratos para empresas y representados",
+                                  	"Gestión del repositorio en GitHub para permitir su publicación y consulta así como potenciales pull requests."
+                                ]
+                            },
+                          	{
+                                "description": "Definición del modelo de datos y los procesos necesarios para identificar, clasificar y gestionar perfiles de profesionales técnicos.",
+                                "actions": [
+                                  	"Proceso de onboarding de representados.",
+                                  	"Perfilado de candidatos",
+                                  	"Presentación de representados a potenciales empleadores",
+                                  	"Recepción de ofertas de empleadores"                     
+                                ]
+                            },
+                          	{
+                                "description": "Definición de formato CV extendido.",
+                                "actions": [
+                                  	"Definición de estructura de CV optimizado para búsqueda",
+                                  	"Creación de plantilla y ejemplos"                     
+                                ]
+                            },
+                          	{
+                                "description": "Definición e implementación de la web de la compañía.",
+                                "actions": [
+                                  	"Definición de interfaces",
+                                  	"Redacción de Copy",
+                                  	"Implementación de copy y links definitivos en el HTML base"
                                 ]
                             }
                         ],
                         "means": [
                             {
-                                "name": "Excel",
-                                "type": "domain",
-                                "description": "Formule modeling and complex calculations"
+                                "name": "Balsamiq Mockups",
+                                "type": "tool",
+                                "description": "An app to create low-fi definitions of interfaces"
+                            },
+                          	{
+                                "name": "Atlassian Confluence",
+                                "type": "tool",
+                            },
+                          	{
+                                "name": "Atlassian JIRA",
+                                "type": "tool",
+                            },
+                          	{
+                                "name": "GitHub",
+                                "type": "tool",
+                            },
+                          	{
+                                "name": "BitBucket",
+                                "type": "tool",
+                            },
+                          	{
+                                "name": "AWS",
+                                "type": "tool",
+                            },
+                          	{
+                                "name": "Airtable",
+                                "type": "tool",
+                            },                          	
+                          	{
+                                "name": "GoogleDocs",
+                                "type": "tool",
+                            },
+                          	{
+                                "name": "Trello",
+                                "type": "tool",
+                            },
+                          	{
+                                "name": "Nginx",
+                                "type": "tool",
+                            },
+                          	{
+                                "name": "Gulp",
+                                "type": "tool",
+                            },
+                          	{
+                                "name": "VisualStudio Code",
+                                "type": "tool",
+                            },
+                          	{
+                                "name": "Less",
+                                "type": "technology",
+                            },
+                          	{
+                                "name": "NodeJS",
+                                "type": "technology",
+                            },
+                          	{
+                                "name": "React",
+                                "type": "technology",
+                            },
+                          	{
+                                "name": "Git",
+                                "type": "technology",
                             }
                         ],
                         "referrals": [
                             {
-                                "name": "Sharon",
-                                "surnames": "Vlaovic-Sorensen",
-                                "title": "My supervisor",
-                                "description": "Daniel was the perfect leader and he achieved all the goals assigned to the Departement but the most important thing is he's also a great colleague.",
+                                "name": "Jose Luis",
+                                "surnames": "Vallejo",
+                                "title": "Presidente de SNGULAR",
                                 "contact": {
                                     "publicProfiles": [
                                         {
-                                            "type": "other",
-                                            "URL": "https://www.getmanfred.com/mac/david"
+                                            "type": "linkedin",
+                                            "URL": "https://www.linkedin.com/in/jlvallejo/"
                                         }
-                                    ],
-                                    "phoneNumbers": [
-                                        {
-                                            "countryCode": 34,
-                                            "number": "616100584"
-                                        }
-                                    ],
-                                    "contactMails": [
-                                        "your.name@mail.com"
                                     ]
-                                },
-                                "avatar": {
-                                    "alt": "picture of Mike Gomez",
-                                    "link": "https://images.assetsdelivery.com/compings_v2/thesomeday123/thesomeday1231709/thesomeday123170900021.jpg"
+                                }
+                            },
+                          	{
+                                "name": "Yago",
+                                "surnames": "Cousiño Estevez",
+                                "title": "Primer empleado de Manfred",
+                                "contact": {
+                                    "publicProfiles": [
+                                        {
+                                            "type": "linkedin",
+                                            "URL": "https://www.linkedin.com/in/yago-cousi%C3%B1o-13533261/"
+                                        }
+                                    ],
+                                  	"contactMails" : [
+                                    	"yago@getmanfred.com"
+                                   	]
                                 }
                             }
                         ]
@@ -288,7 +426,7 @@
             }
         ]
     },
-    "education": {
+    "knowledge": {
         "languages": [
             {
                 "name": "EN",
@@ -305,11 +443,35 @@
         ],
         "softSkills": [
             {
-                "name": "Strategic Vision",
-                "type": "domain",
-                "description": "Lorem",
+                "name": "Liderazgo",
+                "type": "practice",
+                "description": "Liderar equipos/organizaciones para que alcancen los objetivos marcados, en tiempo y presupuesto, sin incrementar la rotación de personal.",
                 "level": "expert"
+            },
+          	{
+                "name": "Atraer talento y retenerlo",
+                "type": "practice",               
+                "level": "expert"
+            },
+          	{
+                "name": "Orientado a resultados",
+                "type": "practice",
+              	"description": "Acabar proyectos, además de empezarlos.",
+                "level": "expert"
+            },
+          	{
+                "name": "Comunicación",
+                "type": "practice",
+              	"description": "Comunicar lo que hago, cómo lo hago y -sobre todo- por qué lo hago, tanto de forma oral como escrita, con cierta efectividad.",
+                "level": "expert"
+            },
+          	{
+                "name": "Logística",
+                "type": "domain",
+              	"description": "Conocimientos avanzados de aprovisionamiento, almacenamiento, gestión y distribución de bienes",
+                "level": "high"
             }
+          
         ],
         "studies": [
             {
@@ -451,9 +613,21 @@
             ]
         },
         "goals": [
-            {
-                "title": "Learn German",
-                "description": "Write and speak German fluently"
+            {                
+                "description": "Me gustaría trabajar en una compañía donde disfrutar de compañeros con orígenes y trayectorias vitales y profesionales diversas, pero que compartan mis valores y mi visión sobre la gestión empresarial en general y el desarrollo de software en particular."
+            },
+          	{                
+              	"title" : "Transparencia",  
+              	"description": "Creo en la transparencia corporativa, en que la actividad, rendimiento, aciertos y fracasos de mis equipos deben ser visibles para el resto de la empresa."
+            },
+          	{                
+                "description": "Creo que una organización tiene que obsesionarse con cumplir sus objetivos, no con las horas que sus empleados pasan dentro de un edificio."
+            },
+          	{                
+                "description": "Creo que un buen líder no empuja ni arrastra a un equipo, sino que le señala el objetivo a alcanzar y le ayuda a no alejarse de la ruta para hacerlo."
+            },
+          	{                
+                "description": "Creo que la construcción de software es un esfuerzo colaborativo y me gusta sentir que mi trabajo ha contribuido al mismo. Pero sobre todo me gusta construir cosas útiles. Tanto como para que la gente esté dispuesta a pagar por ellas."
             }
         ]
     }
