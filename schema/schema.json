@@ -82,6 +82,7 @@
                 },
                 "significativeRelationships": {
                     "type": "array",
+                    "description": "Friends or colleagues with whom I have worked or not, whose relationship with me can help define me as a professional.",
                     "additionalItems": false,
                     "minItems": 1,
                     "uniqueItems": true,
@@ -115,7 +116,6 @@
                         },
                         "additionalProperties": false,
                         "required": [
-                            "topic",
                             "fact"
                         ]
                     }
@@ -148,6 +148,7 @@
                 },
                 "recommendations": {
                     "type": "array",
+                    "description": "Content I like and recommend that can help define me as a professional.",
                     "additionalItems": false,
                     "minContains": 1,
                     "items": {
