@@ -1233,7 +1233,9 @@
                 "NGO",
                 "startup",
                 "SME",
-                "bigCorp"
+                "bigCorp",
+                "academicalInstitution",
+                "other"
             ],
             "$comment": "TBD Refactor to extract the enumeration \"OrganizationType\" (used in jobs/roles/organization or careerPreferences/preferredOrganizations) to a common definition file."
         },

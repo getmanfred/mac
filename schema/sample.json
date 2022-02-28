@@ -10,7 +10,7 @@
             "surnames": "Bonilla Fuertes",
             "title": "Fundador en Manfred / C-Level Executive"
             ,
-            "description": "Llevo casi dos décadas desarrollando software, ocupando puestos a lo largo de toda la cadena de valor -programacion, diseño de producto, marketing, ventas y gestión de equipos, departamentos y empresas- pero creo que el rol donde se cruzan mi vocación, mis habilidades y las necesidades de la mayoría de las empresas es en la gestión de equipos y proyectos de construcción de activos digitales.\r\rMe apasiona contribuir en todo el ciclo de vida de un producto o servicio informático, desde la definición hasta el mantenimiento o soporte a clientes, y también involucrarme en la comercialización del mismo.\r\rMe gusta trabajar con gente y para la gente. Como responsable de equipos, mi principal prioridad siempre es eliminar cualquier problema que les impida alcanzar todo su potencial. También procuro devolver a la Comunidad informática parte del valor y el conocimiento que me han aportado a lo largo de mi carrera profesional, dando charlas o colaborando con grupos de usuarios y conferencias técnicas; y, a veces, organizándolos.
+            "description": "Llevo casi dos décadas desarrollando software, ocupando puestos a lo largo de toda la cadena de valor -programacion, diseño de producto, marketing, ventas y gestión de equipos, departamentos y empresas- pero creo que el rol donde se cruzan mi vocación, mis habilidades y las necesidades de la mayoría de las empresas es en la gestión de equipos y proyectos de construcción de activos digitales.\n\nMe apasiona contribuir en todo el ciclo de vida de un producto o servicio informático, desde la definición hasta el mantenimiento o soporte a clientes, y también involucrarme en la comercialización del mismo.\n\nMe gusta trabajar con gente y para la gente. Como responsable de equipos, mi principal prioridad siempre es eliminar cualquier problema que les impida alcanzar todo su potencial. También procuro devolver a la Comunidad informática parte del valor y el conocimiento que me han aportado a lo largo de mi carrera profesional, dando charlas o colaborando con grupos de usuarios y conferencias técnicas; y, a veces, organizándolos.
 ",  
             "avatar": {
                 "alt": "foto de David Bonilla",
@@ -129,7 +129,31 @@
             },
           	{                
                 "fact": "Completar todos los trámites legales, operativos y fiscales necesarios para abrir la filial de una compañía multinacional en Bilbao."
-            }                    
+            },
+            {
+              	"topic" : "¿Cuáles son tus principales herramientas de trabajo (IDEs, editores de texto, clientes de correo, Excel...) y cómo las utilizas (plugins, configuraciones, trucos)?",
+              	"fact" : "Organizo mi tareas personales con **Passion Planner** (un sistema offline) y las profesionales con **Jira** y **Trello**.Tengo tableros compartidos con distintos equipos de trabajo. Uso labels y fechas de entrega para priorizar mi trabajo.\n\nProgramo HTML/CSS/JavaScript con **Visual Studio Code**. Uso algunas extensiones como ‘GitHistory’, ‘Paste JSON as Code’, o ‘Bookmarks’, pero tanto el trabajo con **Git** como la construcción y la construcción con **Gulp** me gusta hacerlo por línea de comandos.\n\nTambién uso bastante **Postman**, además de para hacer pruebas, directamente como interfaz para APIs REST que tengo en producción."
+            },
+            {
+              	"topic" : "¿Qué recursos online (webs, blogs, apps, foros, etc) usas para ayudarte a desempeñar tu trabajo?",
+              	"fact" : "Para informarme de lo más relevante del sector, uso bastante **Twitter** y tengo varias listas específicas por temas. También leo regularmente [Hacker News](https://news.ycombinator.com/) y [Increment](https://increment.com/) y escucho podcasts como[Más que Startups](https://masquestartups.com/).\n\nSi me atasco con algo de código suelo googlear bastante, no tengo un sitio de referencia al que ir, pero muchas veces acabo -supongo que como todos- en [StackOverflow](https://stackoverflow.com/).\n\nPertenezco a un canal de Slack llamado **‘Camaradas del Metal’** donde unas pocas decenas de personas con bastante experiencia suelen comentar y dar contexto a las noticias relacionadas con el emprendimiento tecnológico."
+            },
+            {
+              	"topic" : "¿Qué nuevas tecnologías y/o herramientas te llaman especialmente la atención y por qué?",
+              	"fact" : "Soy muy fan de **Git**, no sólo aplicado al código sino prácticamente a cualquier trabajo colaborativo como documentación o contratos.\n\nMe gusta mucho todo el Ecosistema JavaScript que va más allá del navegador (**React**, **Node**) porque me permite trabajar desde el interfaz a la base de datos (con MongoDB) con la misma sintaxis.\n\nTambién me interesa mucho las posibilidades que puede aportar **Blockchain** para cambiar por completo y democratizar el acceso a según qué sectores y nichos, antes vetados a unos pocos."
+            },
+            {
+              	"topic" : "¿Hay alguna empresa tecnológica que te llame la atención por lo bien que lo está haciendo?",
+              	"fact" : "Creo que [Microsoft](https://www.microsoft.com/es-es/) está dando los pasos correctos para crear todo un sistema de tooling y despliegue que puede atraer a los programadores.\n\nTambién me gusta todo lo que está construyendo [GitLab](https://about.gitlab.com/) y como lo está vendiendo, con una gran documentación y muchísima transparencia."
+            },
+            {
+              	"topic" : "¿Cómo intentas mantener actualizados tus conocimientos y habilidades profesionales?",
+              	"fact" : "Leo todo lo que puedo, pero sobre todo intento hacer pequeños *side projects* que me ayuden a automatizar tareas repetitivas o especialmente pesadas."
+            },
+            {
+              	"topic" : "¿Sueles compartir tu conocimiento por algún canal (posts, foros, contribución a open source, charlas públicas etc)?",
+              	"fact" : "Tengo una lista de correo llamada la [Bonilista](https://www.bonilista.com/) en la que escribo un artículo semanal sobre mis experiencias o temas que me interesan. También organizo —junto a más voluntarios— un evento anual sobre construcción de productos/proyectos digitales llamado [Tarugoconf](https://www.tarugoconf.com/) y suelo participar en distintas conferencias y grupos de usuarios."
+            }
         ],        
         "recommendations": [
             {
@@ -430,54 +454,83 @@
                         ]
                     }
                 ]
+            },
+          	{
+                "organization": {
+                    "name": "Instituto de Empresa"  
+                },
+                "type": "academicalInstitution",
+                "roles": [
+                    {
+                        "name": "Profesor asociado de productividad y metodologías ágiles",
+                        "startDate" : "2015-04-12"
+                    }
+                ]
             }
         ],        
         "publicArtifacts": [
             {
                 "details": {
-                    "name": "Stanford University",
-                    "description": "Lorem",
-                    "URL": "https://www.stanford.edu/",
-                    "image": {
-                        "alt": "picture of Mike Gomez",
-                        "link": "https://images.assetsdelivery.com/compings_v2/thesomeday123/thesomeday1231709/thesomeday123170900021.jpg"
-                    },
-                    "location": {
-                        "country": "US",
-                        "region": "California",
-                        "municipality": "San Francisco",
-                        "postalCode": "Lorem",
-                        "address": "Lorem",
-                        "notes": "Lorem"
-                    }
+                    "name": "JSON Schema: dotando a tus datos de un formato y a tus APIs de un contrato | T3chFest 2019",
+                    "URL": "https://www.youtube.com/watch?v=KB2DkeQo8d8"
                 },
-                "type": "video",
-                "publishingDate": "2011-06-14",
+                "type": "talk",
+                "publishingDate": "2019-03-22",
                 "means": [
                     {
-                        "name": "Excel",
-                        "type": "domain",
-                        "description": "Formule modeling and complex calculations"
+                        "name": "JSON",
+                        "type": "technology"                        
+                    },
+                  	{
+                        "name": "recruiting",
+                        "type": "domain"                        
                     }
                 ]
+            },
+          	{
+                "details": {
+                    "name": "Tarugoconf",
+                  	"description" : "Organizador del evento más gallego y awesómico del mundo.",
+                    "URL": "https://www.tarugoconf.com/",
+                  	"image" : {
+                      "alt" : "Logo de la Tarugoconf",
+                      "link" : "https://www.tarugoconf.com/img/logo-tarugo.png"
+                    }
+                },
+                "type": "sideProject"                
             }
         ]
     },
     "knowledge": {
         "languages": [
+          	{
+                "name": "ES",
+                "level": "native"
+            },
             {
                 "name": "EN",
-                "level": "native"
+                "level": "high"
+            },
+            {
+                "name": "GL",
+                "level": "basic"
             }
         ],
         "hardSkills": [
             {
-              "skill" : {
-                	"name": "Excel",
-                	"type": "hardware",
-                	"description": "Lorem"
-              },
-              "level": "expert"
+              	"skill" : {
+                	"name": "JIRA",
+                	"type": "tool",
+                	"description": "Administración, configuración y gestión avanzada de JIRA."
+              	},
+              	"level": "expert"
+            },
+          	{
+          		"skill" : {
+                	"name": "JAVA",
+                	"type": "technology"
+              	},
+              	"level": "high"
             }
         ],
         "softSkills": [
@@ -524,36 +577,60 @@
         ],
         "studies": [
             {
-                "studyType": "selfTraining",
-                "degreeAchieved": true,
-                "name": "Software Engineering",
+                "studyType": "officialDegree",
+                "degreeAchieved": false,
+                "name": "Ingeniería Técnica Informática",
                 "description": "Computer Science Grade",
-                "startDate": "2011-06-14",
-                "finishDate": "2011-06-14",
+                "startDate": "2002-09-15",
+                "finishDate": "2006-06-30",
                 "institution": {
-                    "name": "Stanford University",
-                    "description": "Lorem",
-                    "URL": "https://www.stanford.edu/",
+                    "name": "UOC",
+                    "description": "Universitat Oberta de Catalunya",
+                    "URL": "https://www.uoc.edu/",
                     "image": {
-                        "alt": "picture of Mike Gomez",
-                        "link": "https://images.assetsdelivery.com/compings_v2/thesomeday123/thesomeday1231709/thesomeday123170900021.jpg"
+                        "alt": "logo de UOC",
+                        "link": "https://upload.wikimedia.org/wikipedia/commons/1/1b/Logo_UOC.svg"
                     },
                     "location": {
-                        "country": "US",
-                        "region": "California",
-                        "municipality": "San Francisco",
-                        "postalCode": "Lorem",
-                        "address": "Lorem",
-                        "notes": "Lorem"
+                        "country": "ES",
+                        "region": "Cataluña",
+                        "notes": "Universidad a distancia"
                     }
-                },
-                "linkedMeans": [
-                    {
-                        "name": "Excel",
-                        "type": "domain",
-                        "description": "Formule modeling and complex calculations"
+                }                
+            },
+          	{
+                "studyType": "unregulated",
+                "degreeAchieved": true,
+                "name": "Master en Desarrollo de Aplicaciones Web",
+                "description": "Computer Science Grade",
+                "startDate": "2000-09-15",
+                "finishDate": "2001-06-30",
+                "institution": {
+                    "name": "CFDTI IBM/La Caixa",
+                    "description": "Centro de Formación de Desarrollo de Tecnologías Informáticas una joint venture de IBM y La Caixa que, desgraciadamente, no perduró en el tiempo.",                    
+                    "location": {
+                        "country": "ES",
+                        "region": "Madrid",
+                      	"municipality" : "Madrid"                      
                     }
-                ]                
+                }                
+            },
+          	{
+                "studyType": "certification",
+                "degreeAchieved": true,
+                "name": "Certified Scrum Master",
+                "description": "Scrum Master certificado por la Scrum Alliance",
+                "startDate": "2007-05-14",
+                "finishDate": "2007-05-21",
+                "institution": {
+                    "name": "Scrum Alliance",
+                    "description": "Curso de certificación impartido por Ariel Ber",                    
+                    "location": {
+                        "country": "ES",
+                        "region": "Madrid",
+                      	"municipality" : "Madrid"                      
+                    }
+                }                
             }
         ]
     },
@@ -561,96 +638,119 @@
         "contact": {
             "publicProfiles": [
                 {
-                    "type": "other",
+                    "type": "manfred",
                     "URL": "https://www.getmanfred.com/mac/david"
                 }
-            ],
-            "phoneNumbers": [
-                {
-                    "countryCode": 34,
-                    "number": "616100584"
-                }
-            ],
-            "contactMails": [
-                "your.name@mail.com"
             ]
         },
         "status": "notAvailable",
         "requirements": {
             "compensation": {
                 "salary": {
-                    "currency": "USD",
-                    "from": 50000,
-                    "upto": 100000,
-                    "comments": "Lorem"
+                    "currency": "EUR",
+                    "from": 100000,
                 },
                 "equity": {
                     "mustHave": true,
-                    "from": 1.5,
-                    "upto": 10,
-                    "comments": "Lorem"
+                    "from": 10
                 },
                 "perks": {
                     "mustHave": [
-                        "Health Insurance"
+                        "Horario Flexible",
+                      	"BYOD"
                     ],
                     "niceToHave": [
-                        "Free Meals"
+                        "Seguro Médico",
+                      	"Clases de Idiomas",
                     ]
                 }
             },
             "contractTypes": [
-                "internship"
+                "permanent",
+              	"freelance"
             ],
             "location": {
                 "remoteOnly": false,
-                "openToRelocate": false,
+                "openToRelocate": true,
                 "openToRemote": true,
                 "workingAreas": [
                     {
                         "location": {
-                            "country": "US",
-                            "region": "California",
-                            "municipality": "San Francisco",
-                            "postalCode": "Lorem",
-                            "address": "Lorem",
-                            "notes": "Lorem"
+                            "country": "ES",
+                            "region": "Galicia",
+                            "municipality": "A Coruña",
                         },
                         "distanceFromMunicipality": {
-                            "unit": "Mi",
+                            "unit": "Km",
                             "amount": 20
+                        }
+                    },
+                  	{
+                        "location": {
+                            "country": "US",
+                            "region": "California"
+                        }
+                    },
+                  	{
+                        "location": {
+                            "country": "US",
+                            "region": "Colorado"
+                        }
+                    },
+                  	{
+                        "location": {
+                            "country": "DE"                           
+                        }
+                    },
+                  	{
+                        "location": {
+                            "country": "IT"
                         }
                     }
                 ],
-                "comments": "I don't want to work in the Financial District. There are no decent donuts shops"
+                "comments": "I could consider moving to the States, Germany or Italy if the project is interesting and it makes sense. Otherwise, I prefer to work remotely."
             }
         },
         "preferences": {
             "preferredMeans": [
                 {
-                    "name": "Excel",
-                    "type": "domain",
-                    "description": "Formule modeling and complex calculations"
+                    "name": "Agile",
+                    "type": "practice",
+                    "description": "Gestión ágil"
+                },
+              	{
+                    "name": "Holocracia",
+                    "type": "practice",
+                    "description": "Organizaciones Holocráticas"
                 }
             ],
             "discardedMeans": [
                 {
-                    "name": "Excel",
+                    "name": "organizaciones jerarquicas",
                     "type": "domain",
-                    "description": "Formule modeling and complex calculations"
+                    "description": "No quiero trabajar en un organización muy jerarquizada"
+                },
+              	{
+                    "name": "juegos de azar",
+                    "type": "domain"
+                },
+              	{
+                    "name": "tabaco",
+                    "type": "domain"
+                },
+              	{
+                    "name": "industria armamentistica",
+                    "type": "domain"
                 }
             ],
             "preferredOrganizations": [
-                "bigCorp"
-            ],
-            "discardedOrganizations": [
-                "bigCorp"
+                "startup",
+              	"academicalInstitution"
             ],
             "preferredRoles": [
-                "Product Manager"
-            ],
-            "discardedRoles": [
-                "Project Manager"
+              	"CEO",
+              	"CMO",
+              	"CPO"
             ]
         },
         "goals": [
