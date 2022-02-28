@@ -41,57 +41,11 @@
             "description": "Main data of the CV author",
             "properties": {
                 "profile": {
-                    "type": "object",
-                    "description": "Data about the author of this CV",
-                    "properties": {
-                        "name": {
-                            "type": "string",
-                            "description": "name of the CV author",
-                            "examples": [
-                                "David"
-                            ]
-                        },
-                        "surnames": {
-                            "type": "string",
-                            "description": "surname (or surnames) of the CV author",
-                            "examples": [
-                                "Bonilla Fuertes"
-                            ]
-                        },
-                        "avatar": {
-                            "$ref": "#/$defs/image"
-                        },
-                        "birthday": {
-                            "type": "string",
-                            "description": "Your birth date in format yyyy-mm-dd",
-                            "format": "date",
-                            "examples": [
-                                "1977-07-26"
-                            ]
-                        },
-                        "whereILive": {
-                            "$ref": "#/$defs/location"
-                        }
-                    },
-                    "additionalProperties": false,
-                    "required": [
-                        "name",
-                        "surnames"
-                    ]
+                    "$ref": "#/$defs/person"
                 },
-                "headline": {
-                    "type": "string",
-                    "description": "You in a sentence.",
-                    "examples": [
-                        "Full-stack Developer at Manfred. Slow Marathoner. Rock'n'roll Accordionist."
-                    ]
-                },
-                "introduction": {
-                    "type": "string",
-                    "description": "A way to explain to your future company what kind of professional you are",
-                    "examples": [
-                        "I'm a developer interested on human-centric projects and videogames. I love my family. I hate broccoli."
-                    ]
+                "yearsOfExperience": {
+                    "type": "number",
+                    "description": "Relevant years of experience related with desired professional roles and goals."
                 },
                 "relevantLinks": {
                     "type": "array",
@@ -104,7 +58,7 @@
                             "type": {
                                 "type": "string",
                                 "enum": [
-                                    "linkedIn",
+                                    "linkedin",
                                     "github",
                                     "twitter",
                                     "website",
@@ -113,7 +67,7 @@
                             },
                             "URL": {
                                 "type": "string",
-                                "format": "hostname"
+                                "format": "uri"
                             },
                             "description": {
                                 "type": "string"
@@ -130,6 +84,7 @@
                     "type": "array",
                     "additionalItems": false,
                     "minItems": 1,
+                    "uniqueItems": true,
                     "items": {
                         "$ref": "#/$defs/person"
                     }
@@ -221,10 +176,7 @@
                     }
                 }
             },
-            "additionalProperties": false,
-            "required": [
-                "profile"
-            ]
+            "additionalProperties": false
         },
         "experience": {
             "type": "object",
@@ -945,8 +897,8 @@
                                         "type": "string",
                                         "enum": [
                                             "manfred",
-                                            "linkedIn",
-                                            "stackOverflow",
+                                            "linkedin",
+                                            "stackoverflow",
                                             "xing",
                                             "other"
                                         ],
@@ -1129,11 +1081,22 @@
                         "Daniel was the perfect leader and he achieved all the goals assigned to the Departement but the most important thing is he's also a great colleague."
                     ]
                 },
-                "contact": {
-                    "$ref": "#/$defs/contactMean"
+                "birthday": {
+                    "type": "string",
+                    "description": "Person's birth date in format yyyy-mm-dd",
+                    "format": "date",
+                    "examples": [
+                        "1977-07-26"
+                    ]
                 },
                 "avatar": {
                     "$ref": "#/$defs/image"
+                },
+                "contact": {
+                    "$ref": "#/$defs/contactMean"
+                },
+                "location": {
+                    "$ref": "#/$defs/location"
                 }
             },
             "additionalProperties": false,
@@ -1250,13 +1213,26 @@
                     "$comment": "TBD It could be validated depending on the Country/Region values."
                 },
                 "postalCode": {
-                    "type": "string"
+                    "type": "string",
+                    "examples": [
+                        "90001",
+                        "SW1W 0NY",
+                        "15001"
+                    ]
                 },
                 "address": {
-                    "type": "string"
+                    "type": "string",
+                    "examples": [
+                        "",
+                        "33 West 23rd Street, 2nd Floor",
+                        "Rua Emilia Pardo Bazán 18, 6ºB"
+                    ]
                 },
                 "notes": {
-                    "type": "string"
+                    "type": "string",
+                    "examples": [
+                        "Please, use the security code '6535' to get access to the mail boxes."
+                    ]
                 }
             },
             "additionalProperties": false
