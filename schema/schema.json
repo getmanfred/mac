@@ -107,11 +107,7 @@
                                 ]
                             },
                             "fact": {
-                                "type": "string",
-                                "examples": [
-                                    "Amstrad CPC 464",
-                                    "Atlético de Madrid"
-                                ]
+                                "type": "string"
                             }
                         },
                         "additionalProperties": false,
@@ -333,29 +329,13 @@
                 },
                 "hardSkills": {
                     "type": "array",
+                    "description": "hardSkills are a subset of mean types (tool, technology or hardware).",
                     "additionalItems": true,
-                    "$comment": "TBD hardSkill and softSkill should be a \"mean\" with a subset of \"type\" values. In case of hardSkills (tool, technology or hardware).",
                     "items": {
                         "type": "object",
                         "properties": {
-                            "name": {
-                                "type": "string",
-                                "examples": [
-                                    "Excel",
-                                    "IntelliJ IDEA",
-                                    "GitHub"
-                                ]
-                            },
-                            "type": {
-                                "type": "string",
-                                "enum": [
-                                    "tool",
-                                    "technology",
-                                    "hardware"
-                                ]
-                            },
-                            "description": {
-                                "type": "string"
+                            "skill": {
+                                "$ref": "#/$defs/mean"
                             },
                             "level": {
                                 "type": "string",
@@ -367,38 +347,19 @@
                                 ]
                             }
                         },
-                        "additionalProperties": false,
-                        "required": [
-                            "name",
-                            "type"
-                        ]
+                        "additionalProperties": false
                     }
                 },
                 "softSkills": {
                     "type": "array",
+                    "description": "softSkills are a subset of mean types (practice or domain)",
                     "additionalItems": true,
                     "minItems": 1,
-                    "$comment": "TBD hardSkill and softSkill should be a \"mean\" with a subset of \"type\" values. In case of hardSkills (tool, practice or domain).",
                     "items": {
                         "type": "object",
                         "properties": {
-                            "name": {
-                                "type": "string",
-                                "examples": [
-                                    "Strategic Vision",
-                                    "TDD",
-                                    "eCommerce"
-                                ]
-                            },
-                            "type": {
-                                "type": "string",
-                                "enum": [
-                                    "practice",
-                                    "domain"
-                                ]
-                            },
-                            "description": {
-                                "type": "string"
+                            "skill": {
+                                "$ref": "#/$defs/mean"
                             },
                             "level": {
                                 "type": "string",
@@ -410,11 +371,7 @@
                                 ]
                             }
                         },
-                        "additionalProperties": false,
-                        "required": [
-                            "name",
-                            "type"
-                        ]
+                        "additionalProperties": false
                     }
                 },
                 "studies": {
@@ -462,32 +419,7 @@
                                 "format": "date"
                             },
                             "institution": {
-                                "type": "object",
-                                "description": "Institution of education or company which awards academic degrees or professional certifications.",
-                                "properties": {
-                                    "name": {
-                                        "type": "string",
-                                        "examples": [
-                                            "Stanford University",
-                                            "IBM",
-                                            "Project Management Institute"
-                                        ]
-                                    },
-                                    "URL": {
-                                        "type": "string",
-                                        "format": "uri",
-                                        "examples": [
-                                            "https://www.stanford.edu/"
-                                        ]
-                                    },
-                                    "logo": {
-                                        "$ref": "#/$defs/image"
-                                    }
-                                },
-                                "additionalProperties": false,
-                                "required": [
-                                    "name"
-                                ]
+                                "$ref": "#/$defs/publicEntityDetails"
                             },
                             "linkedMeans": {
                                 "type": "array",
@@ -496,9 +428,6 @@
                                 "items": {
                                     "$ref": "#/$defs/mean"
                                 }
-                            },
-                            "publicEntity": {
-                                "$ref": "#/$defs/publicEntityDetails"
                             }
                         },
                         "additionalProperties": false,
@@ -1160,6 +1089,8 @@
                             "actions": {
                                 "type": "array",
                                 "additionalItems": true,
+                                "minContains": 1,
+                                "minItems": 1,
                                 "items": {
                                     "type": "string"
                                 }

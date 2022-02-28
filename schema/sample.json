@@ -218,6 +218,14 @@
                                   	"Redacción de Copy",
                                   	"Implementación de copy y links definitivos en el HTML base"
                                 ]
+                            },
+                          	{
+                                "description": "Apertura de nueva filial en Bilbao.",
+                                "actions": [
+                                  	"Definición de interfaces",
+                                  	"Redacción de Copy",
+                                  	"Implementación de copy y links definitivos en el HTML base"
+                                ]
                             }
                         ],
                         "means": [
@@ -268,6 +276,10 @@
                             },
                           	{
                                 "name": "VisualStudio Code",
+                                "type": "tool",
+                            },                          	
+                          	{
+                                "name": "Basecamp",
                                 "type": "tool",
                             },
                           	{
@@ -320,81 +332,106 @@
                         ]
                     }
                 ]
-            }
-        ],
-        "projects": [
-            {
-                "details": {
-                    "name": "Stanford University",
-                    "description": "Lorem",
-                    "URL": "https://www.stanford.edu/",
+            },
+          	{
+                "organization": {
+                    "name": "Comalatech",
+                    "description": "Herramientas para facilitar el trabajo colaborativo en el ecosistema de Atlassian Confluence.",
+                    "URL": "https://www.comalatech.com/",
                     "image": {
-                        "alt": "picture of Mike Gomez",
-                        "link": "https://images.assetsdelivery.com/compings_v2/thesomeday123/thesomeday1231709/thesomeday123170900021.jpg"
+                        "alt": "Logo de Comalatech",
+                        "link": "https://www.comalatech.com/wp-content/themes/comalatech/images/comalatech_logo.png?v=1.0.1"
                     },
                     "location": {
-                        "country": "US",
-                        "region": "California",
-                        "municipality": "San Francisco",
-                        "postalCode": "Lorem",
-                        "address": "Lorem",
-                        "notes": "Lorem"
+                        "country": "CA",
+                        "region": "British Columbia",
+                        "municipality": "Vancouver"                    
                     }
                 },
-                "type": "other",
+                "type": "startup",
                 "roles": [
                     {
-                        "name": "Developer",
-                        "startDate": "2019-06-20",
-                        "finishDate": "2022-02-14",
+                        "name": "CEO",
+                        "startDate" : "2017-02-01",
+                      	"finishDate" : "2018-06-30",
                         "challenges": [
                             {
-                                "description": "Lorem",
+                                "description": "Adaptación de todos los procesos de la compañía al nuevo RGPD",
                                 "actions": [
-                                    "Lorem"
+                                    "Definición de requisitos mínimos.",
+                                  	"Definición de plantillas a cumplimentar por cada nuevo proceso.",
+                                  	"Documentación de la adecuación de proveedores al reglamento.",
+									"Definición de la estrategia de petición de consentimiento a usuarios (actuales y nuevos).",
+									"Redacción de borradores de documentos legales previos a la revisión por departamento legal."
                                 ]
+                            },
+                          	{
+                                "description": "Apertura de nueva filial en Bilbao",
+                                "actions": [
+                                    "Documentación y propuesta para aprovechar las ventajas del régimen fiscal y normativo local.",
+                                  	"Reuniones con Administraciones locales (Diputación y Gobierno Vasco) para alcanzar acuerdos de colaboración previos al establecimiento.",
+                                  	"Selección y contratación de los primeros empleados.",
+									"Búsqueda de oficina representativa, adecuación y reforma de la misma.",
+									"Búsqueda de proveedores locales (fiscalidad y legal)"
+                                ]
+                            },
+                          	{
+                                "description": "Coordinación de actividades en Europa",
+                              	"actions" : [
+                                  	"Gestión de personal (contrataciones, finiquitos, incidencias).",
+                                  	"Establecimiento de centro logístico para materiales de marketing en España.",
+									"Gestión de la producción de materiales de marketing para distintos eventos."
+                                ]
+                            },
+                          	{
+                                "description": "Estandarización de contratos",
+                                "actions": [
+                                    "Diseño de políticas retributivas y condiciones laborales comunes para la plantilla en Canadá y España.",
+									"Negociación individual con cada uno de los empleados para la aceptación de las nuevas condiciones."
+                                ]
+                            },
+                          	{                                			"description": "Soporte"   
+                            },
+                          	{                                			"description": "Lanzamiento de Comala Agile Ranking"   
                             }
                         ],
                         "means": [
                             {
-                                "name": "Excel",
-                                "type": "domain",
-                                "description": "Formule modeling and complex calculations"
-                            }
+                                "name": "Basecamp",
+                                "type": "tool"
+                            },
+                          	{
+                                "name": "Atlassian Confluence",
+                                "type": "tool",
+                            },
+                          	{
+                                "name": "Atlassian JIRA",
+                                "type": "tool",                      
+                            },                          	         
+                          	{
+                                "name": "BlueJeans Videoconference",
+                                "type": "tool",
+                            }                          
                         ],
                         "referrals": [
                             {
-                                "name": "Sharon",
-                                "surnames": "Vlaovic-Sorensen",
-                                "title": "My supervisor",
-                                "description": "Daniel was the perfect leader and he achieved all the goals assigned to the Departement but the most important thing is he's also a great colleague.",
+                                "name": "Gorka",
+                                "surnames": "Puente",
+                                "title": "Group Product Manager en Comalatech",
                                 "contact": {
                                     "publicProfiles": [
                                         {
-                                            "type": "other",
-                                            "URL": "https://www.getmanfred.com/mac/david"
+                                            "type": "linkedin",
+                                            "URL": "https://www.linkedin.com/in/gorkapuente/"
                                         }
-                                    ],
-                                    "phoneNumbers": [
-                                        {
-                                            "countryCode": 34,
-                                            "number": "616100584"
-                                        }
-                                    ],
-                                    "contactMails": [
-                                        "your.name@mail.com"
                                     ]
-                                },
-                                "avatar": {
-                                    "alt": "picture of Mike Gomez",
-                                    "link": "https://images.assetsdelivery.com/compings_v2/thesomeday123/thesomeday1231709/thesomeday123170900021.jpg"
                                 }
                             }
                         ]
                     }
                 ]
             }
-        ],
+        ],        
         "publicArtifacts": [
             {
                 "details": {
@@ -435,41 +472,53 @@
         ],
         "hardSkills": [
             {
-                "name": "Excel",
-                "type": "hardware",
-                "description": "Lorem",
-                "level": "expert"
+              "skill" : {
+                	"name": "Excel",
+                	"type": "hardware",
+                	"description": "Lorem"
+              },
+              "level": "expert"
             }
         ],
         "softSkills": [
             {
-                "name": "Liderazgo",
-                "type": "practice",
-                "description": "Liderar equipos/organizaciones para que alcancen los objetivos marcados, en tiempo y presupuesto, sin incrementar la rotación de personal.",
-                "level": "expert"
+              "skill" : {
+                	"name": "Liderazgo",
+                	"type": "practice",
+                	"description": "Liderar equipos/organizaciones para que alcancen los objetivos marcados, en tiempo y presupuesto, sin incrementar la rotación de personal."
+              },
+              "level": "expert"
             },
           	{
-                "name": "Atraer talento y retenerlo",
-                "type": "practice",               
-                "level": "expert"
+              "skill" : {
+                	"name": "Atraer talento y retenerlo",
+                	"type": "practice"
+              },
+              "level": "expert"
             },
           	{
+              "skill" : {
                 "name": "Orientado a resultados",
                 "type": "practice",
-              	"description": "Acabar proyectos, además de empezarlos.",
-                "level": "expert"
+              	"description": "Acabar proyectos, además de empezarlos."
+              },
+              "level": "expert"
             },
           	{
-                "name": "Comunicación",
-                "type": "practice",
-              	"description": "Comunicar lo que hago, cómo lo hago y -sobre todo- por qué lo hago, tanto de forma oral como escrita, con cierta efectividad.",
-                "level": "expert"
+              "skill" : {
+                	"name": "Comunicación",
+                	"type": "practice",
+              		"description": "Comunicar lo que hago, cómo lo hago y -sobre todo- por qué lo hago, tanto de forma oral como escrita, con cierta efectividad."
+              },             
+              "level": "expert"
             },
           	{
-                "name": "Logística",
-                "type": "domain",
-              	"description": "Conocimientos avanzados de aprovisionamiento, almacenamiento, gestión y distribución de bienes",
-                "level": "high"
+              "skill" : {
+                	"name": "Logística",
+                	"type": "domain",
+              		"description": "Conocimientos avanzados de aprovisionamiento, almacenamiento, gestión y distribución de bienes"
+              },
+              "level": "high"
             }
           
         ],
@@ -482,21 +531,6 @@
                 "startDate": "2011-06-14",
                 "finishDate": "2011-06-14",
                 "institution": {
-                    "name": "Stanford University",
-                    "URL": "https://www.stanford.edu/",
-                    "logo": {
-                        "alt": "picture of Mike Gomez",
-                        "link": "https://images.assetsdelivery.com/compings_v2/thesomeday123/thesomeday1231709/thesomeday123170900021.jpg"
-                    }
-                },
-                "linkedMeans": [
-                    {
-                        "name": "Excel",
-                        "type": "domain",
-                        "description": "Formule modeling and complex calculations"
-                    }
-                ],
-                "publicEntity": {
                     "name": "Stanford University",
                     "description": "Lorem",
                     "URL": "https://www.stanford.edu/",
@@ -512,7 +546,14 @@
                         "address": "Lorem",
                         "notes": "Lorem"
                     }
-                }
+                },
+                "linkedMeans": [
+                    {
+                        "name": "Excel",
+                        "type": "domain",
+                        "description": "Formule modeling and complex calculations"
+                    }
+                ]                
             }
         ]
     },
