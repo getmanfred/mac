@@ -505,15 +505,15 @@
         "languages": [
           	{
                 "name": "ES",
-                "level": "native"
+                "level": "Native or bilingual proficiency"
             },
             {
                 "name": "EN",
-                "level": "high"
+                "level": "Full professional proficiency"
             },
             {
                 "name": "GL",
-                "level": "basic"
+                "level": "Elementary proficiency"
             }
         ],
         "hardSkills": [

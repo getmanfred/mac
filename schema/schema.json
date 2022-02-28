@@ -209,7 +209,6 @@
                                 "$comment": "TBD Refactor to extract the entity \"organization\" to a common definitions file.",
                                 "required": [
                                     "organization",
-                                    "type",
                                     "roles"
                                 ]
                             }
@@ -313,18 +312,24 @@
                             "level": {
                                 "type": "string",
                                 "enum": [
-                                    "basic",
-                                    "intermediate",
-                                    "high",
-                                    "native"
-                                ]
+                                    "Elementary proficiency",
+                                    "Limited working proficiency",
+                                    "Professional working proficiency",
+                                    "Full professional proficiency",
+                                    "Native or bilingual proficiency"
+                                ],
+                                "$comment": "TBD make it required."
                             }
                         },
                         "additionalProperties": false,
                         "required": [
-                            "name",
-                            "level"
-                        ]
+                            "name"
+                        ],
+                        "dependentRequired": {
+                            "level": [
+                                "name"
+                            ]
+                        }
                     }
                 },
                 "hardSkills": {
@@ -754,8 +759,7 @@
             },
             "additionalProperties": false,
             "required": [
-                "contact",
-                "status"
+                "contact"
             ]
         }
     },
