@@ -485,6 +485,11 @@
                         "name": "recruiting",
                         "type": "domain"                        
                     }
+                ],
+                "tags" : [
+                    "keynotes",
+                    "youtube",
+                    "t3chfest"
                 ]
             },
           	{
