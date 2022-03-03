@@ -250,7 +250,7 @@
                   ]
                 }
               ],
-              "means": [
+              "competences": [
                 {
                   "name": "Balsamiq Mockups",
                   "type": "tool",
@@ -419,7 +419,7 @@
                   "description": "Lanzamiento de Comala Agile Ranking"
                 }
               ],
-              "means": [
+              "competences": [
                 {
                   "name": "Basecamp",
                   "type": "tool"
@@ -476,7 +476,7 @@
           },
           "type": "talk",
           "publishingDate": "2019-03-22",
-          "means": [
+          "relatedCompetences": [
             {
               "name": "JSON",
               "type": "technology"
@@ -603,7 +603,7 @@
           }
         },
         {
-          "studyType": "unregulated",
+          "studyType": "certification",
           "degreeAchieved": true,
           "name": "Master en Desarrollo de Aplicaciones Web",
           "description": "Computer Science Grade",
@@ -716,7 +716,7 @@
         }
       },
       "preferences": {
-        "preferredMeans": [
+        "preferredCompetences": [
           {
             "name": "Agile",
             "type": "practice",
@@ -728,7 +728,7 @@
             "description": "Organizaciones Holocráticas"
           }
         ],
-        "discardedMeans": [
+        "discardedCompetences": [
           {
             "name": "organizaciones jerarquicas",
             "type": "domain",

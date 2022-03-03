@@ -396,13 +396,7 @@
                         "type": "object",
                         "properties": {
                             "studyType": {
-                                "type": "string",
-                                "enum": [
-                                    "officialDegree",
-                                    "certification",
-                                    "unregulated",
-                                    "selfTraining"
-                                ]
+                                "$ref": "#/$defs/studyType"
                             },
                             "degreeAchieved": {
                                 "type": "boolean",
@@ -1308,6 +1302,16 @@
                     "february"
                 ]
             }
+        },
+        "studyType": {
+            "type": "string",
+            "description": "Types of studies:\n\n* \"officialDegree\" is a degree accredited by the government (University Degree) or an external, recognized and independent agency (some MBAs).\n* \"certification\" is a degree accredited by a private institution (eg. Oracle Database Admin Certification or Projecr Management Institute PMP)\n* \"unaccredited\" is a course without any accreditation (eg. Coursera or Platzi courses), but this doesn't mean that is not valid, legit, or has poor quality\n* \"selfTraining\" is the study designed, managed and evaluated just by the own learner.",
+            "enum": [
+                "officialDegree",
+                "certification",
+                "unaccredited",
+                "selfTraining"
+            ]
         }
     }
 }
