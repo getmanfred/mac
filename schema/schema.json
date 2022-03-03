@@ -277,13 +277,12 @@
                                         "type": "string",
                                         "format": "date"
                                     },
-                                    "means": {
+                                    "relatedCompetences": {
                                         "type": "array",
                                         "additionalItems": false,
                                         "minContains": 1,
-                                        "$comment": "TBD Refactor to extract the entity \"mean\" (used in jobs, sideProjects and publicArtifacts) to a common definition. It should be the sum of hardSkills and softSkills (defined on education)",
                                         "items": {
-                                            "$ref": "#/$defs/mean"
+                                            "$ref": "#/$defs/competence"
                                         }
                                     },
                                     "tags": {
@@ -343,13 +342,13 @@
                 },
                 "hardSkills": {
                     "type": "array",
-                    "description": "hardSkills are a subset of mean types (tool, technology or hardware).",
+                    "description": "hardSkills are a subset of competence types (tool, technology or hardware).",
                     "additionalItems": true,
                     "items": {
                         "type": "object",
                         "properties": {
                             "skill": {
-                                "$ref": "#/$defs/mean"
+                                "$ref": "#/$defs/competence"
                             },
                             "level": {
                                 "type": "string",
@@ -366,14 +365,14 @@
                 },
                 "softSkills": {
                     "type": "array",
-                    "description": "softSkills are a subset of mean types (practice or domain)",
+                    "description": "softSkills are a subset of competence types (practice or domain)",
                     "additionalItems": true,
                     "minItems": 1,
                     "items": {
                         "type": "object",
                         "properties": {
                             "skill": {
-                                "$ref": "#/$defs/mean"
+                                "$ref": "#/$defs/competence"
                             },
                             "level": {
                                 "type": "string",
@@ -435,12 +434,12 @@
                             "institution": {
                                 "$ref": "#/$defs/publicEntityDetails"
                             },
-                            "linkedMeans": {
+                            "linkedCompetences": {
                                 "type": "array",
                                 "additionalItems": false,
                                 "minContains": 1,
                                 "items": {
-                                    "$ref": "#/$defs/mean"
+                                    "$ref": "#/$defs/competence"
                                 }
                             }
                         },
@@ -671,23 +670,23 @@
                 "preferences": {
                     "type": "object",
                     "properties": {
-                        "preferredMeans": {
+                        "preferredCompetences": {
                             "type": "array",
                             "description": "Skills, tools, domains or methodologies I like to work with",
                             "additionalItems": false,
                             "minItems": 1,
                             "minContains": 1,
                             "items": {
-                                "$ref": "#/$defs/mean"
+                                "$ref": "#/$defs/competence"
                             }
                         },
-                        "discardedMeans": {
+                        "discardedCompetences": {
                             "type": "array",
                             "description": "Skills, tools, domains or methodologies I don't like to work with",
                             "additionalItems": false,
                             "minItems": 1,
                             "items": {
-                                "$ref": "#/$defs/mean"
+                                "$ref": "#/$defs/competence"
                             }
                         },
                         "preferredOrganizations": {
@@ -779,9 +778,9 @@
         "careerPreferences"
     ],
     "$defs": {
-        "mean": {
+        "competence": {
             "type": "object",
-            "description": "Any means of production used to complete professional tasks (tools as \"Excel\", technologies as \"JAVA\", practices as \"TDD\", hardware as vehicles or construction tools, and domains as \"banking\" or \"russia\")",
+            "description": "Any competence used to complete professional tasks (tools proficiency as \"Excel\", technologies mastered as \"JAVA\", practices learned as \"TDD\", hardware you know how to handle as vehicles or construction tools, and know-how domains as \"banking\" or \"russia\")",
             "properties": {
                 "name": {
                     "type": "string",
@@ -1115,13 +1114,13 @@
                         ]
                     }
                 },
-                "means": {
+                "competences": {
                     "type": "array",
                     "additionalItems": false,
                     "minItems": 1,
                     "uniqueItems": true,
                     "items": {
-                        "$ref": "#/$defs/mean"
+                        "$ref": "#/$defs/competence"
                     }
                 },
                 "referrals": {
