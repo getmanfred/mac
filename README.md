@@ -4,6 +4,8 @@ The MAC (or Manfred Awesomic CV) is a(nother) naive attemp to create **a standar
 
 !["JSON Schema"](https://github.com/getmanfred/mac/blob/master/assets/readme/schema_screen_capture.png?raw=true "JSON Schema")
 
+!["MAC Sample"](https://github.com/getmanfred/mac/blob/master/assets/readme/MAC_sample.gif?raw=true "MAC Sample")
+
 ## Why use it
 
 TBD
