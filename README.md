@@ -13,3 +13,9 @@ You just need to copy, download or reference [the schema](https://github.com/get
 You can use **online validators** like [jsonschemavalidator.net](https://www.jsonschemavalidator.net/) or [liquid-technologies.com/online-json-schema-validator](https://www.liquid-technologies.com/online-json-schema-validator).
 
 !["JSON Schema"](https://github.com/getmanfred/mac/blob/master/assets/readme/MAC_online_validator_example.png?raw=true "JSON Schema")
+
+## Who use it
+
+A bunch of Tech Startups, IT Consulting Companies and Recruiting Platforms already use the MAC as an interchangeable format **to unlock the data of their users, candidates and employees and give them back the power to use it wherever they want**.
+
+<a href="https://www.getmanfred.com/" target="_blank"><img src="https://pbs.twimg.com/profile_images/946845160004112384/ap8_xjIa_400x400.jpg" alt="Manfred" width="170"/></a> <a href="https://www.sngular.com/" target="_blank"><img src="https://res.cloudinary.com/crunchbase-production/image/upload/c_lpad,h_170,w_170,f_auto,b_white,q_auto:eco,dpr_1/ympwkuxhx9lusfwrfbbb" alt="SNGULAR" width="170"/></a>
