@@ -4,11 +4,12 @@
 
 The MAC (or Manfred Awesomic CV) is a(nother) naive attemp to create **a standard open source format to define and share CVs**. The format is defined as a JSON Schema to validate CVs stored as JSON files.
 
-[Why use it](#why-use-it) •
-[How to use it](#how-to-use-it) •
-[Who use it](#why-use-it) •
-[Who are you?](#who-are-you) •
-[Roadmap](#roadmap)  
+[Why use it](#-why-use-it) •
+[How to use it](#-how-to-use-it) •
+[Who use it](#-who-use-it) •
+[Who are you?](#-who-are-you) •
+[How to contribute](#%EF%B8%8F-how-to-contribute) •
+[Spread the word!](#-spread-the-word)  
 <br />
 <br />
 <br />
@@ -19,7 +20,7 @@ The MAC (or Manfred Awesomic CV) is a(nother) naive attemp to create **a standar
   
 </div>  
 
-## Why use it
+## 🥘 Why use it
 
 There are A LOT of CV formats, and some of them are a nice try to define a universal CV format, but we think that **a CV should include not only what candidates are or know but also what they are interested in and what they want to become**.
 
@@ -29,7 +30,7 @@ Like most open-source projects, the first use case was found in the company wher
 !["MAC Design"](https://github.com/getmanfred/mac/blob/master/assets/readme/MAC_first_design.png?raw=true "MAC Design")
 
 
-## How to use it
+## 🪛 How to use it
 
 You just need to copy, download or reference [the schema](https://github.com/getmanfred/mac/blob/master/schema/schema.json) to validate a new CV, built as a JSON file from scratch, or a JSON generated previously (for example, [this sample](https://github.com/getmanfred/mac/blob/master/samples/deafult_sample.json)).
 
@@ -52,13 +53,13 @@ The Schema is documented by itself, but it's much easier to get "the big picture
 !["MAC Diagram"](https://github.com/getmanfred/mac/blob/master/assets/readme/MAC_diagram.png?raw=true "MAC Diagram")
 <br />
 
-## Who use it
+## 🎨 Who use it
 
 A bunch of Tech Startups, IT Consulting Companies and Recruiting Platforms already use the MAC as an interchangeable format **to unlock the data of their users, candidates and employees and give them back the power to use it wherever they want**.
 
 <a href="https://www.getmanfred.com/" target="_blank"><img alt="Manfred" src="https://pbs.twimg.com/profile_images/946845160004112384/ap8_xjIa_400x400.jpg" width="170"/></a> <a href="https://www.sngular.com/" target="_blank"><img alt="SNGULAR" src="https://res.cloudinary.com/crunchbase-production/image/upload/c_lpad,h_170,w_170,f_auto,b_white,q_auto:eco,dpr_1/ympwkuxhx9lusfwrfbbb" width="170"/></a> <a href="https://mobivery.com/" target="_blank"><img alt="MOBIVERY" src="https://pbs.twimg.com/profile_images/1494757617859760135/Cs05qCrQ_400x400.png" width="170"/></a>
 
-## Who are you?
+## 🤓 Who are you?
 
 The MAC was made with ❤️ and sentidiño in Galicia, Spain.
 
@@ -83,12 +84,20 @@ Right now the Council is formed by:
 
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
-## Roadmap
-
-TBD
-
-## How to contribute
+## ⚙️ How to contribute
 
 The MAC is an open-source project. We are committed to a fully transparent development process and appreciate highly any contributions. Whether you are helping us fix bugs, proposing new features, improving our documentation or spreading the word - we would love to have you as part of the MAC community.
 
 Please refer to our [Contribution Guidelines]() and [Code of Conduct](https://github.com/getmanfred/mac/blob/master/code_of_conduct.md).
+
+## 🌟 Spread the word!
+
+If you want to say thank you and/or support active development of the Well app:
+
+Add a GitHub Star to the project!
+Tweet about the project on your Twitter!
+Tag @colegawin_ and/or #thewellapp
+Leave us a review on the iOS App Store!
+Thanks so much for your interest in growing the reach of the Well app!
+
+PS: consider sponsoring me (Cole Gawin) to continue the development of this project on BuyMeACoffee :)
