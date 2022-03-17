@@ -101,7 +101,7 @@ Right now the Council is formed by:
 
 The MAC is an open-source project. We are committed to a fully transparent development process and appreciate highly any contributions. Whether you are helping us fix bugs, proposing new features, improving our documentation or spreading the word - we would love to have you as part of the MAC community.
 
-Please refer to our [Contribution Guidelines]() and [Code of Conduct](https://github.com/getmanfred/mac/blob/master/code_of_conduct.md).
+Please refer to our [Contribution Guidelines](https://github.com/getmanfred/mac/blob/master/CONTRIBUTING.md) and [Code of Conduct](https://github.com/getmanfred/mac/blob/master/code_of_conduct.md).
 
 ## ⚖️ License
 
