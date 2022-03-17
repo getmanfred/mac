@@ -15,7 +15,7 @@ The MAC (or Manfred Awesomic CV) is a(nother) naive attemp to create **a standar
 [Who use it](#-who-use-it) •
 [Who are you?](#-who-are-you) •
 [How to contribute](#%EF%B8%8F-how-to-contribute) •
-[License](#license) •
+[License](#%EF%B8%8F-license) •
 [Spread the word!](#-spread-the-word)  
 <br />
 <br />
@@ -105,7 +105,7 @@ Please refer to our [Contribution Guidelines]() and [Code of Conduct](https://gi
 
 ## ⚖️ License
 
-TBD
+The MAC is free and open-source software licensed and distributed under the Creative Commons Attribution Share Alike 4.0 International (CC BY-SA 4.0 International).
 
 ## 🌟 Spread the word!
 
