@@ -60,6 +60,8 @@ A bunch of Tech Startups, IT Consulting Companies and Recruiting Platforms alrea
 
 ## Who are you?
 
+The MAC was made with ❤️ and sentidiño in Galicia, Spain.
+
 As common in new projects, the individual or group who started the project also administers the project, establishes its vision, and controls permissions to merge code into it. **We have appointed a starting Council to manage the MAC**, formed by 2 people from Manfred and 2 independent members, but the plan is to hold formal elections, where contributors will vote for candidates for the Council as soon as the project gets a minimum maturity and adoption.
 
 Right now the Council is formed by:
@@ -81,11 +83,12 @@ Right now the Council is formed by:
 
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
-
 ## Roadmap
 
 TBD
 
 ## How to contribute
 
-TBD
+The MAC is an open-source project. We are committed to a fully transparent development process and appreciate highly any contributions. Whether you are helping us fix bugs, proposing new features, improving our documentation or spreading the word - we would love to have you as part of the MAC community.
+
+Please refer to our [Contribution Guidelines]() and [Code of Conduct](https://github.com/getmanfred/mac/blob/master/code_of_conduct.md).
