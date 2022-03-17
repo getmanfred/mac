@@ -47,7 +47,11 @@ You also have implementations to validate a JSON file programmatically in almost
 
 > :warning: **The current MAC Schema has been designed using the 2019-09 Specification Draft**: When choosing a validator, please, check if it's compliant with the 2019-09 Draft. You can get much more information about the JSON Schema Specification in [json-schema.org](https://json-schema.org/).
 
-The Schema is documented by itself, but it's much easier to get "the big picture" with a graphical representation:
+You can check **examples of how to use code to create and validate MAC files** in the [MAC/scripts](https://github.com/getmanfred/mac/tree/master/scripts) directory.
+
+---
+
+The Schema is documented by itself, but it's much easier to get "the big picture" with **a graphical representation**:
 <br />
 <br />
 !["MAC Diagram"](https://github.com/getmanfred/mac/blob/master/assets/readme/MAC_diagram.png?raw=true "MAC Diagram")
