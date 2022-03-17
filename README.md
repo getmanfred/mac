@@ -15,6 +15,7 @@ The MAC (or Manfred Awesomic CV) is a(nother) naive attemp to create **a standar
 [Who use it](#-who-use-it) •
 [Who are you?](#-who-are-you) •
 [How to contribute](#%EF%B8%8F-how-to-contribute) •
+[License](#license) •
 [Spread the word!](#-spread-the-word)  
 <br />
 <br />
@@ -101,6 +102,10 @@ Right now the Council is formed by:
 The MAC is an open-source project. We are committed to a fully transparent development process and appreciate highly any contributions. Whether you are helping us fix bugs, proposing new features, improving our documentation or spreading the word - we would love to have you as part of the MAC community.
 
 Please refer to our [Contribution Guidelines]() and [Code of Conduct](https://github.com/getmanfred/mac/blob/master/code_of_conduct.md).
+
+## ⚖️ License
+
+TBD
 
 ## 🌟 Spread the word!
 
