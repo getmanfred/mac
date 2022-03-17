@@ -94,10 +94,8 @@ Please refer to our [Contribution Guidelines]() and [Code of Conduct](https://gi
 
 If you want to say thank you and/or support active development of the Well app:
 
-Add a GitHub Star to the project!
-Tweet about the project on your Twitter!
-Tag @colegawin_ and/or #thewellapp
-Leave us a review on the iOS App Store!
-Thanks so much for your interest in growing the reach of the Well app!
+* Add a GitHub Star to the project!
+* Tweet about the project on your Twitter!
+** Tag @getmanfred and/or #AwesomicCV
 
-PS: consider sponsoring me (Cole Gawin) to continue the development of this project on BuyMeACoffee :)
+Thanks so much for your interest in growing the reach of the MAC!
