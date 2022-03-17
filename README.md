@@ -61,7 +61,7 @@ The Schema is documented by itself, but it's much easier to get "the big picture
 <br />
 <br />
 
-<a href="https://github.com/getmanfred/mac/blob/master/assets/readme/MAC_diagram.png" target="_blank"><img alt="MAC Diagram" src="https://github.com/getmanfred/mac/blob/master/assets/readme/MAC_diagram_small.png" /></a>
+<a href="https://github.com/getmanfred/mac/blob/master/assets/readme/MAC_diagram.png" target="_blank"><img alt="MAC Diagram" src="https://github.com/getmanfred/mac/blob/master/assets/readme/MAC_diagram_small.png"/></a>
 
 <br />
 
