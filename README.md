@@ -92,10 +92,10 @@ Please refer to our [Contribution Guidelines]() and [Code of Conduct](https://gi
 
 ## 🌟 Spread the word!
 
-If you want to say thank you and/or support active development of the Well app:
+If you want to say thank you and/or support active development of the MAC:
 
-* Add a GitHub Star to the project!
-* Tweet about the project on your Twitter!
-** Tag @getmanfred and/or #AwesomicCV
+- Add a GitHub Star to the project!
+- Tweet about the project on your Twitter!
+  - Tag [@getmanfred](https://twitter.com/getmanfred) and/or `#AwesomicCV`
 
 Thanks so much for your interest in growing the reach of the MAC!
