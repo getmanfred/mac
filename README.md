@@ -2,7 +2,7 @@
 
 # Manfred Awesomic CV
 
-The MAC (or Manfred Awesomic CV) is a(nother) naive attemp to create **a standard open source format to define and share CVs**. The format is defined as a JSON Schema to validate CVs stored as JSON files.
+The MAC (or Manfred Awesomic CV) is a(nother) naive attempt to create **a standard open source format to define and share CVs**. The format is defined as a JSON Schema to validate CVs stored as JSON files.
  
  <a href='https://github.com/getmanfred/mac/releases'>
   <img src='https://img.shields.io/github/v/release/getmanfred/mac?color=%23FDD835&label=version&style=for-the-badge&logo=JSON'>
@@ -12,8 +12,8 @@ The MAC (or Manfred Awesomic CV) is a(nother) naive attemp to create **a standar
  
 [Why use it](#-why-use-it) •
 [How to use it](#-how-to-use-it) •
-[Who use it](#-who-use-it) •
-[Who are you?](#-who-are-you) •
+[Who use it](#-who-uses-it) •
+[Who we are](#-who-we-are) •
 [How to contribute](#%EF%B8%8F-how-to-contribute) •
 [License](#%EF%B8%8F-license) •
 [Spread the word!](#-spread-the-word)  
@@ -66,13 +66,13 @@ The Schema is documented by itself, but it's much easier to get "the big picture
 
 <br />
 
-## 🎨 Who use it
+## 🎨 Who uses it
 
 A bunch of Tech Startups, IT Consulting Companies and Recruiting Platforms already use the MAC as an interchangeable format **to unlock the data of their users, candidates and employees and give them back the power to use it wherever they want**.
 
 <a href="https://www.getmanfred.com/" target="_blank"><img alt="Manfred" src="https://pbs.twimg.com/profile_images/946845160004112384/ap8_xjIa_400x400.jpg" width="170"/></a> <a href="https://www.sngular.com/" target="_blank"><img alt="SNGULAR" src="https://res.cloudinary.com/crunchbase-production/image/upload/c_lpad,h_170,w_170,f_auto,b_white,q_auto:eco,dpr_1/ympwkuxhx9lusfwrfbbb" width="170"/></a> <a href="https://mobivery.com/" target="_blank"><img alt="MOBIVERY" src="https://pbs.twimg.com/profile_images/1494757617859760135/Cs05qCrQ_400x400.png" width="170"/></a>
 
-## 🤓 Who are you?
+## 🤓 Who we are
 
 The MAC was made with ❤️ and sentidiño in Galicia, Spain.
 
