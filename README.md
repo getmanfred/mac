@@ -58,12 +58,8 @@ You can check **examples of how to use code to create and validate MAC files** i
 
 ---
 
-The Schema is documented by itself, but it's much easier to get "the big picture" with **a graphical representation**:
+The Schema is documented by itself, but it's much easier to get "the big picture" with [a graphical representation](https://github.com/getmanfred/mac/blob/master/assets/readme/MAC_diagram.png)
 <br />
-<br />
-
-<a href="https://github.com/getmanfred/mac/blob/master/assets/readme/MAC_diagram.png" target="_blank"><img alt="MAC Diagram" src="https://github.com/getmanfred/mac/blob/master/assets/readme/MAC_diagram_small.png"/></a>
-
 <br />
 
 ## 🎨 Who uses it
