@@ -2,23 +2,32 @@
 
 # Manfred Awesomic CV
 
-The MAC (or Manfred Awesomic CV) is a(nother) naive attemp to create **a standard open source format to define and share CVs**. The format is defined as [a JSON Schema](https://json-schema.org/) to validate CVs stored as JSON files.
-  
+The MAC (or Manfred Awesomic CV) is a(nother) naive attemp to create **a standard open source format to define and share CVs**. The format is defined as a JSON Schema to validate CVs stored as JSON files.
+
 [Why use it](#why-use-it) •
 [How to use it](#how-to-use-it) •
 [Who use it](#why-use-it) •
 [Who are you?](#who-are-you) •
 [Roadmap](#roadmap)  
-
+<br />
+<br />
+<br />
 !["JSON Schema"](https://github.com/getmanfred/mac/blob/master/assets/readme/schema_screen_capture.png?raw=true "JSON Schema")
 <br />
+ <br />
 !["MAC Sample"](https://github.com/getmanfred/mac/blob/master/assets/readme/MAC_sample.gif?raw=true "MAC Sample")
   
 </div>  
 
 ## Why use it
 
-There are A LOT of CV formats, and some of them are a nice try to define a universal CV format, but we think **that format should include not only what candidates are or know but also what they are interested in and what they want to become**. 
+There are A LOT of CV formats, and some of them are a nice try to define a universal CV format, but we think that **a CV should include not only what candidates are or know but also what they are interested in and what they want to become**.
+
+Like most open-source projects, the first use case was found in the company where the first contributors worked. Manfred is committed to the idea that **every person should keep control over their personal and professional data**. This means that they should be able to export their data from any platform in a machine-readable format with **a Model Definition to process that data efficiently**. This is how the MAC was born.
+
+
+!["MAC Design"](https://github.com/getmanfred/mac/blob/master/assets/readme/MAC_first_design.png?raw=true "MAC Design")
+
 
 ## How to use it
 
@@ -36,4 +45,8 @@ A bunch of Tech Startups, IT Consulting Companies and Recruiting Platforms alrea
 
 ## Who are you?
 
+TBD
 
+## Roadmap
+
+TBD
