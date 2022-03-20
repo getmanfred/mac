@@ -34,7 +34,7 @@ There are A LOT of CV formats, and some of them are a nice try to define a unive
 Like most open-source projects, the first use case was found in the company where the first contributors worked. Manfred is committed to the idea that **every person should keep control over their personal and professional data**. This means that they should be able to export their data from any platform in a machine-readable format with **a Model Definition to process that data efficiently**. This is how the MAC was born.
 
 
-!["MAC Design"](https://github.com/getmanfred/mac/blob/master/assets/readme/MAC_first_design.png?raw=true "MAC Design")
+!["MAC Design"](https://github.com/getmanfred/mac/blob/master/assets/readme/MAC_Structure.png?raw=true "MAC Design")
 
 
 ## 🪛 How to use it
