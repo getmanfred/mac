@@ -49,8 +49,7 @@
                 },
                 "relevantLinks": {
                     "type": "array",
-                    "additionalItems": true,
-                    "minItems": 1,
+                    "additionalItems": false,
                     "uniqueItems": true,
                     "items": {
                         "type": "object",
@@ -84,7 +83,6 @@
                     "type": "array",
                     "description": "Friends or colleagues with whom I have worked or not, whose relationship with me can help define me as a professional.",
                     "additionalItems": false,
-                    "minItems": 1,
                     "uniqueItems": true,
                     "items": {
                         "$ref": "#/$defs/person"
@@ -93,8 +91,7 @@
                 "interestingFacts": {
                     "type": "array",
                     "description": "Facts that define you: your IDE, your favorite books,  your football team...",
-                    "additionalItems": true,
-                    "minItems": 1,
+                    "additionalItems": false,
                     "uniqueItems": true,
                     "items": {
                         "type": "object",
@@ -146,7 +143,7 @@
                     "type": "array",
                     "description": "Content I like and recommend that can help define me as a professional.",
                     "additionalItems": false,
-                    "minContains": 1,
+                    "uniqueItems": true,
                     "items": {
                         "type": "object",
                         "properties": {
@@ -179,7 +176,10 @@
                     }
                 }
             },
-            "additionalProperties": false
+            "additionalProperties": false,
+            "required": [
+                "profile"
+            ]
         },
         "experience": {
             "type": "object",
@@ -190,8 +190,8 @@
                     "properties": {
                         "jobs": {
                             "type": "array",
-                            "additionalItems": true,
-                            "minItems": 1,
+                            "additionalItems": false,
+                            "uniqueItems": true,
                             "items": {
                                 "type": "object",
                                 "description": "Company, Public Institution, or NGO where you work or have worked for a salary.",
@@ -229,7 +229,7 @@
                             "type": "array",
                             "additionalItems": false,
                             "minContains": 1,
-                            "minItems": 1,
+                            "uniqueItems": true,
                             "items": {
                                 "type": "object",
                                 "properties": {
@@ -264,6 +264,7 @@
                             "type": "array",
                             "additionalItems": false,
                             "minContains": 1,
+                            "uniqueItems": true,
                             "items": {
                                 "type": "object",
                                 "properties": {
@@ -305,8 +306,8 @@
             "properties": {
                 "languages": {
                     "type": "array",
-                    "additionalItems": true,
-                    "minItems": 1,
+                    "additionalItems": false,
+                    "uniqueItems": true,
                     "items": {
                         "type": "object",
                         "properties": {
@@ -343,7 +344,8 @@
                 "hardSkills": {
                     "type": "array",
                     "description": "hardSkills are a subset of competence types (tool, technology or hardware).",
-                    "additionalItems": true,
+                    "additionalItems": false,
+                    "uniqueItems": true,
                     "items": {
                         "type": "object",
                         "properties": {
@@ -366,8 +368,8 @@
                 "softSkills": {
                     "type": "array",
                     "description": "softSkills are a subset of competence types (practice or domain)",
-                    "additionalItems": true,
-                    "minItems": 1,
+                    "additionalItems": false,
+                    "uniqueItems": true,
                     "items": {
                         "type": "object",
                         "properties": {
@@ -391,7 +393,7 @@
                     "type": "array",
                     "additionalItems": false,
                     "minContains": 1,
-                    "minItems": 1,
+                    "uniqueItems": true,
                     "items": {
                         "type": "object",
                         "properties": {
@@ -550,7 +552,7 @@
                                                     "type": "array",
                                                     "description": "Perks a new position must have to be considered",
                                                     "additionalItems": false,
-                                                    "minItems": 1,
+                                                    "uniqueItems": true,
                                                     "items": {
                                                         "type": "string",
                                                         "examples": [
@@ -569,7 +571,7 @@
                                                     "type": "array",
                                                     "description": "Perks a new position should have to be considered",
                                                     "additionalItems": false,
-                                                    "minItems": 1,
+                                                    "uniqueItems": true,
                                                     "items": {
                                                         "type": "string",
                                                         "examples": [
@@ -592,7 +594,7 @@
                         "contractTypes": {
                             "type": "array",
                             "additionalItems": false,
-                            "minItems": 1,
+                            "uniqueItems": true,
                             "items": {
                                 "$ref": "#/$defs/contractType"
                             }
@@ -615,6 +617,7 @@
                                 "workingAreas": {
                                     "type": "array",
                                     "additionalItems": false,
+                                    "uniqueItems": true,
                                     "items": {
                                         "type": "object",
                                         "properties": {
@@ -668,8 +671,8 @@
                             "type": "array",
                             "description": "Skills, tools, domains or methodologies I like to work with",
                             "additionalItems": false,
-                            "minItems": 1,
                             "minContains": 1,
+                            "uniqueItems": true,
                             "items": {
                                 "$ref": "#/$defs/competence"
                             }
@@ -678,7 +681,7 @@
                             "type": "array",
                             "description": "Skills, tools, domains or methodologies I don't like to work with",
                             "additionalItems": false,
-                            "minItems": 1,
+                            "uniqueItems": true,
                             "items": {
                                 "$ref": "#/$defs/competence"
                             }
@@ -687,7 +690,7 @@
                             "type": "array",
                             "description": "Type of organizations where I want to work",
                             "additionalItems": false,
-                            "minItems": 1,
+                            "uniqueItems": true,
                             "items": {
                                 "$ref": "#/$defs/organizationType"
                             }
@@ -696,7 +699,7 @@
                             "type": "array",
                             "description": "Type of organizations where I don't want to work",
                             "additionalItems": false,
-                            "minItems": 1,
+                            "uniqueItems": true,
                             "items": {
                                 "$ref": "#/$defs/organizationType"
                             }
@@ -704,7 +707,7 @@
                         "preferredRoles": {
                             "type": "array",
                             "additionalItems": false,
-                            "minItems": 1,
+                            "uniqueItems": true,
                             "items": {
                                 "type": "string",
                                 "examples": [
@@ -718,7 +721,7 @@
                             "type": "array",
                             "description": "Type of roles I don't like to adopt",
                             "additionalItems": false,
-                            "minItems": 1,
+                            "uniqueItems": true,
                             "items": {
                                 "type": "string",
                                 "examples": [
@@ -734,7 +737,7 @@
                     "type": "array",
                     "description": "Personal and Professional goals to match with company needs and requirements.",
                     "additionalItems": false,
-                    "maxContains": 1,
+                    "uniqueItems": true,
                     "items": {
                         "type": "object",
                         "properties": {
@@ -759,17 +762,13 @@
                     }
                 }
             },
-            "additionalProperties": false,
-            "required": [
-                "contact"
-            ]
+            "additionalProperties": false
         }
     },
     "additionalProperties": true,
     "required": [
         "settings",
-        "aboutMe",
-        "careerPreferences"
+        "aboutMe"
     ],
     "$defs": {
         "competence": {
@@ -1083,7 +1082,7 @@
                 },
                 "challenges": {
                     "type": "array",
-                    "additionalItems": true,
+                    "additionalItems": false,
                     "minContains": 1,
                     "uniqueItems": true,
                     "items": {
@@ -1111,7 +1110,6 @@
                 "competences": {
                     "type": "array",
                     "additionalItems": false,
-                    "minItems": 1,
                     "uniqueItems": true,
                     "items": {
                         "$ref": "#/$defs/competence"
@@ -1120,7 +1118,6 @@
                 "referrals": {
                     "type": "array",
                     "additionalItems": false,
-                    "minItems": 1,
                     "uniqueItems": true,
                     "$comment": "Professional Referrals about my activity in one specific rol.",
                     "items": {
