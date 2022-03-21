@@ -160,7 +160,6 @@
                                 "type": "array",
                                 "additionalItems": false,
                                 "uniqueItems": true,
-                                "minItems": 1,
                                 "items": {
                                     "$ref": "#/$defs/person"
                                 }
@@ -241,8 +240,7 @@
                                     },
                                     "roles": {
                                         "type": "array",
-                                        "additionalItems": true,
-                                        "minItems": 1,
+                                        "additionalItems": false,
                                         "items": {
                                             "$ref": "#/$defs/role"
                                         }
@@ -1093,9 +1091,8 @@
                             },
                             "actions": {
                                 "type": "array",
-                                "additionalItems": true,
+                                "additionalItems": false,
                                 "minContains": 1,
-                                "minItems": 1,
                                 "items": {
                                     "type": "string"
                                 }
