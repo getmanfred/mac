@@ -23,7 +23,7 @@
                     "description": "Last time the CV was updated",
                     "format": "date"
                 },
-                "MACversion": {
+                "MACVersion": {
                     "type": "string",
                     "description": "Schema version which validated the JSON",
                     "examples": [
