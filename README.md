@@ -40,7 +40,7 @@ Like most open-source projects, the first use case was found in the company wher
 
 ## 🪛 How to use it
 
-You just need to copy, download or reference [the schema](https://github.com/getmanfred/mac/blob/master/schema/schema.json) to validate a new CV, built as a JSON file from scratch, or a JSON generated previously (for example, [this sample](https://github.com/getmanfred/mac/blob/master/samples/deafult_sample.json)).
+You just need to copy, download or reference [the schema](https://github.com/getmanfred/mac/blob/master/schema/schema.json) to validate a new CV, built as a JSON file from scratch, or a JSON generated previously (for example, [this sample](https://github.com/getmanfred/mac/blob/master/samples/default_sample_ES.json)).
 
 To get started, you can copy both schema and sample in an **online validator** like [jsonschemavalidator.net](https://www.jsonschemavalidator.net/) or [liquid-technologies.com/online-json-schema-validator](https://www.liquid-technologies.com/online-json-schema-validator).
 
