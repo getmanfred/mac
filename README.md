@@ -12,7 +12,7 @@ The MAC (or Manfred Awesomic CV) is a(nother) naive attempt to create **a standa
  
 [Why use it](#-why-use-it) •
 [How to use it](#-how-to-use-it) •
-[Who use it](#-who-uses-it) •
+[Who uses it](#-who-uses-it) •
 [Who we are](#-who-we-are) •
 [How to contribute](#%EF%B8%8F-how-to-contribute) •
 [License](#%EF%B8%8F-license) •
