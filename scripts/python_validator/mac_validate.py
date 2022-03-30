@@ -64,7 +64,8 @@ def reader_builder(filename):
 
 
 def parse_args():
-    parser = argparse.ArgumentParser(description="Validate a Manfred Awesomic CV")
+    parser = argparse.ArgumentParser(
+        description="Validate a Manfred Awesomic CV")
     parser.add_argument(
         "filename", nargs="+", help="YAML or JSON files to be validated"
     )
