@@ -28,4 +28,4 @@ jobs:
         run: |
           cd ../../
           git add .
-          git diff-index --quiet HEAD || git commit -m "Update typescript model" || git push
+          git diff-index --quiet HEAD || (git commit -m "Update typescript model" && git push)
