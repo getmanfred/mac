@@ -3,7 +3,6 @@ import argparse
 import json
 import logging
 
-import jsonschema
 import yaml
 from faker import Faker
 
@@ -25,7 +24,8 @@ def init_logging(debug=0):
 
 
 def parse_args():
-    parser = argparse.ArgumentParser(description="Generate random data for jsonschema")
+    parser = argparse.ArgumentParser(
+        description="Generate random data for jsonschema")
     parser.add_argument("schema", help="Schema to be used")
     parser.add_argument("-o", "--output", help="Output file")
     parser.add_argument(

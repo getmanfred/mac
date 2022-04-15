@@ -1,0 +1,17 @@
+name: CI
+
+on: [push, pull_request]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    container:
+      image: alpine:latest 
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2.0.0
+      - name: Package installation
+        run: apk add --no-cache python3 py3-pip && pip3 install tox
+      - name: Tox call tests
+        run: tox -v
+
