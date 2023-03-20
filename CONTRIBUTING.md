@@ -4,7 +4,7 @@ We would ❤️ it if you contributed to the project and helped make MAC even be
 
 ## Got a question?
 
-You can ask questions, consult with more experienced MAC users, and discuss MAC-related topics in the our [Discussions Page](https://github.com/getmanfred/mac/discussions/).
+You can ask questions, consult with more experienced MAC users, and discuss MAC-related topics in the [Discussions Page](https://github.com/getmanfred/mac/discussions/).
 
 ## Found a bug?
 
@@ -17,7 +17,7 @@ You can request a new feature by [submitting an issue](https://github.com/getman
 If you'd like to implement a new feature, it's always good to be in touch with us before you invest time and effort, since not all features can be supported.
 
 - For a Major Feature, first open an issue and outline your proposal. This will let us coordinate efforts, prevent duplication of work, and help you craft the change so that it's successfully integrated into the project.
-- Small Features can be crafted and directly [submitted as a Pull Request](#submit-pr).
+- Small Features can be crafted and directly [submitted as a Pull Request](#step-8--create-pull-request).
 
 # <a name="submit-pr"></a> How do I make a code contribution?
 
