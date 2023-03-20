@@ -1,11 +1,11 @@
-<div align="center">
+<div style="text-align: center;">
 
 # Manfred Awesomic CV
 
 The MAC (or Manfred Awesomic CV) is a(nother) naive attempt to create **a standard open source format to define and share CVs**. The format is defined as a JSON Schema to validate CVs stored as JSON files.
  
  <a href='https://github.com/getmanfred/mac/releases'>
-  <img src='https://img.shields.io/github/v/release/getmanfred/mac?color=%23FDD835&label=version&style=for-the-badge&logo=JSON'>
+  <img src='https://img.shields.io/github/v/release/getmanfred/mac?color=%23FDD835&label=version&style=for-the-badge&logo=JSON' alt="Project Shields">
 </a>
 <br />
 <br />
@@ -14,9 +14,9 @@ The MAC (or Manfred Awesomic CV) is a(nother) naive attempt to create **a standa
 [How to use it](#-how-to-use-it) •
 [Who uses it](#-who-uses-it) •
 [Who we are](#-who-we-are) •
-[How to contribute](#%EF%B8%8F-how-to-contribute) •
-[License](#%EF%B8%8F-license) •
-[Spread the word!](#-spread-the-word)  
+[How to contribute](#-how-to-contribute) •
+[License](#-license) •
+[Spread the word!](#-spread-the-word-)  
 <br />
 <br />
 <br />
@@ -33,8 +33,8 @@ There are A LOT of CV formats, and some of them are a nice try to define a unive
 
 Like most open-source projects, the first use case was found in the company where the first contributors worked. Manfred is committed to the idea that **every person should keep control over their personal and professional data**. This means that they should be able to export their data from any platform in a machine-readable format with **a Model Definition to process that data efficiently**. This is how the MAC was born.
 
-<div align="center">
-  <img src='https://github.com/getmanfred/mac/blob/master/assets/readme/MAC_Structure.png?raw=true' width='600px'>
+<div style="text-align: center;">
+  <img src='https://github.com/getmanfred/mac/blob/master/assets/readme/MAC_Structure.png?raw=true' width='600px' alt="MAC Structure">
  </div>
 
 
@@ -82,10 +82,10 @@ Right now the Council is formed by:
 <!-- markdownlint-disable -->
 <table>
   <tr>
-    <td align="center"><a href="https://github.com/dbonillaf"><img src="https://avatars.githubusercontent.com/u/293330?v=4?s=100" width="100px;" alt="David Bonilla"/><br /><sub><b>David Bonilla</b></sub></a></td>
-    <td align="center"><a href="https://github.com/blanaspa"><img src="https://avatars.githubusercontent.com/u/30079172?v=4?s=100" width="100px;" alt="Blanca Lanaspa"/><br /><sub><b>Blanca Lanaspa</b></sub></a></a></td>
-    <td align="center"><a href="https://github.com/molpe"><img src="https://avatars.githubusercontent.com/u/7792?v=4?s=100" width="100px;" alt="Alberto Molpeceres"/><br /><sub><b>Alberto Molpeceres</b></sub></a></td>
-    <td align="center"><a href="https://github.com/jerolba"><img src="https://avatars.githubusercontent.com/u/709055?v=4?s=100" width="100px;" alt="Jerónimo López"/><br /><sub><b>Jerónimo López</b></sub></a></td>
+    <td style="text-align: center;"><a href="https://github.com/dbonillaf"><img src="https://avatars.githubusercontent.com/u/293330?v=4?s=100" width="100px;" alt="David Bonilla"/><br /><sub><b>David Bonilla</b></sub></a></td>
+    <td style="text-align: center;"><a href="https://github.com/blanaspa"><img src="https://avatars.githubusercontent.com/u/30079172?v=4?s=100" width="100px;" alt="Blanca Lanaspa"/><br /><sub><b>Blanca Lanaspa</b></sub></a></td>
+    <td style="text-align: center;"><a href="https://github.com/molpe"><img src="https://avatars.githubusercontent.com/u/7792?v=4?s=100" width="100px;" alt="Alberto Molpeceres"/><br /><sub><b>Alberto Molpeceres</b></sub></a></td>
+    <td style="text-align: center;"><a href="https://github.com/jerolba"><img src="https://avatars.githubusercontent.com/u/709055?v=4?s=100" width="100px;" alt="Jerónimo López"/><br /><sub><b>Jerónimo López</b></sub></a></td>
   </tr>
 </table>
 
