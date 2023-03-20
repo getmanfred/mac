@@ -31,7 +31,7 @@ class Validator(object):
             return False
 
     def get_schema(self, url):
-        with open("../schema/schema.json") as fd:
+        with open("../../schema/schema.json") as fd:
             return json.load(fd)
 
 
