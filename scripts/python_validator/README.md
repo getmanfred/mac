@@ -24,8 +24,14 @@ then you can install dependencies:
 And now you can generate a new CV and then check it:
 
 ```
-python jsonschema_generator.py ../schema/schema.json -o example1.json; ./mac_validate.py example1.json
+python jsonschema_generator.py ../../schema/schema.json -o example1.json; ./mac_validate.py example1.json
 ```
 
 Do not expect values to have sense, just to be valid according to the MAC
 jsonschema.
+
+Also, to exit the previously created virtual environment:
+```
+(venv) $ deactivate
+$
+```

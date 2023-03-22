@@ -31,7 +31,7 @@ class Validator(object):
             return False
 
     def get_schema(self, url):
-        with open("../schema/schema.json") as fd:
+        with open("../../schema/schema.json") as fd:
             return json.load(fd)
 
 
@@ -55,12 +55,17 @@ class YAMLReader(DataReader):
             return yaml.safe_load(fd)
 
 
+class UnknownFormatException(Exception):
+    """Unknown format exception"""
+    pass
+
+
 def reader_builder(filename):
     if filename.lower().endswith("json"):
         return JSONReader(filename)
     if filename.lower().endswith(("yml", "yaml")):
         return YAMLReader(filename)
-    raise Exception("Unknown format")
+    raise UnknownFormatException("Unknown format")
 
 
 def parse_args():
