@@ -29,11 +29,11 @@ export type ContactMean =
        */
       publicProfiles: [
         {
-          type: "manfred" | "linkedin" | "stackoverflow" | "xing" | "other";
+          type: "manfred" | "linkedin" | "stackoverflow" | "xing" | "twitter" | "github" | "other";
           URL: string;
         },
         ...{
-          type: "manfred" | "linkedin" | "stackoverflow" | "xing" | "other";
+          type: "manfred" | "linkedin" | "stackoverflow" | "xing" | "twitter" | "github" | "other";
           URL: string;
         }[]
       ];
