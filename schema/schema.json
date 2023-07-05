@@ -835,6 +835,8 @@
                                             "linkedin",
                                             "stackoverflow",
                                             "xing",
+                                            "twitter",
+                                            "github",
                                             "other"
                                         ],
                                         "$comment": "TBD Refactor to extract the enumeration \"public link type\" to a common definition file, to be completed with more external services."
