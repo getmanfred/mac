@@ -316,6 +316,11 @@
                                     "EN"
                                 ]
                             },
+                            "fullName": {
+                                "type": "string",
+                                "$comment": "A human friendly readable language name",
+                                "examples": [ "English"]
+                            },
                             "level": {
                                 "type": "string",
                                 "enum": [
@@ -334,6 +339,9 @@
                         ],
                         "dependentRequired": {
                             "level": [
+                                "name"
+                            ],
+                            "fullName": [
                                 "name"
                             ]
                         }

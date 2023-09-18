@@ -1,4 +1,5 @@
 {
+    "$schema": "../schema/schema.json",
     "settings": {
       "language": "ES",
       "lastUpdate": "2022-02-28",
@@ -510,6 +511,7 @@
       "languages": [
         {
           "name": "ES",
+          "fullName": "Español",
           "level": "Native or bilingual proficiency"
         },
         {
