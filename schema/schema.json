@@ -57,9 +57,12 @@
                             "type": {
                                 "type": "string",
                                 "enum": [
+                                    "manfred",
                                     "linkedin",
-                                    "github",
+                                    "stackoverflow",
+                                    "xing",
                                     "twitter",
+                                    "github",
                                     "website",
                                     "other"
                                 ]
@@ -319,7 +322,9 @@
                             "fullName": {
                                 "type": "string",
                                 "$comment": "A human friendly readable language name",
-                                "examples": [ "English"]
+                                "examples": [
+                                    "English"
+                                ]
                             },
                             "level": {
                                 "type": "string",
@@ -845,6 +850,7 @@
                                             "xing",
                                             "twitter",
                                             "github",
+                                            "website",
                                             "other"
                                         ],
                                         "$comment": "TBD Refactor to extract the enumeration \"public link type\" to a common definition file, to be completed with more external services."
