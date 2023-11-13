@@ -29,11 +29,11 @@ export type ContactMean =
        */
       publicProfiles: [
         {
-          type: "manfred" | "linkedin" | "stackoverflow" | "xing" | "twitter" | "github" | "other";
+          type: "manfred" | "linkedin" | "stackoverflow" | "xing" | "twitter" | "github" | "website" | "other";
           URL: string;
         },
         ...{
-          type: "manfred" | "linkedin" | "stackoverflow" | "xing" | "twitter" | "github" | "other";
+          type: "manfred" | "linkedin" | "stackoverflow" | "xing" | "twitter" | "github" | "website" | "other";
           URL: string;
         }[]
       ];
@@ -135,7 +135,7 @@ export interface ManfredAwesomicCV {
      */
     relevantYearsOfExperience?: number;
     relevantLinks?: {
-      type: "linkedin" | "github" | "twitter" | "website" | "other";
+      type: "manfred" | "linkedin" | "stackoverflow" | "xing" | "twitter" | "github" | "website" | "other";
       URL: string;
       description?: string;
     }[];
@@ -198,6 +198,7 @@ export interface ManfredAwesomicCV {
        * A language expressed as a [ISO 639-1 code](https://en.wikipedia.org/wiki/ISO_639-1)
        */
       name: string;
+      fullName?: string;
       level?:
         | "Elementary proficiency"
         | "Limited working proficiency"
