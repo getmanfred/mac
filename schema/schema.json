@@ -1066,8 +1066,7 @@
             "$comment": "TBD Same component used in rol/referrals, #/experience/jobs/organization/projects/project/referrals and significativeRelationships, to be refactor to a common definition.",
             "required": [
                 "name",
-                "surnames",
-                "title"
+                "surnames"
             ]
         },
         "role": {
