@@ -337,7 +337,7 @@ export interface Person {
   /**
    * Role, relationship or activity related to the person.
    */
-  title: string;
+  title?: string;
   description?: string;
   /**
    * Person's birth date in format yyyy-mm-dd
