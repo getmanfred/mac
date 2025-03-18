@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 import argparse
 import json
+import os
 
 import jsonschema
 import yaml
@@ -31,7 +32,10 @@ class Validator(object):
             return False
 
     def get_schema(self, url):
-        with open("../../schema/schema.json") as fd:
+        script_dir = os.path.dirname(os.path.abspath(__file__))
+        schema_path = os.path.join(script_dir, "..", "..", "schema", "schema.json")
+
+        with open(schema_path) as fd:
             return json.load(fd)
 
 
@@ -57,6 +61,7 @@ class YAMLReader(DataReader):
 
 class UnknownFormatException(Exception):
     """Unknown format exception"""
+
     pass
 
 
@@ -69,8 +74,7 @@ def reader_builder(filename):
 
 
 def parse_args():
-    parser = argparse.ArgumentParser(
-        description="Validate a Manfred Awesomic CV")
+    parser = argparse.ArgumentParser(description="Validate a Manfred Awesomic CV")
     parser.add_argument(
         "filename", nargs="+", help="YAML or JSON files to be validated"
     )

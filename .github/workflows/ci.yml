@@ -1,0 +1,46 @@
+name: CI
+
+on: [push, pull_request]
+
+jobs:
+  python-lint:
+    runs-on: ubuntu-latest
+    container:
+      image: alpine:latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Package installation
+        run: |
+          apk add --no-cache git python3 py3-pip
+          python3 -m venv /venv
+          source /venv/bin/activate
+          pip install tox
+
+      - name: Run linting
+        run: |
+          source /venv/bin/activate
+          git config --global --add safe.directory "$GITHUB_WORKSPACE"
+          tox -e pep8 -v
+
+  validate-schema:
+    runs-on: ubuntu-latest
+    container:
+      image: alpine:latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Package installation
+        run: |
+          apk add --no-cache git python3 py3-pip
+          python3 -m venv /venv
+          source /venv/bin/activate
+          pip install tox jsonschema pyyaml
+
+      - name: Run schema validation
+        run: |
+          source /venv/bin/activate
+          git config --global --add safe.directory "$GITHUB_WORKSPACE"
+          tox -e validate -v
