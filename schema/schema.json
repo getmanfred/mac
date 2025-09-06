@@ -12,10 +12,7 @@
                 "language": {
                     "type": "string",
                     "description": "The language of the CV expressed as a [ISO 639-1 code](https://en.wikipedia.org/wiki/ISO_639-1)",
-                    "examples": [
-                        "EN",
-                        "EN-US"
-                    ],
+                    "examples": [ "EN", "EN-US" ],
                     "$comment": "TDB: link to a enum of ISO-639 codes in a external definition file"
                 },
                 "lastUpdate": {
@@ -26,15 +23,11 @@
                 "MACVersion": {
                     "type": "string",
                     "description": "Schema version which validated the JSON",
-                    "examples": [
-                        "0.2"
-                    ]
+                    "examples": [ "0.2" ]
                 }
             },
             "additionalProperties": false,
-            "required": [
-                "language"
-            ]
+            "required": [ "language" ]
         },
         "aboutMe": {
             "type": "object",
@@ -49,13 +42,11 @@
                 },
                 "relevantLinks": {
                     "type": "array",
-                    "additionalItems": false,
                     "uniqueItems": true,
                     "items": {
                         "type": "object",
                         "properties": {
                             "type": {
-                                "type": "string",
                                 "enum": [
                                     "manfred",
                                     "linkedin",
@@ -76,16 +67,12 @@
                             }
                         },
                         "additionalProperties": false,
-                        "required": [
-                            "type",
-                            "URL"
-                        ]
+                        "required": [ "type", "URL" ]
                     }
                 },
                 "significativeRelationships": {
                     "type": "array",
                     "description": "Friends or colleagues with whom I have worked or not, whose relationship with me can help define me as a professional.",
-                    "additionalItems": false,
                     "uniqueItems": true,
                     "items": {
                         "$ref": "#/$defs/person"
@@ -94,7 +81,6 @@
                 "interestingFacts": {
                     "type": "array",
                     "description": "Facts that define you: your IDE, your favorite books,  your football team...",
-                    "additionalItems": false,
                     "uniqueItems": true,
                     "items": {
                         "type": "object",
@@ -111,9 +97,7 @@
                             }
                         },
                         "additionalProperties": false,
-                        "required": [
-                            "fact"
-                        ]
+                        "required": [ "fact" ]
                     }
                 },
                 "currentSalary": {
@@ -127,17 +111,13 @@
                         },
                         "relevantPerks": {
                             "type": "array",
-                            "additionalItems": true,
                             "items": {
                                 "type": "string"
                             }
                         }
                     },
                     "additionalProperties": false,
-                    "required": [
-                        "currency",
-                        "amount"
-                    ]
+                    "required": [ "currency", "amount" ]
                 },
                 "noticePeriod": {
                     "type": "integer"
@@ -145,7 +125,6 @@
                 "recommendations": {
                     "type": "array",
                     "description": "Content I like and recommend that can help define me as a professional.",
-                    "additionalItems": false,
                     "uniqueItems": true,
                     "items": {
                         "type": "object",
@@ -161,7 +140,6 @@
                             },
                             "authors": {
                                 "type": "array",
-                                "additionalItems": false,
                                 "uniqueItems": true,
                                 "items": {
                                     "$ref": "#/$defs/person"
@@ -172,27 +150,21 @@
                             }
                         },
                         "additionalProperties": false,
-                        "required": [
-                            "title"
-                        ]
+                        "required": [ "title" ]
                     }
                 }
             },
             "additionalProperties": false,
-            "required": [
-                "profile"
-            ]
+            "required": [ "profile" ]
         },
         "experience": {
             "type": "object",
-            "additionalProperties": true,
             "allOf": [
                 {
                     "type": "object",
                     "properties": {
                         "jobs": {
                             "type": "array",
-                            "additionalItems": false,
                             "uniqueItems": true,
                             "items": {
                                 "type": "object",
@@ -206,31 +178,23 @@
                                     },
                                     "roles": {
                                         "type": "array",
-                                        "additionalItems": false,
                                         "minItems": 1,
                                         "items": {
                                             "$ref": "#/$defs/role"
                                         }
                                     }
                                 },
-                                "additionalProperties": true,
                                 "$comment": "TBD Refactor to extract the entity \"organization\" to a common definitions file.",
-                                "required": [
-                                    "organization",
-                                    "roles"
-                                ]
+                                "required": [ "organization", "roles" ]
                             }
                         }
-                    },
-                    "additionalProperties": true
+                    }
                 },
                 {
                     "type": "object",
                     "properties": {
                         "projects": {
                             "type": "array",
-                            "additionalItems": false,
-                            "minContains": 1,
                             "uniqueItems": true,
                             "items": {
                                 "type": "object",
@@ -243,28 +207,22 @@
                                     },
                                     "roles": {
                                         "type": "array",
-                                        "additionalItems": false,
                                         "items": {
                                             "$ref": "#/$defs/role"
                                         }
                                     }
                                 },
                                 "additionalProperties": false,
-                                "required": [
-                                    "roles"
-                                ]
+                                "required": [ "roles" ]
                             }
                         }
-                    },
-                    "additionalProperties": true
+                    }
                 },
                 {
                     "type": "object",
                     "properties": {
                         "publicArtifacts": {
                             "type": "array",
-                            "additionalItems": false,
-                            "minContains": 1,
                             "uniqueItems": true,
                             "items": {
                                 "type": "object",
@@ -281,8 +239,6 @@
                                     },
                                     "relatedCompetences": {
                                         "type": "array",
-                                        "additionalItems": false,
-                                        "minContains": 1,
                                         "items": {
                                             "$ref": "#/$defs/competence"
                                         }
@@ -292,13 +248,10 @@
                                     }
                                 },
                                 "additionalProperties": false,
-                                "required": [
-                                    "details"
-                                ]
+                                "required": [ "details" ]
                             }
                         }
-                    },
-                    "additionalProperties": true
+                    }
                 }
             ]
         },
@@ -307,7 +260,6 @@
             "properties": {
                 "languages": {
                     "type": "array",
-                    "additionalItems": false,
                     "uniqueItems": true,
                     "items": {
                         "type": "object",
@@ -315,19 +267,14 @@
                             "name": {
                                 "type": "string",
                                 "description": "A language expressed as a [ISO 639-1 code](https://en.wikipedia.org/wiki/ISO_639-1)",
-                                "examples": [
-                                    "EN"
-                                ]
+                                "examples": [ "EN" ]
                             },
                             "fullName": {
                                 "type": "string",
                                 "$comment": "A human friendly readable language name",
-                                "examples": [
-                                    "English"
-                                ]
+                                "examples": [ "English" ]
                             },
                             "level": {
-                                "type": "string",
                                 "enum": [
                                     "Elementary proficiency",
                                     "Limited working proficiency",
@@ -339,23 +286,16 @@
                             }
                         },
                         "additionalProperties": false,
-                        "required": [
-                            "name"
-                        ],
+                        "required": [ "name" ],
                         "dependentRequired": {
-                            "level": [
-                                "name"
-                            ],
-                            "fullName": [
-                                "name"
-                            ]
+                            "level": [ "name" ],
+                            "fullName": [ "name" ]
                         }
                     }
                 },
                 "hardSkills": {
                     "type": "array",
                     "description": "hardSkills are a subset of competence types (tool, technology or hardware).",
-                    "additionalItems": false,
                     "uniqueItems": true,
                     "items": {
                         "type": "object",
@@ -364,7 +304,6 @@
                                 "$ref": "#/$defs/competence"
                             },
                             "level": {
-                                "type": "string",
                                 "enum": [
                                     "basic",
                                     "intermediate",
@@ -379,7 +318,6 @@
                 "softSkills": {
                     "type": "array",
                     "description": "softSkills are a subset of competence types (practice or domain)",
-                    "additionalItems": false,
                     "uniqueItems": true,
                     "items": {
                         "type": "object",
@@ -388,7 +326,6 @@
                                 "$ref": "#/$defs/competence"
                             },
                             "level": {
-                                "type": "string",
                                 "enum": [
                                     "basic",
                                     "intermediate",
@@ -402,8 +339,6 @@
                 },
                 "studies": {
                     "type": "array",
-                    "additionalItems": false,
-                    "minContains": 1,
                     "uniqueItems": true,
                     "items": {
                         "type": "object",
@@ -424,9 +359,7 @@
                             },
                             "description": {
                                 "type": "string",
-                                "examples": [
-                                    "Computer Science Grade"
-                                ]
+                                "examples": [ "Computer Science Grade" ]
                             },
                             "startDate": {
                                 "type": "string",
@@ -443,8 +376,6 @@
                             },
                             "linkedCompetences": {
                                 "type": "array",
-                                "additionalItems": false,
-                                "minContains": 1,
                                 "items": {
                                     "$ref": "#/$defs/competence"
                                 }
@@ -469,7 +400,6 @@
                     "$ref": "#/$defs/contactMean"
                 },
                 "status": {
-                    "type": "string",
                     "enum": [
                         "openToOffers",
                         "searchingActively",
@@ -489,34 +419,23 @@
                                             "type": "string",
                                             "minLength": 3,
                                             "maxLength": 3,
-                                            "examples": [
-                                                "USD",
-                                                "EUR",
-                                                "CNY"
-                                            ],
+                                            "examples": [ "USD", "EUR", "CNY" ],
                                             "$comment": "TBD refactor to validate against an enum based on ISO 4217 currency codes."
                                         },
                                         "from": {
                                             "type": "integer",
-                                            "examples": [
-                                                50000
-                                            ]
+                                            "examples": [ 50000 ]
                                         },
                                         "upto": {
                                             "type": "integer",
-                                            "examples": [
-                                                100000
-                                            ]
+                                            "examples": [ 100000 ]
                                         },
                                         "comments": {
                                             "type": "string"
                                         }
                                     },
                                     "additionalProperties": false,
-                                    "required": [
-                                        "currency",
-                                        "from"
-                                    ]
+                                    "required": [ "currency", "from" ]
                                 },
                                 "equity": {
                                     "type": "object",
@@ -527,34 +446,22 @@
                                         },
                                         "from": {
                                             "type": "number",
-                                            "examples": [
-                                                1.5,
-                                                0.3,
-                                                30
-                                            ]
+                                            "examples": [ 1.5, 0.3, 30 ]
                                         },
                                         "upto": {
                                             "type": "number",
-                                            "examples": [
-                                                10
-                                            ]
+                                            "examples": [ 10 ]
                                         },
                                         "comments": {
                                             "type": "string",
-                                            "examples": [
-                                                ""
-                                            ]
+                                            "examples": [ "" ]
                                         }
                                     },
                                     "additionalProperties": false,
-                                    "required": [
-                                        "mustHave",
-                                        "from"
-                                    ]
+                                    "required": [ "mustHave", "from" ]
                                 },
                                 "perks": {
                                     "type": "object",
-                                    "additionalProperties": true,
                                     "allOf": [
                                         {
                                             "type": "object",
@@ -562,7 +469,6 @@
                                                 "mustHave": {
                                                     "type": "array",
                                                     "description": "Perks a new position must have to be considered",
-                                                    "additionalItems": false,
                                                     "uniqueItems": true,
                                                     "items": {
                                                         "type": "string",
@@ -572,8 +478,7 @@
                                                         "$comment": "TBD to be validated against an external enumeration of perks"
                                                     }
                                                 }
-                                            },
-                                            "additionalProperties": true
+                                            }
                                         },
                                         {
                                             "type": "object",
@@ -581,7 +486,6 @@
                                                 "niceToHave": {
                                                     "type": "array",
                                                     "description": "Perks a new position should have to be considered",
-                                                    "additionalItems": false,
                                                     "uniqueItems": true,
                                                     "items": {
                                                         "type": "string",
@@ -591,20 +495,16 @@
                                                         "$comment": "TBD to be validated against an external enumeration of perks"
                                                     }
                                                 }
-                                            },
-                                            "additionalProperties": true
+                                            }
                                         }
                                     ]
                                 }
                             },
                             "additionalProperties": false,
-                            "required": [
-                                "salary"
-                            ]
+                            "required": [ "salary" ]
                         },
                         "contractTypes": {
                             "type": "array",
-                            "additionalItems": false,
                             "uniqueItems": true,
                             "items": {
                                 "$ref": "#/$defs/contractType"
@@ -627,7 +527,6 @@
                                 },
                                 "workingAreas": {
                                     "type": "array",
-                                    "additionalItems": false,
                                     "uniqueItems": true,
                                     "items": {
                                         "type": "object",
@@ -639,25 +538,16 @@
                                                 "type": "object",
                                                 "properties": {
                                                     "unit": {
-                                                        "type": "string",
                                                         "description": "Unit of measure, Kilometers or Miles",
-                                                        "enum": [
-                                                            "Km",
-                                                            "Mi"
-                                                        ]
+                                                        "enum": [ "Km", "Mi" ]
                                                     },
                                                     "amount": {
                                                         "type": "integer",
-                                                        "examples": [
-                                                            20
-                                                        ]
+                                                        "examples": [ 20 ]
                                                     }
                                                 },
                                                 "additionalProperties": false,
-                                                "required": [
-                                                    "unit",
-                                                    "amount"
-                                                ]
+                                                "required": [ "unit", "amount" ]
                                             }
                                         },
                                         "additionalProperties": false
@@ -681,8 +571,6 @@
                         "preferredCompetences": {
                             "type": "array",
                             "description": "Skills, tools, domains or methodologies I like to work with",
-                            "additionalItems": false,
-                            "minContains": 1,
                             "uniqueItems": true,
                             "items": {
                                 "$ref": "#/$defs/competence"
@@ -691,7 +579,6 @@
                         "discardedCompetences": {
                             "type": "array",
                             "description": "Skills, tools, domains or methodologies I don't like to work with",
-                            "additionalItems": false,
                             "uniqueItems": true,
                             "items": {
                                 "$ref": "#/$defs/competence"
@@ -700,7 +587,6 @@
                         "preferredOrganizations": {
                             "type": "array",
                             "description": "Type of organizations where I want to work",
-                            "additionalItems": false,
                             "uniqueItems": true,
                             "items": {
                                 "$ref": "#/$defs/organizationType"
@@ -709,7 +595,6 @@
                         "discardedOrganizations": {
                             "type": "array",
                             "description": "Type of organizations where I don't want to work",
-                            "additionalItems": false,
                             "uniqueItems": true,
                             "items": {
                                 "$ref": "#/$defs/organizationType"
@@ -717,7 +602,6 @@
                         },
                         "preferredRoles": {
                             "type": "array",
-                            "additionalItems": false,
                             "uniqueItems": true,
                             "items": {
                                 "type": "string",
@@ -731,14 +615,10 @@
                         "discardedRoles": {
                             "type": "array",
                             "description": "Type of roles I don't like to adopt",
-                            "additionalItems": false,
                             "uniqueItems": true,
                             "items": {
                                 "type": "string",
-                                "examples": [
-                                    "Project Manager",
-                                    "CIO"
-                                ]
+                                "examples": [ "Project Manager", "CIO" ]
                             }
                         }
                     },
@@ -747,7 +627,6 @@
                 "goals": {
                     "type": "array",
                     "description": "Personal and Professional goals to match with company needs and requirements.",
-                    "additionalItems": false,
                     "uniqueItems": true,
                     "items": {
                         "type": "object",
@@ -776,11 +655,7 @@
             "additionalProperties": false
         }
     },
-    "additionalProperties": true,
-    "required": [
-        "settings",
-        "aboutMe"
-    ],
+    "required": [ "settings", "aboutMe" ],
     "$defs": {
         "competence": {
             "type": "object",
@@ -797,7 +672,6 @@
                     ]
                 },
                 "type": {
-                    "type": "string",
                     "enum": [
                         "tool",
                         "technology",
@@ -818,15 +692,11 @@
                 }
             },
             "additionalProperties": false,
-            "required": [
-                "name",
-                "type"
-            ]
+            "required": [ "name", "type" ]
         },
         "contactMean": {
             "type": "object",
             "description": "A way to contact a specific person",
-            "additionalProperties": true,
             "anyOf": [
                 {
                     "type": "object",
@@ -834,15 +704,12 @@
                         "publicProfiles": {
                             "type": "array",
                             "description": "Online services that provide a way to contact a person without exposing mail or phone number.",
-                            "additionalItems": false,
-                            "minContains": 1,
                             "uniqueItems": true,
                             "minItems": 1,
                             "items": {
                                 "type": "object",
                                 "properties": {
                                     "type": {
-                                        "type": "string",
                                         "enum": [
                                             "manfred",
                                             "linkedin",
@@ -865,25 +732,17 @@
                                     }
                                 },
                                 "additionalProperties": false,
-                                "required": [
-                                    "type",
-                                    "URL"
-                                ]
+                                "required": [ "type", "URL" ]
                             }
                         }
                     },
-                    "additionalProperties": true,
-                    "required": [
-                        "publicProfiles"
-                    ]
+                    "required": [ "publicProfiles" ]
                 },
                 {
                     "type": "object",
                     "properties": {
                         "phoneNumbers": {
                             "type": "array",
-                            "additionalItems": false,
-                            "minContains": 1,
                             "minItems": 1,
                             "uniqueItems": true,
                             "items": {
@@ -892,10 +751,7 @@
                                     "countryCode": {
                                         "type": "number",
                                         "description": "Country calling code as defined in International Telecommunication Union (ITU) standards E.123 and E.164.",
-                                        "examples": [
-                                            34,
-                                            1
-                                        ]
+                                        "examples": [ 34, 1 ]
                                     },
                                     "number": {
                                         "type": "string",
@@ -907,40 +763,27 @@
                                     }
                                 },
                                 "additionalProperties": false,
-                                "required": [
-                                    "countryCode",
-                                    "number"
-                                ]
+                                "required": [ "countryCode", "number" ]
                             }
                         }
                     },
-                    "additionalProperties": true,
-                    "required": [
-                        "phoneNumbers"
-                    ]
+                    "required": [ "phoneNumbers" ]
                 },
                 {
                     "type": "object",
                     "properties": {
                         "contactMails": {
                             "type": "array",
-                            "additionalItems": false,
-                            "minContains": 1,
                             "uniqueItems": true,
                             "minItems": 1,
                             "items": {
                                 "type": "string",
                                 "format": "email",
-                                "examples": [
-                                    "your.name@mail.com"
-                                ]
+                                "examples": [ "your.name@mail.com" ]
                             }
                         }
                     },
-                    "additionalProperties": true,
-                    "required": [
-                        "contactMails"
-                    ]
+                    "required": [ "contactMails" ]
                 }
             ],
             "$comment": "TBD Same component used in significativeRelationships and careerPreferences/contact (to be refactor to a common definition)"
@@ -952,12 +795,9 @@
                 "alt": {
                     "type": "string",
                     "description": "Alternative description of the image",
-                    "examples": [
-                        "picture of Mike Gomez"
-                    ]
+                    "examples": [ "picture of Mike Gomez" ]
                 }
             },
-            "additionalProperties": true,
             "oneOf": [
                 {
                     "type": "object",
@@ -971,10 +811,7 @@
                             ]
                         }
                     },
-                    "additionalProperties": true,
-                    "required": [
-                        "link"
-                    ]
+                    "required": [ "link" ]
                 },
                 {
                     "type": "object",
@@ -987,23 +824,13 @@
                             ]
                         },
                         "mediaType": {
-                            "type": "string",
-                            "enum": [
-                                "image/png",
-                                "image/jpeg"
-                            ]
+                            "enum": [ "image/png", "image/jpeg" ]
                         },
                         "encoding": {
-                            "type": "string",
                             "const": "base64"
                         }
                     },
-                    "additionalProperties": true,
-                    "required": [
-                        "data",
-                        "mediaType",
-                        "encoding"
-                    ]
+                    "required": [ "data", "mediaType", "encoding" ]
                 }
             ],
             "$comment": "TDB: to be refactor to extract an image  \"object\" within a definitions section or schema"
@@ -1014,20 +841,12 @@
             "properties": {
                 "name": {
                     "type": "string",
-                    "examples": [
-                        "Sharon",
-                        "Tatiana",
-                        "Goran"
-                    ]
+                    "examples": [ "Sharon", "Tatiana", "Goran" ]
                 },
                 "surnames": {
                     "type": "string",
                     "description": "Surname o Surnames of the person",
-                    "examples": [
-                        "Vlaovic-Sorensen",
-                        "Varoufakis",
-                        "Ahmed"
-                    ]
+                    "examples": [ "Vlaovic-Sorensen", "Varoufakis", "Ahmed" ]
                 },
                 "title": {
                     "type": "string",
@@ -1048,9 +867,7 @@
                     "type": "string",
                     "description": "Person's birth date in format yyyy-mm-dd",
                     "format": "date",
-                    "examples": [
-                        "1977-07-26"
-                    ]
+                    "examples": [ "1977-07-26" ]
                 },
                 "avatar": {
                     "$ref": "#/$defs/image"
@@ -1064,10 +881,7 @@
             },
             "additionalProperties": false,
             "$comment": "TBD Same component used in rol/referrals, #/experience/jobs/organization/projects/project/referrals and significativeRelationships, to be refactor to a common definition.",
-            "required": [
-                "name",
-                "surnames"
-            ]
+            "required": [ "name", "surnames" ]
         },
         "role": {
             "type": "object",
@@ -1075,28 +889,20 @@
             "properties": {
                 "name": {
                     "type": "string",
-                    "examples": [
-                        "Developer"
-                    ]
+                    "examples": [ "Developer" ]
                 },
                 "startDate": {
                     "type": "string",
                     "format": "date",
-                    "examples": [
-                        "2019-06-20"
-                    ]
+                    "examples": [ "2019-06-20" ]
                 },
                 "finishDate": {
                     "type": "string",
                     "format": "date",
-                    "examples": [
-                        "2022-02-14"
-                    ]
+                    "examples": [ "2022-02-14" ]
                 },
                 "challenges": {
                     "type": "array",
-                    "additionalItems": false,
-                    "minContains": 1,
                     "uniqueItems": true,
                     "items": {
                         "type": "object",
@@ -1106,22 +912,17 @@
                             },
                             "actions": {
                                 "type": "array",
-                                "additionalItems": false,
-                                "minContains": 1,
                                 "items": {
                                     "type": "string"
                                 }
                             }
                         },
                         "additionalProperties": false,
-                        "required": [
-                            "description"
-                        ]
+                        "required": [ "description" ]
                     }
                 },
                 "competences": {
                     "type": "array",
-                    "additionalItems": false,
                     "uniqueItems": true,
                     "items": {
                         "$ref": "#/$defs/competence"
@@ -1129,7 +930,6 @@
                 },
                 "referrals": {
                     "type": "array",
-                    "additionalItems": false,
                     "uniqueItems": true,
                     "$comment": "Professional Referrals about my activity in one specific rol.",
                     "items": {
@@ -1142,10 +942,7 @@
                 }
             },
             "additionalProperties": false,
-            "required": [
-                "name",
-                "startDate"
-            ]
+            "required": [ "name", "startDate" ]
         },
         "location": {
             "type": "object",
@@ -1153,9 +950,7 @@
                 "country": {
                     "type": "string",
                     "description": "Country where you live",
-                    "examples": [
-                        "US"
-                    ],
+                    "examples": [ "US" ],
                     "$comment": "TDB: link to a enum of ISO-3166 codes in a external definition file"
                 },
                 "region": {
@@ -1182,11 +977,7 @@
                 },
                 "postalCode": {
                     "type": "string",
-                    "examples": [
-                        "90001",
-                        "SW1W 0NY",
-                        "15001"
-                    ]
+                    "examples": [ "90001", "SW1W 0NY", "15001" ]
                 },
                 "address": {
                     "type": "string",
@@ -1223,9 +1014,7 @@
                 "URL": {
                     "type": "string",
                     "format": "uri",
-                    "examples": [
-                        "https://www.stanford.edu/"
-                    ]
+                    "examples": [ "https://www.stanford.edu/" ]
                 },
                 "image": {
                     "$ref": "#/$defs/image"
@@ -1234,13 +1023,9 @@
                     "$ref": "#/$defs/location"
                 }
             },
-            "additionalProperties": true,
-            "required": [
-                "name"
-            ]
+            "required": [ "name" ]
         },
         "organizationType": {
-            "type": "string",
             "description": "Types of Organization",
             "enum": [
                 "freelance",
@@ -1255,7 +1040,6 @@
             "$comment": "TBD Refactor to extract the enumeration \"OrganizationType\" (used in jobs/roles/organization or careerPreferences/preferredOrganizations) to a common definition file."
         },
         "projectType": {
-            "type": "string",
             "description": "Types of Projects",
             "enum": [
                 "proBono",
@@ -1266,7 +1050,6 @@
             ]
         },
         "publicArtifactType": {
-            "type": "string",
             "description": "Types of Public Artifacts",
             "enum": [
                 "post",
@@ -1278,42 +1061,23 @@
             ]
         },
         "contractType": {
-            "type": "string",
             "description": "Types of Contracts",
-            "enum": [
-                "permanent",
-                "temporary",
-                "freelance",
-                "internship"
-            ]
+            "enum": [ "permanent", "temporary", "freelance", "internship" ]
         },
         "recommendationType": {
-            "type": "string",
             "description": "Types of Recommendations",
-            "enum": [
-                "reading",
-                "video",
-                "podcast",
-                "web",
-                "other"
-            ]
+            "enum": [ "reading", "video", "podcast", "web", "other" ]
         },
         "tags": {
             "type": "array",
             "description": "A list of tags with random values to provide the candidates a way to segment and categorize elements in their CV.",
-            "additionalItems": false,
             "uniqueItems": true,
             "items": {
                 "type": "string",
-                "examples": [
-                    "cooking",
-                    "not available",
-                    "february"
-                ]
+                "examples": [ "cooking", "not available", "february" ]
             }
         },
         "studyType": {
-            "type": "string",
             "description": "Types of studies:\n\n* \"officialDegree\" is a degree accredited by the government (University Degree) or an external, recognized and independent agency (some MBAs).\n* \"certification\" is a degree accredited by a private institution (eg. Oracle Database Admin Certification or Projecr Management Institute PMP)\n* \"unaccredited\" is a course without any accreditation (eg. Coursera or Platzi courses), but this doesn't mean that is not valid, legit, or has poor quality\n* \"selfTraining\" is the study designed, managed and evaluated just by the own learner.",
             "enum": [
                 "officialDegree",
