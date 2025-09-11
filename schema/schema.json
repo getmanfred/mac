@@ -1,1090 +1,1029 @@
 {
-    "$schema": "https://json-schema.org/draft/2019-09/schema",
-    "$id": "http://github.com/manfred/mac/schema.json",
-    "type": "object",
-    "title": "Manfred Awesomic CV",
-    "description": "An open CV format",
-    "properties": {
-        "settings": {
-            "type": "object",
-            "description": "CV Settings",
-            "properties": {
-                "language": {
-                    "type": "string",
-                    "description": "The language of the CV expressed as a [ISO 639-1 code](https://en.wikipedia.org/wiki/ISO_639-1)",
-                    "examples": [ "EN", "EN-US" ],
-                    "$comment": "TDB: link to a enum of ISO-639 codes in a external definition file"
-                },
-                "lastUpdate": {
-                    "type": "string",
-                    "description": "Last time the CV was updated",
-                    "format": "date"
-                },
-                "MACVersion": {
-                    "type": "string",
-                    "description": "Schema version which validated the JSON",
-                    "examples": [ "0.2" ]
-                }
+  "$schema": "https://json-schema.org/draft/2019-09/schema",
+  "$id": "http://github.com/manfred/mac/schema.json",
+  "title": "Manfred Awesomic CV",
+  "description": "An open CV format",
+  "type": "object",
+  "required": [ "settings", "aboutMe" ],
+  "properties": {
+    "aboutMe": {
+      "description": "Main data of the CV author",
+      "type": "object",
+      "required": [ "profile" ],
+      "properties": {
+        "currentSalary": {
+          "type": "object",
+          "required": [ "currency", "amount" ],
+          "properties": {
+            "amount": {
+              "type": "integer"
             },
-            "additionalProperties": false,
-            "required": [ "language" ]
-        },
-        "aboutMe": {
-            "type": "object",
-            "description": "Main data of the CV author",
-            "properties": {
-                "profile": {
-                    "$ref": "#/$defs/person"
-                },
-                "relevantYearsOfExperience": {
-                    "type": "number",
-                    "description": "Relevant years of experience related with desired professional roles and goals."
-                },
-                "relevantLinks": {
-                    "type": "array",
-                    "uniqueItems": true,
-                    "items": {
-                        "type": "object",
-                        "properties": {
-                            "type": {
-                                "enum": [
-                                    "manfred",
-                                    "linkedin",
-                                    "stackoverflow",
-                                    "xing",
-                                    "twitter",
-                                    "github",
-                                    "website",
-                                    "other"
-                                ]
-                            },
-                            "URL": {
-                                "type": "string",
-                                "format": "uri"
-                            },
-                            "description": {
-                                "type": "string"
-                            }
-                        },
-                        "additionalProperties": false,
-                        "required": [ "type", "URL" ]
-                    }
-                },
-                "significativeRelationships": {
-                    "type": "array",
-                    "description": "Friends or colleagues with whom I have worked or not, whose relationship with me can help define me as a professional.",
-                    "uniqueItems": true,
-                    "items": {
-                        "$ref": "#/$defs/person"
-                    }
-                },
-                "interestingFacts": {
-                    "type": "array",
-                    "description": "Facts that define you: your IDE, your favorite books,  your football team...",
-                    "uniqueItems": true,
-                    "items": {
-                        "type": "object",
-                        "properties": {
-                            "topic": {
-                                "type": "string",
-                                "examples": [
-                                    "First computer",
-                                    "My football team"
-                                ]
-                            },
-                            "fact": {
-                                "type": "string"
-                            }
-                        },
-                        "additionalProperties": false,
-                        "required": [ "fact" ]
-                    }
-                },
-                "currentSalary": {
-                    "type": "object",
-                    "properties": {
-                        "currency": {
-                            "type": "string"
-                        },
-                        "amount": {
-                            "type": "integer"
-                        },
-                        "relevantPerks": {
-                            "type": "array",
-                            "items": {
-                                "type": "string"
-                            }
-                        }
-                    },
-                    "additionalProperties": false,
-                    "required": [ "currency", "amount" ]
-                },
-                "noticePeriod": {
-                    "type": "integer"
-                },
-                "recommendations": {
-                    "type": "array",
-                    "description": "Content I like and recommend that can help define me as a professional.",
-                    "uniqueItems": true,
-                    "items": {
-                        "type": "object",
-                        "properties": {
-                            "title": {
-                                "type": "string"
-                            },
-                            "type": {
-                                "$ref": "#/$defs/recommendationType"
-                            },
-                            "URL": {
-                                "type": "string"
-                            },
-                            "authors": {
-                                "type": "array",
-                                "uniqueItems": true,
-                                "items": {
-                                    "$ref": "#/$defs/person"
-                                }
-                            },
-                            "summary": {
-                                "type": "string"
-                            }
-                        },
-                        "additionalProperties": false,
-                        "required": [ "title" ]
-                    }
-                }
+            "currency": {
+              "type": "string"
             },
-            "additionalProperties": false,
-            "required": [ "profile" ]
+            "relevantPerks": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          },
+          "additionalProperties": false
         },
-        "experience": {
+        "interestingFacts": {
+          "description": "Facts that define you: your IDE, your favorite books,  your football team...",
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
             "type": "object",
-            "allOf": [
-                {
-                    "type": "object",
-                    "properties": {
-                        "jobs": {
-                            "type": "array",
-                            "uniqueItems": true,
-                            "items": {
-                                "type": "object",
-                                "description": "Company, Public Institution, or NGO where you work or have worked for a salary.",
-                                "properties": {
-                                    "organization": {
-                                        "$ref": "#/$defs/publicEntityDetails"
-                                    },
-                                    "type": {
-                                        "$ref": "#/$defs/organizationType"
-                                    },
-                                    "roles": {
-                                        "type": "array",
-                                        "minItems": 1,
-                                        "items": {
-                                            "$ref": "#/$defs/role"
-                                        }
-                                    }
-                                },
-                                "$comment": "TBD Refactor to extract the entity \"organization\" to a common definitions file.",
-                                "required": [ "organization", "roles" ]
-                            }
-                        }
-                    }
-                },
-                {
-                    "type": "object",
-                    "properties": {
-                        "projects": {
-                            "type": "array",
-                            "uniqueItems": true,
-                            "items": {
-                                "type": "object",
-                                "properties": {
-                                    "details": {
-                                        "$ref": "#/$defs/publicEntityDetails"
-                                    },
-                                    "type": {
-                                        "$ref": "#/$defs/projectType"
-                                    },
-                                    "roles": {
-                                        "type": "array",
-                                        "items": {
-                                            "$ref": "#/$defs/role"
-                                        }
-                                    }
-                                },
-                                "additionalProperties": false,
-                                "required": [ "roles" ]
-                            }
-                        }
-                    }
-                },
-                {
-                    "type": "object",
-                    "properties": {
-                        "publicArtifacts": {
-                            "type": "array",
-                            "uniqueItems": true,
-                            "items": {
-                                "type": "object",
-                                "properties": {
-                                    "details": {
-                                        "$ref": "#/$defs/publicEntityDetails"
-                                    },
-                                    "type": {
-                                        "$ref": "#/$defs/publicArtifactType"
-                                    },
-                                    "publishingDate": {
-                                        "type": "string",
-                                        "format": "date"
-                                    },
-                                    "relatedCompetences": {
-                                        "type": "array",
-                                        "items": {
-                                            "$ref": "#/$defs/competence"
-                                        }
-                                    },
-                                    "tags": {
-                                        "$ref": "#/$defs/tags"
-                                    }
-                                },
-                                "additionalProperties": false,
-                                "required": [ "details" ]
-                            }
-                        }
-                    }
-                }
-            ]
-        },
-        "knowledge": {
-            "type": "object",
+            "required": [ "fact" ],
             "properties": {
-                "languages": {
-                    "type": "array",
-                    "uniqueItems": true,
-                    "items": {
-                        "type": "object",
-                        "properties": {
-                            "name": {
-                                "type": "string",
-                                "description": "A language expressed as a [ISO 639-1 code](https://en.wikipedia.org/wiki/ISO_639-1)",
-                                "examples": [ "EN" ]
-                            },
-                            "fullName": {
-                                "type": "string",
-                                "$comment": "A human friendly readable language name",
-                                "examples": [ "English" ]
-                            },
-                            "level": {
-                                "enum": [
-                                    "Elementary proficiency",
-                                    "Limited working proficiency",
-                                    "Professional working proficiency",
-                                    "Full professional proficiency",
-                                    "Native or bilingual proficiency"
-                                ],
-                                "$comment": "TBD make it required."
-                            }
-                        },
-                        "additionalProperties": false,
-                        "required": [ "name" ],
-                        "dependentRequired": {
-                            "level": [ "name" ],
-                            "fullName": [ "name" ]
-                        }
-                    }
-                },
-                "hardSkills": {
-                    "type": "array",
-                    "description": "hardSkills are a subset of competence types (tool, technology or hardware).",
-                    "uniqueItems": true,
-                    "items": {
-                        "type": "object",
-                        "properties": {
-                            "skill": {
-                                "$ref": "#/$defs/competence"
-                            },
-                            "level": {
-                                "enum": [
-                                    "basic",
-                                    "intermediate",
-                                    "high",
-                                    "expert"
-                                ]
-                            }
-                        },
-                        "additionalProperties": false
-                    }
-                },
-                "softSkills": {
-                    "type": "array",
-                    "description": "softSkills are a subset of competence types (practice or domain)",
-                    "uniqueItems": true,
-                    "items": {
-                        "type": "object",
-                        "properties": {
-                            "skill": {
-                                "$ref": "#/$defs/competence"
-                            },
-                            "level": {
-                                "enum": [
-                                    "basic",
-                                    "intermediate",
-                                    "high",
-                                    "expert"
-                                ]
-                            }
-                        },
-                        "additionalProperties": false
-                    }
-                },
-                "studies": {
-                    "type": "array",
-                    "uniqueItems": true,
-                    "items": {
-                        "type": "object",
-                        "properties": {
-                            "studyType": {
-                                "$ref": "#/$defs/studyType"
-                            },
-                            "degreeAchieved": {
-                                "type": "boolean",
-                                "description": "If studies finished achieving the linked degree"
-                            },
-                            "name": {
-                                "type": "string",
-                                "examples": [
-                                    "Software Engineering",
-                                    "Certified ScrumMaster"
-                                ]
-                            },
-                            "description": {
-                                "type": "string",
-                                "examples": [ "Computer Science Grade" ]
-                            },
-                            "startDate": {
-                                "type": "string",
-                                "description": "date when studies started in format yyyy-mm-dd",
-                                "format": "date"
-                            },
-                            "finishDate": {
-                                "type": "string",
-                                "description": "date when studies finished (if finished), with or without obtaining a degree, in format yyyy-mm-dd",
-                                "format": "date"
-                            },
-                            "institution": {
-                                "$ref": "#/$defs/publicEntityDetails"
-                            },
-                            "linkedCompetences": {
-                                "type": "array",
-                                "items": {
-                                    "$ref": "#/$defs/competence"
-                                }
-                            }
-                        },
-                        "additionalProperties": false,
-                        "required": [
-                            "studyType",
-                            "degreeAchieved",
-                            "name",
-                            "startDate"
-                        ]
-                    }
-                }
+              "fact": {
+                "type": "string"
+              },
+              "topic": {
+                "examples": [ "First computer", "My football team" ],
+                "type": "string"
+              }
             },
             "additionalProperties": false
+          }
         },
-        "careerPreferences": {
+        "noticePeriod": {
+          "type": "integer"
+        },
+        "profile": {
+          "$ref": "#/$defs/person"
+        },
+        "recommendations": {
+          "description": "Content I like and recommend that can help define me as a professional.",
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
             "type": "object",
+            "required": [ "title" ],
             "properties": {
-                "contact": {
-                    "$ref": "#/$defs/contactMean"
-                },
-                "status": {
-                    "enum": [
-                        "openToOffers",
-                        "searchingActively",
-                        "notAvailable"
-                    ]
-                },
-                "requirements": {
-                    "type": "object",
-                    "properties": {
-                        "compensation": {
-                            "type": "object",
-                            "properties": {
-                                "salary": {
-                                    "type": "object",
-                                    "properties": {
-                                        "currency": {
-                                            "type": "string",
-                                            "minLength": 3,
-                                            "maxLength": 3,
-                                            "examples": [ "USD", "EUR", "CNY" ],
-                                            "$comment": "TBD refactor to validate against an enum based on ISO 4217 currency codes."
-                                        },
-                                        "from": {
-                                            "type": "integer",
-                                            "examples": [ 50000 ]
-                                        },
-                                        "upto": {
-                                            "type": "integer",
-                                            "examples": [ 100000 ]
-                                        },
-                                        "comments": {
-                                            "type": "string"
-                                        }
-                                    },
-                                    "additionalProperties": false,
-                                    "required": [ "currency", "from" ]
-                                },
-                                "equity": {
-                                    "type": "object",
-                                    "properties": {
-                                        "mustHave": {
-                                            "type": "boolean",
-                                            "description": "If equity is a must have to accept a new position"
-                                        },
-                                        "from": {
-                                            "type": "number",
-                                            "examples": [ 1.5, 0.3, 30 ]
-                                        },
-                                        "upto": {
-                                            "type": "number",
-                                            "examples": [ 10 ]
-                                        },
-                                        "comments": {
-                                            "type": "string",
-                                            "examples": [ "" ]
-                                        }
-                                    },
-                                    "additionalProperties": false,
-                                    "required": [ "mustHave", "from" ]
-                                },
-                                "perks": {
-                                    "type": "object",
-                                    "allOf": [
-                                        {
-                                            "type": "object",
-                                            "properties": {
-                                                "mustHave": {
-                                                    "type": "array",
-                                                    "description": "Perks a new position must have to be considered",
-                                                    "uniqueItems": true,
-                                                    "items": {
-                                                        "type": "string",
-                                                        "examples": [
-                                                            "Health Insurance"
-                                                        ],
-                                                        "$comment": "TBD to be validated against an external enumeration of perks"
-                                                    }
-                                                }
-                                            }
-                                        },
-                                        {
-                                            "type": "object",
-                                            "properties": {
-                                                "niceToHave": {
-                                                    "type": "array",
-                                                    "description": "Perks a new position should have to be considered",
-                                                    "uniqueItems": true,
-                                                    "items": {
-                                                        "type": "string",
-                                                        "examples": [
-                                                            "Free Meals"
-                                                        ],
-                                                        "$comment": "TBD to be validated against an external enumeration of perks"
-                                                    }
-                                                }
-                                            }
-                                        }
-                                    ]
-                                }
-                            },
-                            "additionalProperties": false,
-                            "required": [ "salary" ]
-                        },
-                        "contractTypes": {
-                            "type": "array",
-                            "uniqueItems": true,
-                            "items": {
-                                "$ref": "#/$defs/contractType"
-                            }
-                        },
-                        "location": {
-                            "type": "object",
-                            "properties": {
-                                "remoteOnly": {
-                                    "type": "boolean",
-                                    "default": false
-                                },
-                                "openToRelocate": {
-                                    "type": "boolean",
-                                    "default": false
-                                },
-                                "openToRemote": {
-                                    "type": "boolean",
-                                    "default": true
-                                },
-                                "workingAreas": {
-                                    "type": "array",
-                                    "uniqueItems": true,
-                                    "items": {
-                                        "type": "object",
-                                        "properties": {
-                                            "location": {
-                                                "$ref": "#/$defs/location"
-                                            },
-                                            "distanceFromMunicipality": {
-                                                "type": "object",
-                                                "properties": {
-                                                    "unit": {
-                                                        "description": "Unit of measure, Kilometers or Miles",
-                                                        "enum": [ "Km", "Mi" ]
-                                                    },
-                                                    "amount": {
-                                                        "type": "integer",
-                                                        "examples": [ 20 ]
-                                                    }
-                                                },
-                                                "additionalProperties": false,
-                                                "required": [ "unit", "amount" ]
-                                            }
-                                        },
-                                        "additionalProperties": false
-                                    }
-                                },
-                                "comments": {
-                                    "type": "string",
-                                    "examples": [
-                                        "I don't want to work in the Financial District. There are no decent donuts shops"
-                                    ]
-                                }
-                            },
-                            "additionalProperties": false
-                        }
-                    },
-                    "additionalProperties": false
-                },
-                "preferences": {
-                    "type": "object",
-                    "properties": {
-                        "preferredCompetences": {
-                            "type": "array",
-                            "description": "Skills, tools, domains or methodologies I like to work with",
-                            "uniqueItems": true,
-                            "items": {
-                                "$ref": "#/$defs/competence"
-                            }
-                        },
-                        "discardedCompetences": {
-                            "type": "array",
-                            "description": "Skills, tools, domains or methodologies I don't like to work with",
-                            "uniqueItems": true,
-                            "items": {
-                                "$ref": "#/$defs/competence"
-                            }
-                        },
-                        "preferredOrganizations": {
-                            "type": "array",
-                            "description": "Type of organizations where I want to work",
-                            "uniqueItems": true,
-                            "items": {
-                                "$ref": "#/$defs/organizationType"
-                            }
-                        },
-                        "discardedOrganizations": {
-                            "type": "array",
-                            "description": "Type of organizations where I don't want to work",
-                            "uniqueItems": true,
-                            "items": {
-                                "$ref": "#/$defs/organizationType"
-                            }
-                        },
-                        "preferredRoles": {
-                            "type": "array",
-                            "uniqueItems": true,
-                            "items": {
-                                "type": "string",
-                                "examples": [
-                                    "Product Manager",
-                                    "Chef",
-                                    "Teacher"
-                                ]
-                            }
-                        },
-                        "discardedRoles": {
-                            "type": "array",
-                            "description": "Type of roles I don't like to adopt",
-                            "uniqueItems": true,
-                            "items": {
-                                "type": "string",
-                                "examples": [ "Project Manager", "CIO" ]
-                            }
-                        }
-                    },
-                    "additionalProperties": false
-                },
-                "goals": {
-                    "type": "array",
-                    "description": "Personal and Professional goals to match with company needs and requirements.",
-                    "uniqueItems": true,
-                    "items": {
-                        "type": "object",
-                        "properties": {
-                            "title": {
-                                "type": "string",
-                                "examples": [
-                                    "Learn German",
-                                    "Become Team Leader",
-                                    "Work in a Silicon Valley Company"
-                                ]
-                            },
-                            "description": {
-                                "type": "string",
-                                "examples": [
-                                    "Write and speak German fluently",
-                                    "Manage people, resources and goals",
-                                    "Work in a startup "
-                                ]
-                            }
-                        },
-                        "additionalProperties": false
-                    }
+              "title": {
+                "type": "string"
+              },
+              "type": {
+                "$ref": "#/$defs/recommendationType"
+              },
+              "URL": {
+                "type": "string"
+              },
+              "authors": {
+                "type": "array",
+                "uniqueItems": true,
+                "items": {
+                  "$ref": "#/$defs/person"
                 }
+              },
+              "summary": {
+                "type": "string"
+              }
             },
             "additionalProperties": false
+          }
+        },
+        "relevantLinks": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "type": "object",
+            "required": [ "type", "URL" ],
+            "properties": {
+              "description": {
+                "type": "string"
+              },
+              "type": {
+                "enum": [
+                  "manfred",
+                  "linkedin",
+                  "stackoverflow",
+                  "xing",
+                  "twitter",
+                  "github",
+                  "website",
+                  "other"
+                ]
+              },
+              "URL": {
+                "type": "string",
+                "format": "uri"
+              }
+            },
+            "additionalProperties": false
+          }
+        },
+        "relevantYearsOfExperience": {
+          "description": "Relevant years of experience related with desired professional roles and goals.",
+          "type": "number"
+        },
+        "significativeRelationships": {
+          "description": "Friends or colleagues with whom I have worked or not, whose relationship with me can help define me as a professional.",
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "$ref": "#/$defs/person"
+          }
         }
+      },
+      "additionalProperties": false
     },
-    "required": [ "settings", "aboutMe" ],
-    "$defs": {
-        "competence": {
+    "careerPreferences": {
+      "type": "object",
+      "properties": {
+        "contact": {
+          "$ref": "#/$defs/contactMean"
+        },
+        "goals": {
+          "description": "Personal and Professional goals to match with company needs and requirements.",
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
             "type": "object",
-            "description": "Any competence used to complete professional tasks (tools proficiency as \"Excel\", technologies mastered as \"JAVA\", practices learned as \"TDD\", hardware you know how to handle as vehicles or construction tools, and know-how domains as \"banking\" or \"russia\")",
             "properties": {
-                "name": {
-                    "type": "string",
-                    "examples": [
-                        "Excel",
-                        "JAVA",
-                        "TDD",
-                        "Class 8 trucks",
-                        "banking"
-                    ]
-                },
-                "type": {
-                    "enum": [
-                        "tool",
-                        "technology",
-                        "practice",
-                        "hardware",
-                        "domain"
-                    ]
-                },
-                "description": {
-                    "type": "string",
-                    "examples": [
-                        "Formule modeling and complex calculations",
-                        "Web apps developing",
-                        "Writing tests first and then coding to pass then",
-                        "Driving 15-wheeler over the country",
-                        "Experience in the financial sector"
-                    ]
-                }
+              "title": {
+                "examples": [
+                  "Learn German",
+                  "Become Team Leader",
+                  "Work in a Silicon Valley Company"
+                ],
+                "type": "string"
+              },
+              "description": {
+                "examples": [
+                  "Write and speak German fluently",
+                  "Manage people, resources and goals",
+                  "Work in a startup "
+                ],
+                "type": "string"
+              }
             },
-            "additionalProperties": false,
-            "required": [ "name", "type" ]
+            "additionalProperties": false
+          }
         },
-        "contactMean": {
-            "type": "object",
-            "description": "A way to contact a specific person",
-            "anyOf": [
-                {
-                    "type": "object",
-                    "properties": {
-                        "publicProfiles": {
-                            "type": "array",
-                            "description": "Online services that provide a way to contact a person without exposing mail or phone number.",
-                            "uniqueItems": true,
-                            "minItems": 1,
-                            "items": {
-                                "type": "object",
-                                "properties": {
-                                    "type": {
-                                        "enum": [
-                                            "manfred",
-                                            "linkedin",
-                                            "stackoverflow",
-                                            "xing",
-                                            "twitter",
-                                            "github",
-                                            "website",
-                                            "other"
-                                        ],
-                                        "$comment": "TBD Refactor to extract the enumeration \"public link type\" to a common definition file, to be completed with more external services."
-                                    },
-                                    "URL": {
-                                        "type": "string",
-                                        "format": "uri",
-                                        "examples": [
-                                            "https://www.getmanfred.com/mac/david",
-                                            "https://www.linkedin.com/in/satyanadella/"
-                                        ]
-                                    }
-                                },
-                                "additionalProperties": false,
-                                "required": [ "type", "URL" ]
-                            }
-                        }
-                    },
-                    "required": [ "publicProfiles" ]
-                },
-                {
-                    "type": "object",
-                    "properties": {
-                        "phoneNumbers": {
-                            "type": "array",
-                            "minItems": 1,
-                            "uniqueItems": true,
-                            "items": {
-                                "type": "object",
-                                "properties": {
-                                    "countryCode": {
-                                        "type": "number",
-                                        "description": "Country calling code as defined in International Telecommunication Union (ITU) standards E.123 and E.164.",
-                                        "examples": [ 34, 1 ]
-                                    },
-                                    "number": {
-                                        "type": "string",
-                                        "examples": [
-                                            "616100584",
-                                            "(555) 555-1234"
-                                        ],
-                                        "$comment": "TBD refactor to validate the phone number depending on the Country Code"
-                                    }
-                                },
-                                "additionalProperties": false,
-                                "required": [ "countryCode", "number" ]
-                            }
-                        }
-                    },
-                    "required": [ "phoneNumbers" ]
-                },
-                {
-                    "type": "object",
-                    "properties": {
-                        "contactMails": {
-                            "type": "array",
-                            "uniqueItems": true,
-                            "minItems": 1,
-                            "items": {
-                                "type": "string",
-                                "format": "email",
-                                "examples": [ "your.name@mail.com" ]
-                            }
-                        }
-                    },
-                    "required": [ "contactMails" ]
-                }
-            ],
-            "$comment": "TBD Same component used in significativeRelationships and careerPreferences/contact (to be refactor to a common definition)"
-        },
-        "image": {
-            "type": "object",
-            "description": "picture, thumbnail or avatar",
-            "properties": {
-                "alt": {
-                    "type": "string",
-                    "description": "Alternative description of the image",
-                    "examples": [ "picture of Mike Gomez" ]
-                }
+        "preferences": {
+          "type": "object",
+          "properties": {
+            "discardedCompetences": {
+              "description": "Skills, tools, domains or methodologies I don't like to work with",
+              "type": "array",
+              "uniqueItems": true,
+              "items": {
+                "$ref": "#/$defs/competence"
+              }
             },
-            "oneOf": [
-                {
-                    "type": "object",
-                    "description": "A link to the image",
-                    "properties": {
-                        "link": {
-                            "type": "string",
-                            "format": "uri",
-                            "examples": [
-                                "https://images.assetsdelivery.com/compings_v2/thesomeday123/thesomeday1231709/thesomeday123170900021.jpg"
-                            ]
-                        }
-                    },
-                    "required": [ "link" ]
-                },
-                {
-                    "type": "object",
-                    "description": "Image data encoded in base64",
-                    "properties": {
-                        "data": {
-                            "type": "string",
-                            "examples": [
-                                "iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAApgAAAKYB3X3/OAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAANCSURBVEiJtZZPbBtFFMZ/M7ubXdtdb1xSFyeilBapySVU8h8OoFaooFSqiihIVIpQBKci6KEg9Q6H9kovIHoCIVQJJCKE1ENFjnAgcaSGC6rEnxBwA04Tx43t2FnvDAfjkNibxgHxnWb2e/u992bee7tCa00YFsffekFY+nUzFtjW0LrvjRXrCDIAaPLlW0nHL0SsZtVoaF98mLrx3pdhOqLtYPHChahZcYYO7KvPFxvRl5XPp1sN3adWiD1ZAqD6XYK1b/dvE5IWryTt2udLFedwc1+9kLp+vbbpoDh+6TklxBeAi9TL0taeWpdmZzQDry0AcO+jQ12RyohqqoYoo8RDwJrU+qXkjWtfi8Xxt58BdQuwQs9qC/afLwCw8tnQbqYAPsgxE1S6F3EAIXux2oQFKm0ihMsOF71dHYx+f3NND68ghCu1YIoePPQN1pGRABkJ6Bus96CutRZMydTl+TvuiRW1m3n0eDl0vRPcEysqdXn+jsQPsrHMquGeXEaY4Yk4wxWcY5V/9scqOMOVUFthatyTy8QyqwZ+kDURKoMWxNKr2EeqVKcTNOajqKoBgOE28U4tdQl5p5bwCw7BWquaZSzAPlwjlithJtp3pTImSqQRrb2Z8PHGigD4RZuNX6JYj6wj7O4TFLbCO/Mn/m8R+h6rYSUb3ekokRY6f/YukArN979jcW+V/S8g0eT/N3VN3kTqWbQ428m9/8k0P/1aIhF36PccEl6EhOcAUCrXKZXXWS3XKd2vc/TRBG9O5ELC17MmWubD2nKhUKZa26Ba2+D3P+4/MNCFwg59oWVeYhkzgN/JDR8deKBoD7Y+ljEjGZ0sosXVTvbc6RHirr2reNy1OXd6pJsQ+gqjk8VWFYmHrwBzW/n+uMPFiRwHB2I7ih8ciHFxIkd/3Omk5tCDV1t+2nNu5sxxpDFNx+huNhVT3/zMDz8usXC3ddaHBj1GHj/As08fwTS7Kt1HBTmyN29vdwAw+/wbwLVOJ3uAD1wi/dUH7Qei66PfyuRj4Ik9is+hglfbkbfR3cnZm7chlUWLdwmprtCohX4HUtlOcQjLYCu+fzGJH2QRKvP3UNz8bWk1qMxjGTOMThZ3kvgLI5AzFfo379UAAAAASUVORK5CYII="
-                            ]
-                        },
-                        "mediaType": {
-                            "enum": [ "image/png", "image/jpeg" ]
-                        },
-                        "encoding": {
-                            "const": "base64"
-                        }
-                    },
-                    "required": [ "data", "mediaType", "encoding" ]
-                }
-            ],
-            "$comment": "TDB: to be refactor to extract an image  \"object\" within a definitions section or schema"
-        },
-        "person": {
-            "type": "object",
-            "description": "A Person data",
-            "properties": {
-                "name": {
-                    "type": "string",
-                    "examples": [ "Sharon", "Tatiana", "Goran" ]
-                },
-                "surnames": {
-                    "type": "string",
-                    "description": "Surname o Surnames of the person",
-                    "examples": [ "Vlaovic-Sorensen", "Varoufakis", "Ahmed" ]
-                },
-                "title": {
-                    "type": "string",
-                    "description": "Role, relationship or activity related to the person.",
-                    "maxLength": 255,
-                    "examples": [
-                        "My supervisor",
-                        "I work with her for 5 years"
-                    ]
-                },
-                "description": {
-                    "type": "string",
-                    "examples": [
-                        "Daniel was the perfect leader and he achieved all the goals assigned to the Departement but the most important thing is he's also a great colleague."
-                    ]
-                },
-                "birthday": {
-                    "type": "string",
-                    "description": "Person's birth date in format yyyy-mm-dd",
-                    "format": "date",
-                    "examples": [ "1977-07-26" ]
-                },
-                "avatar": {
-                    "$ref": "#/$defs/image"
-                },
-                "contact": {
-                    "$ref": "#/$defs/contactMean"
-                },
-                "location": {
-                    "$ref": "#/$defs/location"
-                }
+            "discardedOrganizations": {
+              "description": "Type of organizations where I don't want to work",
+              "type": "array",
+              "uniqueItems": true,
+              "items": {
+                "$ref": "#/$defs/organizationType"
+              }
             },
-            "additionalProperties": false,
-            "$comment": "TBD Same component used in rol/referrals, #/experience/jobs/organization/projects/project/referrals and significativeRelationships, to be refactor to a common definition.",
-            "required": [ "name", "surnames" ]
+            "discardedRoles": {
+              "description": "Type of roles I don't like to adopt",
+              "type": "array",
+              "uniqueItems": true,
+              "items": {
+                "examples": [ "Project Manager", "CIO" ],
+                "type": "string"
+              }
+            },
+            "preferredCompetences": {
+              "description": "Skills, tools, domains or methodologies I like to work with",
+              "type": "array",
+              "uniqueItems": true,
+              "items": {
+                "$ref": "#/$defs/competence"
+              }
+            },
+            "preferredOrganizations": {
+              "description": "Type of organizations where I want to work",
+              "type": "array",
+              "uniqueItems": true,
+              "items": {
+                "$ref": "#/$defs/organizationType"
+              }
+            },
+            "preferredRoles": {
+              "type": "array",
+              "uniqueItems": true,
+              "items": {
+                "examples": [ "Product Manager", "Chef", "Teacher" ],
+                "type": "string"
+              }
+            }
+          },
+          "additionalProperties": false
         },
-        "role": {
-            "type": "object",
-            "description": "roles developed within an organization",
-            "properties": {
-                "name": {
-                    "type": "string",
-                    "examples": [ "Developer" ]
+        "requirements": {
+          "type": "object",
+          "properties": {
+            "compensation": {
+              "type": "object",
+              "required": [ "salary" ],
+              "properties": {
+                "equity": {
+                  "type": "object",
+                  "required": [ "mustHave", "from" ],
+                  "properties": {
+                    "comments": {
+                      "examples": [ "" ],
+                      "type": "string"
+                    },
+                    "from": {
+                      "examples": [ 1.5, 0.3, 30 ],
+                      "type": "number"
+                    },
+                    "mustHave": {
+                      "description": "If equity is a must have to accept a new position",
+                      "type": "boolean"
+                    },
+                    "upto": {
+                      "examples": [ 10 ],
+                      "type": "number"
+                    }
+                  },
+                  "additionalProperties": false
                 },
-                "startDate": {
-                    "type": "string",
-                    "format": "date",
-                    "examples": [ "2019-06-20" ]
+                "perks": {
+                  "type": "object",
+                  "allOf": [
+                    {
+                      "type": "object",
+                      "properties": {
+                        "mustHave": {
+                          "description": "Perks a new position must have to be considered",
+                          "type": "array",
+                          "uniqueItems": true,
+                          "items": {
+                            "$comment": "TBD to be validated against an external enumeration of perks",
+                            "examples": [ "Health Insurance" ],
+                            "type": "string"
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "type": "object",
+                      "properties": {
+                        "niceToHave": {
+                          "description": "Perks a new position should have to be considered",
+                          "type": "array",
+                          "uniqueItems": true,
+                          "items": {
+                            "$comment": "TBD to be validated against an external enumeration of perks",
+                            "examples": [ "Free Meals" ],
+                            "type": "string"
+                          }
+                        }
+                      }
+                    }
+                  ]
                 },
-                "finishDate": {
-                    "type": "string",
-                    "format": "date",
-                    "examples": [ "2022-02-14" ]
+                "salary": {
+                  "type": "object",
+                  "required": [ "currency", "from" ],
+                  "properties": {
+                    "comments": {
+                      "type": "string"
+                    },
+                    "currency": {
+                      "$comment": "TBD refactor to validate against an enum based on ISO 4217 currency codes.",
+                      "examples": [ "USD", "EUR", "CNY" ],
+                      "type": "string",
+                      "maxLength": 3,
+                      "minLength": 3
+                    },
+                    "from": {
+                      "examples": [ 50000 ],
+                      "type": "integer"
+                    },
+                    "upto": {
+                      "examples": [ 100000 ],
+                      "type": "integer"
+                    }
+                  },
+                  "additionalProperties": false
+                }
+              },
+              "additionalProperties": false
+            },
+            "contractTypes": {
+              "type": "array",
+              "uniqueItems": true,
+              "items": {
+                "$ref": "#/$defs/contractType"
+              }
+            },
+            "location": {
+              "type": "object",
+              "properties": {
+                "comments": {
+                  "examples": [
+                    "I don't want to work in the Financial District. There are no decent donuts shops"
+                  ],
+                  "type": "string"
                 },
-                "challenges": {
-                    "type": "array",
-                    "uniqueItems": true,
-                    "items": {
+                "openToRelocate": {
+                  "default": false,
+                  "type": "boolean"
+                },
+                "openToRemote": {
+                  "default": true,
+                  "type": "boolean"
+                },
+                "remoteOnly": {
+                  "default": false,
+                  "type": "boolean"
+                },
+                "workingAreas": {
+                  "type": "array",
+                  "uniqueItems": true,
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "distanceFromMunicipality": {
                         "type": "object",
+                        "required": [ "unit", "amount" ],
                         "properties": {
-                            "description": {
-                                "type": "string"
-                            },
-                            "actions": {
-                                "type": "array",
-                                "items": {
-                                    "type": "string"
-                                }
-                            }
+                          "amount": {
+                            "examples": [ 20 ],
+                            "type": "integer"
+                          },
+                          "unit": {
+                            "description": "Unit of measure, Kilometers or Miles",
+                            "enum": [ "Km", "Mi" ]
+                          }
                         },
-                        "additionalProperties": false,
-                        "required": [ "description" ]
-                    }
-                },
-                "competences": {
-                    "type": "array",
-                    "uniqueItems": true,
-                    "items": {
-                        "$ref": "#/$defs/competence"
-                    }
-                },
-                "referrals": {
-                    "type": "array",
-                    "uniqueItems": true,
-                    "$comment": "Professional Referrals about my activity in one specific rol.",
-                    "items": {
-                        "$ref": "#/$defs/person"
-                    }
-                },
-                "notes": {
-                    "type": "string",
-                    "description": "Notes and information about the role"
+                        "additionalProperties": false
+                      },
+                      "location": {
+                        "$ref": "#/$defs/location"
+                      }
+                    },
+                    "additionalProperties": false
+                  }
                 }
+              },
+              "additionalProperties": false
+            }
+          },
+          "additionalProperties": false
+        },
+        "status": {
+          "enum": [ "openToOffers", "searchingActively", "notAvailable" ]
+        }
+      },
+      "additionalProperties": false
+    },
+    "experience": {
+      "type": "object",
+      "allOf": [
+        {
+          "type": "object",
+          "properties": {
+            "jobs": {
+              "type": "array",
+              "uniqueItems": true,
+              "items": {
+                "description": "Company, Public Institution, or NGO where you work or have worked for a salary.",
+                "$comment": "TBD Refactor to extract the entity \"organization\" to a common definitions file.",
+                "type": "object",
+                "required": [ "organization", "roles" ],
+                "properties": {
+                  "type": {
+                    "$ref": "#/$defs/organizationType"
+                  },
+                  "organization": {
+                    "$ref": "#/$defs/publicEntityDetails"
+                  },
+                  "roles": {
+                    "type": "array",
+                    "minItems": 1,
+                    "items": {
+                      "$ref": "#/$defs/role"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        {
+          "type": "object",
+          "properties": {
+            "projects": {
+              "type": "array",
+              "uniqueItems": true,
+              "items": {
+                "type": "object",
+                "required": [ "roles" ],
+                "properties": {
+                  "type": {
+                    "$ref": "#/$defs/projectType"
+                  },
+                  "details": {
+                    "$ref": "#/$defs/publicEntityDetails"
+                  },
+                  "roles": {
+                    "type": "array",
+                    "items": {
+                      "$ref": "#/$defs/role"
+                    }
+                  }
+                },
+                "additionalProperties": false
+              }
+            }
+          }
+        },
+        {
+          "type": "object",
+          "properties": {
+            "publicArtifacts": {
+              "type": "array",
+              "uniqueItems": true,
+              "items": {
+                "type": "object",
+                "required": [ "details" ],
+                "properties": {
+                  "type": {
+                    "$ref": "#/$defs/publicArtifactType"
+                  },
+                  "details": {
+                    "$ref": "#/$defs/publicEntityDetails"
+                  },
+                  "publishingDate": {
+                    "type": "string",
+                    "format": "date"
+                  },
+                  "relatedCompetences": {
+                    "type": "array",
+                    "items": {
+                      "$ref": "#/$defs/competence"
+                    }
+                  },
+                  "tags": {
+                    "$ref": "#/$defs/tags"
+                  }
+                },
+                "additionalProperties": false
+              }
+            }
+          }
+        }
+      ]
+    },
+    "knowledge": {
+      "type": "object",
+      "properties": {
+        "hardSkills": {
+          "description": "hardSkills are a subset of competence types (tool, technology or hardware).",
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "type": "object",
+            "properties": {
+              "level": {
+                "enum": [ "basic", "intermediate", "high", "expert" ]
+              },
+              "skill": {
+                "$ref": "#/$defs/competence"
+              }
+            },
+            "additionalProperties": false
+          }
+        },
+        "languages": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "type": "object",
+            "required": [ "name" ],
+            "properties": {
+              "fullName": {
+                "$comment": "A human friendly readable language name",
+                "examples": [ "English" ],
+                "type": "string"
+              },
+              "level": {
+                "$comment": "TBD make it required.",
+                "enum": [
+                  "Elementary proficiency",
+                  "Limited working proficiency",
+                  "Professional working proficiency",
+                  "Full professional proficiency",
+                  "Native or bilingual proficiency"
+                ]
+              },
+              "name": {
+                "description": "A language expressed as a [ISO 639-1 code](https://en.wikipedia.org/wiki/ISO_639-1)",
+                "examples": [ "EN" ],
+                "type": "string"
+              }
             },
             "additionalProperties": false,
-            "required": [ "name", "startDate" ]
+            "dependentRequired": {
+              "fullName": [ "name" ],
+              "level": [ "name" ]
+            }
+          }
+        },
+        "softSkills": {
+          "description": "softSkills are a subset of competence types (practice or domain)",
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "type": "object",
+            "properties": {
+              "level": {
+                "enum": [ "basic", "intermediate", "high", "expert" ]
+              },
+              "skill": {
+                "$ref": "#/$defs/competence"
+              }
+            },
+            "additionalProperties": false
+          }
+        },
+        "studies": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "type": "object",
+            "required": [ "studyType", "degreeAchieved", "name", "startDate" ],
+            "properties": {
+              "description": {
+                "examples": [ "Computer Science Grade" ],
+                "type": "string"
+              },
+              "degreeAchieved": {
+                "description": "If studies finished achieving the linked degree",
+                "type": "boolean"
+              },
+              "finishDate": {
+                "description": "date when studies finished (if finished), with or without obtaining a degree, in format yyyy-mm-dd",
+                "type": "string",
+                "format": "date"
+              },
+              "institution": {
+                "$ref": "#/$defs/publicEntityDetails"
+              },
+              "linkedCompetences": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/$defs/competence"
+                }
+              },
+              "name": {
+                "examples": [ "Software Engineering", "Certified ScrumMaster" ],
+                "type": "string"
+              },
+              "startDate": {
+                "description": "date when studies started in format yyyy-mm-dd",
+                "type": "string",
+                "format": "date"
+              },
+              "studyType": {
+                "$ref": "#/$defs/studyType"
+              }
+            },
+            "additionalProperties": false
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    "settings": {
+      "description": "CV Settings",
+      "type": "object",
+      "required": [ "language" ],
+      "properties": {
+        "MACVersion": {
+          "description": "Schema version which validated the JSON",
+          "examples": [ "0.2" ],
+          "type": "string"
+        },
+        "language": {
+          "description": "The language of the CV expressed as a [ISO 639-1 code](https://en.wikipedia.org/wiki/ISO_639-1)",
+          "$comment": "TDB: link to a enum of ISO-639 codes in a external definition file",
+          "examples": [ "EN", "EN-US" ],
+          "type": "string"
+        },
+        "lastUpdate": {
+          "description": "Last time the CV was updated",
+          "type": "string",
+          "format": "date"
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  "$defs": {
+    "competence": {
+      "description": "Any competence used to complete professional tasks (tools proficiency as \"Excel\", technologies mastered as \"JAVA\", practices learned as \"TDD\", hardware you know how to handle as vehicles or construction tools, and know-how domains as \"banking\" or \"russia\")",
+      "type": "object",
+      "required": [ "name", "type" ],
+      "properties": {
+        "description": {
+          "examples": [
+            "Formule modeling and complex calculations",
+            "Web apps developing",
+            "Writing tests first and then coding to pass then",
+            "Driving 15-wheeler over the country",
+            "Experience in the financial sector"
+          ],
+          "type": "string"
+        },
+        "type": {
+          "enum": [ "tool", "technology", "practice", "hardware", "domain" ]
+        },
+        "name": {
+          "examples": [ "Excel", "JAVA", "TDD", "Class 8 trucks", "banking" ],
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "contactMean": {
+      "description": "A way to contact a specific person",
+      "$comment": "TBD Same component used in significativeRelationships and careerPreferences/contact (to be refactor to a common definition)",
+      "type": "object",
+      "anyOf": [
+        {
+          "type": "object",
+          "required": [ "publicProfiles" ],
+          "properties": {
+            "publicProfiles": {
+              "description": "Online services that provide a way to contact a person without exposing mail or phone number.",
+              "type": "array",
+              "minItems": 1,
+              "uniqueItems": true,
+              "items": {
+                "type": "object",
+                "required": [ "type", "URL" ],
+                "properties": {
+                  "type": {
+                    "$comment": "TBD Refactor to extract the enumeration \"public link type\" to a common definition file, to be completed with more external services.",
+                    "enum": [
+                      "manfred",
+                      "linkedin",
+                      "stackoverflow",
+                      "xing",
+                      "twitter",
+                      "github",
+                      "website",
+                      "other"
+                    ]
+                  },
+                  "URL": {
+                    "examples": [
+                      "https://www.getmanfred.com/mac/david",
+                      "https://www.linkedin.com/in/satyanadella/"
+                    ],
+                    "type": "string",
+                    "format": "uri"
+                  }
+                },
+                "additionalProperties": false
+              }
+            }
+          }
+        },
+        {
+          "type": "object",
+          "required": [ "phoneNumbers" ],
+          "properties": {
+            "phoneNumbers": {
+              "type": "array",
+              "minItems": 1,
+              "uniqueItems": true,
+              "items": {
+                "type": "object",
+                "required": [ "countryCode", "number" ],
+                "properties": {
+                  "countryCode": {
+                    "description": "Country calling code as defined in International Telecommunication Union (ITU) standards E.123 and E.164.",
+                    "examples": [ 34, 1 ],
+                    "type": "number"
+                  },
+                  "number": {
+                    "$comment": "TBD refactor to validate the phone number depending on the Country Code",
+                    "examples": [ "616100584", "(555) 555-1234" ],
+                    "type": "string"
+                  }
+                },
+                "additionalProperties": false
+              }
+            }
+          }
+        },
+        {
+          "type": "object",
+          "required": [ "contactMails" ],
+          "properties": {
+            "contactMails": {
+              "type": "array",
+              "minItems": 1,
+              "uniqueItems": true,
+              "items": {
+                "examples": [ "your.name@mail.com" ],
+                "type": "string",
+                "format": "email"
+              }
+            }
+          }
+        }
+      ]
+    },
+    "contractType": {
+      "description": "Types of Contracts",
+      "enum": [ "permanent", "temporary", "freelance", "internship" ]
+    },
+    "image": {
+      "description": "picture, thumbnail or avatar",
+      "$comment": "TDB: to be refactor to extract an image  \"object\" within a definitions section or schema",
+      "type": "object",
+      "oneOf": [
+        {
+          "description": "A link to the image",
+          "type": "object",
+          "required": [ "link" ],
+          "properties": {
+            "link": {
+              "examples": [
+                "https://images.assetsdelivery.com/compings_v2/thesomeday123/thesomeday1231709/thesomeday123170900021.jpg"
+              ],
+              "type": "string",
+              "format": "uri"
+            }
+          }
+        },
+        {
+          "description": "Image data encoded in base64",
+          "type": "object",
+          "required": [ "data", "mediaType", "encoding" ],
+          "properties": {
+            "data": {
+              "examples": [
+                "iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAApgAAAKYB3X3/OAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAANCSURBVEiJtZZPbBtFFMZ/M7ubXdtdb1xSFyeilBapySVU8h8OoFaooFSqiihIVIpQBKci6KEg9Q6H9kovIHoCIVQJJCKE1ENFjnAgcaSGC6rEnxBwA04Tx43t2FnvDAfjkNibxgHxnWb2e/u992bee7tCa00YFsffekFY+nUzFtjW0LrvjRXrCDIAaPLlW0nHL0SsZtVoaF98mLrx3pdhOqLtYPHChahZcYYO7KvPFxvRl5XPp1sN3adWiD1ZAqD6XYK1b/dvE5IWryTt2udLFedwc1+9kLp+vbbpoDh+6TklxBeAi9TL0taeWpdmZzQDry0AcO+jQ12RyohqqoYoo8RDwJrU+qXkjWtfi8Xxt58BdQuwQs9qC/afLwCw8tnQbqYAPsgxE1S6F3EAIXux2oQFKm0ihMsOF71dHYx+f3NND68ghCu1YIoePPQN1pGRABkJ6Bus96CutRZMydTl+TvuiRW1m3n0eDl0vRPcEysqdXn+jsQPsrHMquGeXEaY4Yk4wxWcY5V/9scqOMOVUFthatyTy8QyqwZ+kDURKoMWxNKr2EeqVKcTNOajqKoBgOE28U4tdQl5p5bwCw7BWquaZSzAPlwjlithJtp3pTImSqQRrb2Z8PHGigD4RZuNX6JYj6wj7O4TFLbCO/Mn/m8R+h6rYSUb3ekokRY6f/YukArN979jcW+V/S8g0eT/N3VN3kTqWbQ428m9/8k0P/1aIhF36PccEl6EhOcAUCrXKZXXWS3XKd2vc/TRBG9O5ELC17MmWubD2nKhUKZa26Ba2+D3P+4/MNCFwg59oWVeYhkzgN/JDR8deKBoD7Y+ljEjGZ0sosXVTvbc6RHirr2reNy1OXd6pJsQ+gqjk8VWFYmHrwBzW/n+uMPFiRwHB2I7ih8ciHFxIkd/3Omk5tCDV1t+2nNu5sxxpDFNx+huNhVT3/zMDz8usXC3ddaHBj1GHj/As08fwTS7Kt1HBTmyN29vdwAw+/wbwLVOJ3uAD1wi/dUH7Qei66PfyuRj4Ik9is+hglfbkbfR3cnZm7chlUWLdwmprtCohX4HUtlOcQjLYCu+fzGJH2QRKvP3UNz8bWk1qMxjGTOMThZ3kvgLI5AzFfo379UAAAAASUVORK5CYII="
+              ],
+              "type": "string"
+            },
+            "encoding": {
+              "const": "base64"
+            },
+            "mediaType": {
+              "enum": [ "image/png", "image/jpeg" ]
+            }
+          }
+        }
+      ],
+      "properties": {
+        "alt": {
+          "description": "Alternative description of the image",
+          "examples": [ "picture of Mike Gomez" ],
+          "type": "string"
+        }
+      }
+    },
+    "location": {
+      "type": "object",
+      "properties": {
+        "address": {
+          "examples": [
+            "",
+            "33 West 23rd Street, 2nd Floor",
+            "Rua Emilia Pardo Bazán 18, 6ºB"
+          ],
+          "type": "string"
+        },
+        "country": {
+          "description": "Country where you live",
+          "$comment": "TDB: link to a enum of ISO-3166 codes in a external definition file",
+          "examples": [ "US" ],
+          "type": "string"
+        },
+        "municipality": {
+          "description": "City or town where you live.",
+          "$comment": "TBD It could be validated depending on the Country/Region values.",
+          "examples": [ "San Francisco", "A Coruña", "Hamburg", "La Rochelle" ],
+          "type": "string"
+        },
+        "notes": {
+          "examples": [
+            "Please, use the security code '6535' to get access to the mail boxes."
+          ],
+          "type": "string"
+        },
+        "postalCode": {
+          "examples": [ "90001", "SW1W 0NY", "15001" ],
+          "type": "string"
+        },
+        "region": {
+          "description": "Region (State, Länder, County, Community...) where you live.",
+          "$comment": "TBD It could be validated depending on the Country value.",
+          "examples": [ "California", "Galicia", "Bayern", "Hampshire" ],
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "organizationType": {
+      "description": "Types of Organization",
+      "$comment": "TBD Refactor to extract the enumeration \"OrganizationType\" (used in jobs/roles/organization or careerPreferences/preferredOrganizations) to a common definition file.",
+      "enum": [
+        "freelance",
+        "publicAdministration",
+        "NGO",
+        "startup",
+        "SME",
+        "bigCorp",
+        "academicalInstitution",
+        "other"
+      ]
+    },
+    "person": {
+      "description": "A Person data",
+      "$comment": "TBD Same component used in rol/referrals, #/experience/jobs/organization/projects/project/referrals and significativeRelationships, to be refactor to a common definition.",
+      "type": "object",
+      "required": [ "name", "surnames" ],
+      "properties": {
+        "title": {
+          "description": "Role, relationship or activity related to the person.",
+          "examples": [ "My supervisor", "I work with her for 5 years" ],
+          "type": "string",
+          "maxLength": 255
+        },
+        "description": {
+          "examples": [
+            "Daniel was the perfect leader and he achieved all the goals assigned to the Departement but the most important thing is he's also a great colleague."
+          ],
+          "type": "string"
+        },
+        "avatar": {
+          "$ref": "#/$defs/image"
+        },
+        "birthday": {
+          "description": "Person's birth date in format yyyy-mm-dd",
+          "examples": [ "1977-07-26" ],
+          "type": "string",
+          "format": "date"
+        },
+        "contact": {
+          "$ref": "#/$defs/contactMean"
         },
         "location": {
+          "$ref": "#/$defs/location"
+        },
+        "name": {
+          "examples": [ "Sharon", "Tatiana", "Goran" ],
+          "type": "string"
+        },
+        "surnames": {
+          "description": "Surname o Surnames of the person",
+          "examples": [ "Vlaovic-Sorensen", "Varoufakis", "Ahmed" ],
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "projectType": {
+      "description": "Types of Projects",
+      "enum": [
+        "proBono",
+        "openSource",
+        "sideProject",
+        "personalAchievement",
+        "other"
+      ]
+    },
+    "publicArtifactType": {
+      "description": "Types of Public Artifacts",
+      "enum": [
+        "post",
+        "talk",
+        "sideProject",
+        "achievement",
+        "launch",
+        "video"
+      ]
+    },
+    "publicEntityDetails": {
+      "description": "Organization, Company, Institution, Administration, Project or Initiative related to my career.",
+      "type": "object",
+      "required": [ "name" ],
+      "properties": {
+        "description": {
+          "type": "string"
+        },
+        "URL": {
+          "examples": [ "https://www.stanford.edu/" ],
+          "type": "string",
+          "format": "uri"
+        },
+        "image": {
+          "$ref": "#/$defs/image"
+        },
+        "location": {
+          "$ref": "#/$defs/location"
+        },
+        "name": {
+          "examples": [
+            "Stanford University",
+            "IBM",
+            "Project Management Institute"
+          ],
+          "type": "string"
+        }
+      }
+    },
+    "recommendationType": {
+      "description": "Types of Recommendations",
+      "enum": [ "reading", "video", "podcast", "web", "other" ]
+    },
+    "role": {
+      "description": "roles developed within an organization",
+      "type": "object",
+      "required": [ "name", "startDate" ],
+      "properties": {
+        "challenges": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
             "type": "object",
+            "required": [ "description" ],
             "properties": {
-                "country": {
-                    "type": "string",
-                    "description": "Country where you live",
-                    "examples": [ "US" ],
-                    "$comment": "TDB: link to a enum of ISO-3166 codes in a external definition file"
-                },
-                "region": {
-                    "type": "string",
-                    "description": "Region (State, Länder, County, Community...) where you live.",
-                    "examples": [
-                        "California",
-                        "Galicia",
-                        "Bayern",
-                        "Hampshire"
-                    ],
-                    "$comment": "TBD It could be validated depending on the Country value."
-                },
-                "municipality": {
-                    "type": "string",
-                    "description": "City or town where you live.",
-                    "examples": [
-                        "San Francisco",
-                        "A Coruña",
-                        "Hamburg",
-                        "La Rochelle"
-                    ],
-                    "$comment": "TBD It could be validated depending on the Country/Region values."
-                },
-                "postalCode": {
-                    "type": "string",
-                    "examples": [ "90001", "SW1W 0NY", "15001" ]
-                },
-                "address": {
-                    "type": "string",
-                    "examples": [
-                        "",
-                        "33 West 23rd Street, 2nd Floor",
-                        "Rua Emilia Pardo Bazán 18, 6ºB"
-                    ]
-                },
-                "notes": {
-                    "type": "string",
-                    "examples": [
-                        "Please, use the security code '6535' to get access to the mail boxes."
-                    ]
+              "description": {
+                "type": "string"
+              },
+              "actions": {
+                "type": "array",
+                "items": {
+                  "type": "string"
                 }
+              }
             },
             "additionalProperties": false
+          }
         },
-        "publicEntityDetails": {
-            "type": "object",
-            "description": "Organization, Company, Institution, Administration, Project or Initiative related to my career.",
-            "properties": {
-                "name": {
-                    "type": "string",
-                    "examples": [
-                        "Stanford University",
-                        "IBM",
-                        "Project Management Institute"
-                    ]
-                },
-                "description": {
-                    "type": "string"
-                },
-                "URL": {
-                    "type": "string",
-                    "format": "uri",
-                    "examples": [ "https://www.stanford.edu/" ]
-                },
-                "image": {
-                    "$ref": "#/$defs/image"
-                },
-                "location": {
-                    "$ref": "#/$defs/location"
-                }
-            },
-            "required": [ "name" ]
+        "competences": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "$ref": "#/$defs/competence"
+          }
         },
-        "organizationType": {
-            "description": "Types of Organization",
-            "enum": [
-                "freelance",
-                "publicAdministration",
-                "NGO",
-                "startup",
-                "SME",
-                "bigCorp",
-                "academicalInstitution",
-                "other"
-            ],
-            "$comment": "TBD Refactor to extract the enumeration \"OrganizationType\" (used in jobs/roles/organization or careerPreferences/preferredOrganizations) to a common definition file."
+        "finishDate": {
+          "examples": [ "2022-02-14" ],
+          "type": "string",
+          "format": "date"
         },
-        "projectType": {
-            "description": "Types of Projects",
-            "enum": [
-                "proBono",
-                "openSource",
-                "sideProject",
-                "personalAchievement",
-                "other"
-            ]
+        "name": {
+          "examples": [ "Developer" ],
+          "type": "string"
         },
-        "publicArtifactType": {
-            "description": "Types of Public Artifacts",
-            "enum": [
-                "post",
-                "talk",
-                "sideProject",
-                "achievement",
-                "launch",
-                "video"
-            ]
+        "notes": {
+          "description": "Notes and information about the role",
+          "type": "string"
         },
-        "contractType": {
-            "description": "Types of Contracts",
-            "enum": [ "permanent", "temporary", "freelance", "internship" ]
+        "referrals": {
+          "$comment": "Professional Referrals about my activity in one specific rol.",
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "$ref": "#/$defs/person"
+          }
         },
-        "recommendationType": {
-            "description": "Types of Recommendations",
-            "enum": [ "reading", "video", "podcast", "web", "other" ]
-        },
-        "tags": {
-            "type": "array",
-            "description": "A list of tags with random values to provide the candidates a way to segment and categorize elements in their CV.",
-            "uniqueItems": true,
-            "items": {
-                "type": "string",
-                "examples": [ "cooking", "not available", "february" ]
-            }
-        },
-        "studyType": {
-            "description": "Types of studies:\n\n* \"officialDegree\" is a degree accredited by the government (University Degree) or an external, recognized and independent agency (some MBAs).\n* \"certification\" is a degree accredited by a private institution (eg. Oracle Database Admin Certification or Projecr Management Institute PMP)\n* \"unaccredited\" is a course without any accreditation (eg. Coursera or Platzi courses), but this doesn't mean that is not valid, legit, or has poor quality\n* \"selfTraining\" is the study designed, managed and evaluated just by the own learner.",
-            "enum": [
-                "officialDegree",
-                "certification",
-                "unaccredited",
-                "selfTraining"
-            ]
+        "startDate": {
+          "examples": [ "2019-06-20" ],
+          "type": "string",
+          "format": "date"
         }
+      },
+      "additionalProperties": false
+    },
+    "studyType": {
+      "description": "Types of studies:\n\n* \"officialDegree\" is a degree accredited by the government (University Degree) or an external, recognized and independent agency (some MBAs).\n* \"certification\" is a degree accredited by a private institution (eg. Oracle Database Admin Certification or Projecr Management Institute PMP)\n* \"unaccredited\" is a course without any accreditation (eg. Coursera or Platzi courses), but this doesn't mean that is not valid, legit, or has poor quality\n* \"selfTraining\" is the study designed, managed and evaluated just by the own learner.",
+      "enum": [
+        "officialDegree",
+        "certification",
+        "unaccredited",
+        "selfTraining"
+      ]
+    },
+    "tags": {
+      "description": "A list of tags with random values to provide the candidates a way to segment and categorize elements in their CV.",
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "examples": [ "cooking", "not available", "february" ],
+        "type": "string"
+      }
     }
+  }
 }
